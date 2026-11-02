@@ -3,6 +3,19 @@
   "trailingSlash": false,
   "headers": [
     {
+      "source": "/files/cv/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=600, must-revalidate"
+        },
+        {
+          "key": "Content-Disposition",
+          "value": "inline"
+        }
+      ]
+    },
+    {
       "source": "/media/(.*)",
       "headers": [
         {
@@ -37,7 +50,7 @@
   "rewrites": [
     {
       "source": "/cv",
-      "destination": "/cv.html"
+      "destination": "/cv-hub.html"
     }
   ]
 }
