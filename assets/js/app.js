@@ -315,7 +315,7 @@ function render() {
 }
 
 (async () => {
-  const ar0 = (document.documentElement.lang || "ar") !== "en"; introSplash(ar0 ? "فارس الأسمري" : "Fares Al-Asmari", ar0 ? "نموذج الملاءمة · تخطيط و GIS" : "SUITABILITY MODEL · PLANNING & GIS");
+  const ar0 = (document.documentElement.lang || "ar") !== "en"; introSplash(ar0 ? "فارس الأسمري" : "Faris Al-Asmari", ar0 ? "نموذج الملاءمة · تخطيط و GIS" : "SUITABILITY MODEL · PLANNING & GIS");
   c = await boot("home"); app = $("#app"); initWeights(); render();
   document.addEventListener("langchange", () => { render(); });
   addEventListener("resize", () => { clearTimeout(render.t); render.t = setTimeout(renderRaster, 200); });

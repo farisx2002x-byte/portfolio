@@ -1,6 +1,6 @@
 {
  "defaultLang": "ar",
- "siteUrl": "https://example.github.io/portfolio",
+ "siteUrl": "https://faris-alasmari.vercel.app",
  "sections": [
   "hero",
   "now",
@@ -32,11 +32,11 @@
  "seo": {
   "title": {
    "ar": "فارس الأسمري · مخطط حضري وإقليمي",
-   "en": "Fares Al-Asmari · Urban & Regional Planner"
+   "en": "Faris Al-Asmari · Urban & Regional Planner"
   },
   "description": {
    "ar": "بورتفوليو فارس الأسمري، طالب تخطيط حضري وإقليمي في جامعة الملك عبدالعزيز: مشاريع تخطيط ونقل وGIS مرتبة بنموذج ملاءمة حسب ما يبحث عنه الزائر.",
-   "en": "Portfolio of Fares Al-Asmari, Urban & Regional Planning student at KAU: planning, transport and GIS work ranked by a suitability model."
+   "en": "Portfolio of Faris Al-Asmari, Urban & Regional Planning student at KAU: planning, transport and GIS work ranked by a suitability model."
   },
   "ogImage": "media/og.png"
  },

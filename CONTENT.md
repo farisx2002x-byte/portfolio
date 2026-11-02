@@ -62,7 +62,7 @@
 
 ```json
 {
-  "name": {"ar":"فارس الأسمري","en":"Fares Al-Asmari"},
+  "name": {"ar":"فارس الأسمري","en":"Faris Al-Asmari"},
   "title": {"ar":"","en":""}, "tagline": {"ar":"","en":""}, "bio": {"ar":"","en":""}, "location": {"ar":"","en":""},
   "photo": "media/profile.webp",
   "availability": { "open": true, "note": {"ar":"","en":""} },

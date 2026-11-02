@@ -302,7 +302,7 @@ json.dump(C, open("content/certificates.json", "w", encoding="utf-8"), ensure_as
 
 # ── الملف الشخصي (من الجدول) ──
 profile = {
- "name": bi("فارس الأسمري", "Fares Al-Asmari"),
+ "name": bi("فارس الأسمري", "Faris Al-Asmari"),
  "fullName": bi("فارس عبدالله حسن الأسمري", "Faris Abdullah Hassan Al-Asmari"),
  "title": bi("مخطط حضري وإقليمي · GIS وتخطيط النقل", "Urban & Regional Planner · GIS & Transport"),
  "headline": bi("مخطط حضري وإقليمي · نظم المعلومات الجغرافية والتحليل المكاني · تخطيط النقل والتنقل", "Urban & Regional Planner · GIS & Spatial Analysis · Transport & Mobility Planning"),
@@ -378,8 +378,8 @@ site["presets"] = [
  {"id": "transport", "label": bi("أبحث عن مخطط نقل", "I need a transport planner"), "weights": {"planning": 5, "gis": 3, "geomatics": 1, "design": 1, "digital": 1}},
  {"id": "gis", "label": bi("أبحث عن محلل GIS", "I need a GIS analyst"), "weights": {"planning": 2, "gis": 5, "geomatics": 4, "design": 1, "digital": 3}},
  {"id": "design", "label": bi("أبحث عن عروض وتقارير", "I need presentations & reports"), "weights": {"planning": 2, "gis": 1, "geomatics": 0, "design": 4, "digital": 5}}]
-site["seo"]["title"] = bi("فارس الأسمري · مخطط حضري وإقليمي", "Fares Al-Asmari · Urban & Regional Planner")
-site["seo"]["description"] = bi("بورتفوليو فارس الأسمري، طالب تخطيط حضري وإقليمي في جامعة الملك عبدالعزيز: مشاريع تخطيط ونقل وGIS مرتبة بنموذج ملاءمة حسب ما يبحث عنه الزائر.", "Portfolio of Fares Al-Asmari, Urban & Regional Planning student at KAU: planning, transport and GIS work ranked by a suitability model.")
+site["seo"]["title"] = bi("فارس الأسمري · مخطط حضري وإقليمي", "Faris Al-Asmari · Urban & Regional Planner")
+site["seo"]["description"] = bi("بورتفوليو فارس الأسمري، طالب تخطيط حضري وإقليمي في جامعة الملك عبدالعزيز: مشاريع تخطيط ونقل وGIS مرتبة بنموذج ملاءمة حسب ما يبحث عنه الزائر.", "Portfolio of Faris Al-Asmari, Urban & Regional Planning student at KAU: planning, transport and GIS work ranked by a suitability model.")
 site["requestFullEmail"] = EMAIL
 site["downloadsRequireApproval"] = True
 for pr in site["presets"]: pr["theme"] = {"transport": "transport", "gis": "gis", "design": "design"}.get(pr["id"], "planning")
