@@ -31,7 +31,7 @@
     }
   ],
   "framework": null,
-  "installCommand": "",
-  "buildCommand": "",
-  "outputDirectory": "."
+  "installCommand": "npm i --no-save --no-audit --no-fund --ignore-scripts esbuild@0.24.2",
+  "buildCommand": "node scripts/dist.mjs",
+  "outputDirectory": "dist"
 }
