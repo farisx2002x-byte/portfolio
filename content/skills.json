@@ -1,0 +1,340 @@
+{
+ "groups": [
+  {
+   "id": "planning",
+   "tier": "core",
+   "title": {
+    "ar": "التخطيط الحضري والإقليمي",
+    "en": "Urban & Regional Planning"
+   },
+   "items": [
+    {
+     "id": "transport-planning",
+     "name": {
+      "ar": "تخطيط النقل",
+      "en": "Transport planning"
+     },
+     "level": null
+    },
+    {
+     "id": "tod",
+     "name": {
+      "ar": "التطوير الموجّه بالنقل TOD",
+      "en": "Transit-oriented development"
+     },
+     "level": null
+    },
+    {
+     "id": "15-min-city",
+     "name": {
+      "ar": "مدينة الـ15 دقيقة",
+      "en": "15-minute city"
+     },
+     "level": null
+    },
+    {
+     "id": "site-selection",
+     "name": {
+      "ar": "دراسات الجدوى المقارنة للمواقع",
+      "en": "Comparative site feasibility"
+     },
+     "level": null
+    },
+    {
+     "id": "land-use",
+     "name": {
+      "ar": "استعمالات الأراضي ومعامل البناء FAR",
+      "en": "Land use & FAR analysis"
+     },
+     "level": null
+    },
+    {
+     "id": "suitability-analysis",
+     "name": {
+      "ar": "تحليل الملاءمة",
+      "en": "Suitability analysis"
+     },
+     "level": null
+    },
+    {
+     "id": "regional-planning",
+     "name": {
+      "ar": "التخطيط الإقليمي",
+      "en": "Regional planning"
+     },
+     "level": null
+    },
+    {
+     "id": "urban-design",
+     "name": {
+      "ar": "التصميم الحضري",
+      "en": "Urban design"
+     },
+     "level": null
+    },
+    {
+     "id": "field-survey",
+     "name": {
+      "ar": "المسوحات الميدانية",
+      "en": "Field surveys"
+     },
+     "level": null
+    }
+   ]
+  },
+  {
+   "id": "gis",
+   "tier": "core",
+   "title": {
+    "ar": "نظم المعلومات الجغرافية",
+    "en": "GIS & Spatial Analysis"
+   },
+   "items": [
+    {
+     "id": "arcgis-pro",
+     "name": {
+      "ar": "ArcGIS Pro",
+      "en": "ArcGIS Pro"
+     },
+     "level": null
+    },
+    {
+     "id": "web-mapping",
+     "name": {
+      "ar": "خرائط الويب ArcGIS Online",
+      "en": "Web mapping (ArcGIS Online)"
+     },
+     "level": null
+    },
+    {
+     "id": "network-analysis",
+     "name": {
+      "ar": "التحليل الشبكي",
+      "en": "Network analysis"
+     },
+     "level": null
+    },
+    {
+     "id": "accessibility",
+     "name": {
+      "ar": "تحليل إمكانية الوصول",
+      "en": "Accessibility analysis"
+     },
+     "level": null
+    },
+    {
+     "id": "geodatabase",
+     "name": {
+      "ar": "قواعد البيانات المكانية",
+      "en": "Geodatabases"
+     },
+     "level": null
+    },
+    {
+     "id": "spss",
+     "name": {
+      "ar": "التحليل الإحصائي SPSS",
+      "en": "IBM SPSS"
+     },
+     "level": null
+    }
+   ]
+  },
+  {
+   "id": "geomatics",
+   "tier": "support",
+   "title": {
+    "ar": "الجيوماتكس والمساحة",
+    "en": "Geomatics & Surveying"
+   },
+   "items": [
+    {
+     "id": "gnss",
+     "name": {
+      "ar": "جمع البيانات بنظام GNSS",
+      "en": "GNSS data collection"
+     },
+     "level": null
+    },
+    {
+     "id": "drones",
+     "name": {
+      "ar": "تشغيل الدرون DJI Pilot",
+      "en": "Drone operation (DJI Pilot)"
+     },
+     "level": null
+    },
+    {
+     "id": "photogrammetry",
+     "name": {
+      "ar": "التصوير المساحي Agisoft Metashape",
+      "en": "Photogrammetry (Agisoft Metashape)"
+     },
+     "level": null
+    },
+    {
+     "id": "terrain-analysis",
+     "name": {
+      "ar": "قراءة البيانات الطبوغرافية والهيدرولوجية",
+      "en": "Topographic & hydrological interpretation"
+     },
+     "level": null
+    },
+    {
+     "id": "surveying",
+     "name": {
+      "ar": "الرفع المساحي",
+      "en": "Surveying"
+     },
+     "level": null
+    }
+   ]
+  },
+  {
+   "id": "design",
+   "tier": "support",
+   "title": {
+    "ar": "التصميم والنمذجة",
+    "en": "Design & 3D Modelling"
+   },
+   "items": [
+    {
+     "id": "autocad",
+     "name": {
+      "ar": "AutoCAD",
+      "en": "AutoCAD"
+     },
+     "level": null
+    },
+    {
+     "id": "revit",
+     "name": {
+      "ar": "Revit",
+      "en": "Revit"
+     },
+     "level": null
+    },
+    {
+     "id": "sketchup",
+     "name": {
+      "ar": "SketchUp",
+      "en": "SketchUp"
+     },
+     "level": null
+    },
+    {
+     "id": "rendering",
+     "name": {
+      "ar": "الإظهار Lumion وD5",
+      "en": "Rendering (Lumion, D5)"
+     },
+     "level": null
+    },
+    {
+     "id": "adobe",
+     "name": {
+      "ar": "Photoshop وAdobe",
+      "en": "Photoshop & Adobe Suite"
+     },
+     "level": null
+    }
+   ]
+  },
+  {
+   "id": "digital",
+   "tier": "support",
+   "title": {
+    "ar": "البيانات والعروض والأتمتة",
+    "en": "Data, Presentation & Automation"
+   },
+   "items": [
+    {
+     "id": "excel",
+     "name": {
+      "ar": "Excel",
+      "en": "Microsoft Excel"
+     },
+     "level": null
+    },
+    {
+     "id": "presentations",
+     "name": {
+      "ar": "تصميم العروض Canva وPowerPoint",
+      "en": "Presentation design"
+     },
+     "level": null
+    },
+    {
+     "id": "report-writing",
+     "name": {
+      "ar": "كتابة التقارير الفنية",
+      "en": "Technical report writing"
+     },
+     "level": null
+    },
+    {
+     "id": "automation",
+     "name": {
+      "ar": "البرمجة والأتمتة Python",
+      "en": "Python & automation"
+     },
+     "level": null
+    },
+    {
+     "id": "ai-tools",
+     "name": {
+      "ar": "أدوات الذكاء الاصطناعي",
+      "en": "AI tools"
+     },
+     "level": null
+    }
+   ]
+  }
+ ],
+ "tools": [
+  {
+   "name": "ArcGIS Pro",
+   "level": null
+  },
+  {
+   "name": "ArcPy / Python",
+   "level": null
+  },
+  {
+   "name": "AutoCAD",
+   "level": null
+  },
+  {
+   "name": "Revit",
+   "level": null
+  },
+  {
+   "name": "Lumion",
+   "level": null
+  },
+  {
+   "name": "Agisoft Metashape",
+   "level": null
+  },
+  {
+   "name": "DJI Pilot",
+   "level": null
+  },
+  {
+   "name": "Excel",
+   "level": null
+  },
+  {
+   "name": "SPSS",
+   "level": null
+  },
+  {
+   "name": "Photoshop",
+   "level": null
+  },
+  {
+   "name": "Canva",
+   "level": null
+  }
+ ]
+}

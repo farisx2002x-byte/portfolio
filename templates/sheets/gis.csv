@@ -1,0 +1,3 @@
+﻿publish,id,title_ar,title_en,description_ar,description_en,project,geometry,style_type,style_color,style_width,style_radius,style_opacity,style_field,style_classes,style_breaks,style_colors,popup_fields,swipe_with,md_source_ar,md_source_en,md_crs,md_date,md_accuracy_ar,md_accuracy_en,md_constraints_ar,md_constraints_en
+نعم,example-brt-corridor,مثال: ممر BRT,Sample: BRT corridor,وصف,Description,example-brt,line,single,#E3B23C,4,,,,,,,name|phase,example-brt-existing,بيانات تجريبية,Placeholder,EPSG:4326,2026-10,تقريبية,Approximate,مثال,Sample
+نعم,example-stations,مثال: المحطات,Sample: stations,,,example-brt,point,categories,,,7,,type,interchange=#E3B23C=تبادلية~Interchange|regular=#2FA37A=عادية~Regular,,,name|type,,بيانات تجريبية,Placeholder,EPSG:4326,2026-10,,,,

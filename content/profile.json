@@ -1,0 +1,99 @@
+{
+ "name": {
+  "ar": "فارس الأسمري",
+  "en": "Fares Al-Asmari"
+ },
+ "fullName": {
+  "ar": "فارس عبدالله حسن الأسمري",
+  "en": "Faris Abdullah Hassan Al-Asmari"
+ },
+ "title": {
+  "ar": "مخطط حضري وإقليمي · GIS وتخطيط النقل",
+  "en": "Urban & Regional Planner · GIS & Transport"
+ },
+ "headline": {
+  "ar": "مخطط حضري وإقليمي · قيادة طلابية وعمل تطوعي · الجيوماتكس ونظم المعلومات الجغرافية",
+  "en": "Urban & Regional Planner · Student leadership & volunteering · Geomatics & GIS"
+ },
+ "tagline": {
+  "ar": "أخطّط المدن بالبيانات، وأبني الأدوات التي تجعلها أذكى.",
+  "en": "Planning cities with data — and building the tools that make them smarter."
+ },
+ "bio": {
+  "ar": "طالب تخطيط حضري وإقليمي في جامعة الملك عبدالعزيز (المستوى 300)، حاصل على شهادة التميز للعام الجامعي 2025–2026. أعمل إلى جانب الدراسة في الجيوماتكس والتصوير الجوي بالدرون منذ 2024، وفي تخطيط النقل مع شركة حافل منذ تدريبي التعاوني. أشارك في تنظيم فعاليات الكلية والجامعة، وأجيد العرض والتواصل بالعربية والإنجليزية.",
+  "en": "Urban & Regional Planning student at King Abdulaziz University (level 300), recipient of the Certificate of Excellence 2025–2026. Alongside study I work in geomatics and drone aerial survey since 2024, and in transport planning with Hafil since my co-op. I help organise faculty and university events and present comfortably in Arabic and English."
+ },
+ "location": {
+  "ar": "جدة، المملكة العربية السعودية",
+  "en": "Jeddah, Saudi Arabia"
+ },
+ "photo": "media/profile.webp",
+ "availability": {
+  "open": true,
+  "note": {
+   "ar": "متاح للمشاريع والعمل الحر",
+   "en": "Available for projects and freelance work"
+  }
+ },
+ "contact": {
+  "email": "farisx2002x@gmail.com",
+  "whatsapp": "+966580002585",
+  "linkedin": "https://www.linkedin.com/in/faris-a-alasmari-3a4a2a337",
+  "x": "",
+  "github": "",
+  "behance": ""
+ },
+ "cvFile": "request",
+ "languages": [
+  {
+   "name": {
+    "ar": "العربية",
+    "en": "Arabic"
+   },
+   "level": {
+    "ar": "لغة أم",
+    "en": "Native"
+   }
+  },
+  {
+   "name": {
+    "ar": "الإنجليزية",
+    "en": "English"
+   },
+   "level": {
+    "ar": "مستوى مهني",
+    "en": "Professional working proficiency"
+   }
+  }
+ ],
+ "highlights": [
+  {
+   "value": "✓",
+   "label": {
+    "ar": "متطوّع نشط في فعاليات الكلية والمجتمع",
+    "en": "Active volunteer in faculty & community events"
+   }
+  },
+  {
+   "value": "14",
+   "label": {
+    "ar": "مشروعاً بملخص جاهز",
+    "en": "projects with a summary"
+   }
+  },
+  {
+   "value": "4",
+   "label": {
+    "ar": "تكريمات من الكلية",
+    "en": "faculty honours"
+   }
+  }
+ ],
+ "requestFull": {
+  "email": "farisx2002x@gmail.com",
+  "subject": {
+   "ar": "طلب العرض الكامل",
+   "en": "Request for the full deck"
+  }
+ }
+}

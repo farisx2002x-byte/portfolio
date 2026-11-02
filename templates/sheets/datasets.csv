@@ -1,0 +1,2 @@
+﻿publish,id,title_ar,title_en,description_ar,description_en,project,gis_layer,license,md_source_ar,md_source_en,md_crs,md_date,md_accuracy_ar,md_accuracy_en,md_constraints_ar,md_constraints_en
+نعم,example-stations-open,مثال: محطات الممر,Sample: stations,وصف,Description,example-brt,example-stations,CC BY 4.0,بيانات تجريبية,Placeholder,EPSG:4326,2026-10,,,,

@@ -1,0 +1,2392 @@
+[
+ {
+  "id": "al-jamea-local-unit",
+  "order": 1,
+  "featured": true,
+  "added": "2026-10-23",
+  "title": {
+   "ar": "حي الجامعة: وحدة محلية تتنفس",
+   "en": "Al-Jamiah: a local unit that breathes"
+  },
+  "summary": {
+   "ar": "مخطط سكني بمساحة 22.2 هكتار في قلب جدة، صُمّم ليتجاوب مع حرارة المدينة ورياحها الشمالية، ويجمع الخدمات والمسجد والحدائق في قلب الحي.",
+   "en": "A 22.2-ha residential local unit in Jeddah designed to respond to heat and northerly winds, with services, the mosque and parks at its heart."
+  },
+  "categories": [
+   "planning",
+   "urban-design"
+  ],
+  "type": "course",
+  "course": "استديو التخطيط 3-1 · 2025",
+  "year": 2025,
+  "status": "completed",
+  "role": {
+   "ar": "عمل فردي: التحليل والفكرة والمخطط العام والإظهار",
+   "en": "Individual: analysis, concept, master plan and renders"
+  },
+  "tools": [
+   "AutoCAD",
+   "Lumion",
+   "ArcGIS Pro"
+  ],
+  "skills": [
+   "urban-design",
+   "land-use",
+   "site-selection",
+   "terrain-analysis",
+   "rendering"
+  ],
+  "metrics": [
+   {
+    "value": "22.2",
+    "label": {
+     "ar": "هكتار مساحة الموقع",
+     "en": "ha site area"
+    }
+   },
+   {
+    "value": "70%",
+    "label": {
+     "ar": "نسبة البناء",
+     "en": "building ratio"
+    }
+   },
+   {
+    "value": "3",
+    "label": {
+     "ar": "نماذج مبانٍ",
+     "en": "building types"
+    }
+   },
+   {
+    "value": "42",
+    "label": {
+     "ar": "صفحة في التقرير الكامل",
+     "en": "pages in the full report"
+    }
+   }
+  ],
+  "cover": "media/projects/al-jamea-local-unit/cover.webp",
+  "gallery": [
+   {
+    "src": "media/posters/poster-jamea-studio.webp",
+    "caption": {
+     "ar": "لوحة الاستديو الكاملة (A1)",
+     "en": "Full studio board (A1)"
+    }
+   }
+  ],
+  "slides": [
+   {
+    "src": "media/projects/al-jamea-local-unit/slides/slide-01.webp",
+    "caption": {
+     "ar": "الشريحة 1 من الملخص",
+     "en": "Summary slide 1"
+    }
+   },
+   {
+    "src": "media/projects/al-jamea-local-unit/slides/slide-02.webp",
+    "caption": {
+     "ar": "الشريحة 2 من الملخص",
+     "en": "Summary slide 2"
+    }
+   },
+   {
+    "src": "media/projects/al-jamea-local-unit/slides/slide-03.webp",
+    "caption": {
+     "ar": "الشريحة 3 من الملخص",
+     "en": "Summary slide 3"
+    }
+   },
+   {
+    "src": "media/projects/al-jamea-local-unit/slides/slide-04.webp",
+    "caption": {
+     "ar": "الشريحة 4 من الملخص",
+     "en": "Summary slide 4"
+    }
+   },
+   {
+    "src": "media/projects/al-jamea-local-unit/slides/slide-05.webp",
+    "caption": {
+     "ar": "الشريحة 5 من الملخص",
+     "en": "Summary slide 5"
+    }
+   }
+  ],
+  "files": [
+   {
+    "label": {
+     "ar": "ملخص المشروع (PDF)",
+     "en": "Project summary (PDF)"
+    },
+    "request": true,
+    "driveId": "1LJyuhr7sB-0GQ97VGfaKaXgf3AopIxuv"
+   }
+  ],
+  "links": [],
+  "location": {
+   "name": {
+    "ar": "حي الجامعة، جدة",
+    "en": "Al-Jamiah, Jeddah"
+   },
+   "lat": 21.464,
+   "lon": 39.256
+  },
+  "problem": {
+   "ar": "أرض أُزيلت ضمن مشاريع الإزالة على طريق مكة القديم قرب الجامعة، تحتاج إعادة تخطيط تراعي مناخ جدة: حرارة عالية، رياح شمالية وشمالية غربية سائدة، وتعرّض للسيول.",
+   "en": "A cleared site on Old Makkah Road near the university that needed re-planning for Jeddah's climate: heat, prevailing north/north-west winds and flash-flood exposure."
+  },
+  "method": {
+   "ar": "قراءة الموقع والمناخ (الرياح، الحرارة، الأمطار، الشمس، المناسيب) ثم ترجمتها إلى أربعة قرارات: التوجيه، المواد، التصريف، والظل. تطوّرت الفكرة على ثلاث مراحل من رسم يدوي إلى محور قطري يشبه الرقم 8 يربط الحدائق.",
+   "en": "Site and climate reading (wind, heat, rain, sun, levels) translated into four decisions: orientation, materials, drainage and shade. The concept evolved in three stages from a hand sketch to a figure-8 diagonal axis linking the parks."
+  },
+  "result": {
+   "ar": "شوارع متدرجة بعروض 10 و15 و20 م، نسبة بناء 70%، ثلاثة نماذج مبانٍ (مستطيل، شبه مربع، سداسي) تلتف حول الحدائق، وخدمات ومسجد جامع في القلب. التقرير الكامل 42 صفحة.",
+   "en": "Hierarchical streets of 10/15/20 m, 70% building ratio, three building types (rectangular, near-square, hexagonal) wrapped around parks, with services and the main mosque at the centre. Full report: 42 pages."
+  },
+  "summaryDriveId": "1LJyuhr7sB-0GQ97VGfaKaXgf3AopIxuv",
+  "summaryPages": 5,
+  "driveFolder": "1fJ3uyI_nqlB4AQLgH82YuBPCFOsqK9jh",
+  "fullDeck": {
+   "onRequest": true,
+   "pages": 42,
+   "note": {
+    "ar": "التقرير الكامل: البيانات والتحليل والجداول والمراحل.",
+    "en": "Full report: data, analysis, tables and phases."
+   },
+   "email": "farisx2002x@gmail.com"
+  }
+ },
+ {
+  "id": "urp244-tod-neighbourhood",
+  "order": 2,
+  "featured": true,
+  "added": "2026-10-23",
+  "title": {
+   "ar": "مجاورة سكنية تدور حول النقل (TOD)",
+   "en": "Transit-oriented residential neighbourhood (TOD)"
+  },
+  "summary": {
+   "ar": "تصميم حي بمبادئ التنمية الموجّهة بالنقل: كثافة حول المحطات، شبكة مشاة ودراجات، ومركبات PRT ذاتية بدل الاعتماد الكلي على السيارة.",
+   "en": "A neighbourhood designed on TOD principles: density around stations, a walking and cycling network, and autonomous PRT vehicles instead of full car dependence."
+  },
+  "categories": [
+   "planning",
+   "transport",
+   "urban-design"
+  ],
+  "type": "course",
+  "course": "URP-244 · الفصل الثاني 1447",
+  "year": 2026,
+  "status": "completed",
+  "role": {
+   "ar": "عضو فريق من ستة طلاب: صمّمت المنطقة الفرعية رقم 2 (الركن الشمالي الشرقي) وشاركت في المخطط العام ودليل PRT",
+   "en": "Member of a six-student team: designed sub-area 2 (north-east corner) and contributed to the master plan and PRT guide"
+  },
+  "team": {
+   "ar": "عمل جماعي · فريق من 6 طلاب",
+   "en": "Team project · 6 students"
+  },
+  "tools": [
+   "AutoCAD",
+   "ArcGIS Pro",
+   "Photoshop"
+  ],
+  "skills": [
+   "tod",
+   "transport-planning",
+   "urban-design",
+   "land-use"
+  ],
+  "metrics": [
+   {
+    "value": "168",
+    "label": {
+     "ar": "هكتار مساحة الموقع",
+     "en": "ha site"
+    }
+   },
+   {
+    "value": "8,100",
+    "label": {
+     "ar": "وحدة سكنية في المخطط",
+     "en": "housing units"
+    }
+   },
+   {
+    "value": "240",
+    "label": {
+     "ar": "نسمة/هكتار",
+     "en": "people per ha"
+    }
+   },
+   {
+    "value": "1,188",
+    "label": {
+     "ar": "وحدة في منطقتي",
+     "en": "units in my sub-area"
+    }
+   }
+  ],
+  "cover": "media/projects/urp244-tod-neighbourhood/cover.webp",
+  "gallery": [
+   {
+    "src": "media/projects/urp244-tod-neighbourhood/boards/board-1.webp",
+    "caption": {
+     "ar": "لوحة المعرض 1: المشروع المشترك (عمل جماعي)",
+     "en": "Exhibition board 1: the joint scheme (team work)"
+    }
+   },
+   {
+    "src": "media/projects/urp244-tod-neighbourhood/boards/board-2.webp",
+    "caption": {
+     "ar": "لوحة المعرض 2: المساهمات الفردية — منطقة التصميم 2 من نصيبي",
+     "en": "Exhibition board 2: individual contributions — design area 2 is mine"
+    }
+   }
+  ],
+  "slides": [
+   {
+    "src": "media/projects/urp244-tod-neighbourhood/slides/slide-01.webp",
+    "caption": {
+     "ar": "الشريحة 1 من الملخص",
+     "en": "Summary slide 1"
+    }
+   },
+   {
+    "src": "media/projects/urp244-tod-neighbourhood/slides/slide-02.webp",
+    "caption": {
+     "ar": "الشريحة 2 من الملخص",
+     "en": "Summary slide 2"
+    }
+   },
+   {
+    "src": "media/projects/urp244-tod-neighbourhood/slides/slide-03.webp",
+    "caption": {
+     "ar": "الشريحة 3 من الملخص",
+     "en": "Summary slide 3"
+    }
+   },
+   {
+    "src": "media/projects/urp244-tod-neighbourhood/slides/slide-04.webp",
+    "caption": {
+     "ar": "الشريحة 4 من الملخص",
+     "en": "Summary slide 4"
+    }
+   },
+   {
+    "src": "media/projects/urp244-tod-neighbourhood/slides/slide-05.webp",
+    "caption": {
+     "ar": "الشريحة 5 من الملخص",
+     "en": "Summary slide 5"
+    }
+   }
+  ],
+  "files": [
+   {
+    "label": {
+     "ar": "ملخص المشروع (PDF)",
+     "en": "Project summary (PDF)"
+    },
+    "request": true,
+    "driveId": "1t2pcqKFIEKb0QXIB8SumUbpX8h-jm7xW"
+   }
+  ],
+  "links": [],
+  "problem": {
+   "ar": "كيف نصمم مجاورة بمساحة 168 هكتاراً لنحو 40 ألف نسمة دون أن تكون السيارة الخاصة هي الوسيلة الوحيدة؟",
+   "en": "How to design a 168-ha neighbourhood for ~40,000 residents without the private car as the only mode?"
+  },
+  "method": {
+   "ar": "أربع غايات وثمانية مبادئ TOD (المشي، الدراجات، الربط، النقل العام، المزيج، التكثيف، التضام، التحول). قُسّم المخطط إلى ست مناطق فرعية، صمّم كل طالب واحدة، وتلتقي كلها على شبكة PRT واحدة.",
+   "en": "Four goals and the eight TOD principles (walk, cycle, connect, transit, mix, densify, compact, shift). The plan was split into six sub-areas, one per student, all meeting on a single PRT network."
+  },
+  "result": {
+   "ar": "مخطط نهائي بنحو 8,100 وحدة سكنية و240 نسمة/هكتار و195 خدمة، ومحطات PRT في قلب الحي. منطقتي (25 هكتاراً): 66 مبنى و1,188 وحدة حول ساحة مركزية وحدائق متصلة، وشارع رئيسي يعطي 12 م للمشاة والدراجات مقابل 8 م للسيارات.",
+   "en": "Final plan of ~8,100 units, 240 p/ha and 195 services with PRT stations at the core. My sub-area (25 ha): 66 buildings and 1,188 units around a central square and linked parks; the main street gives 12 m to pedestrians/cyclists versus 8 m to cars."
+  },
+  "summaryDriveId": "1t2pcqKFIEKb0QXIB8SumUbpX8h-jm7xW",
+  "summaryPages": 5,
+  "driveFolder": "1S7GYZ14NHAqOchZ92OHR1QMcNWpct90G",
+  "fullDeck": {
+   "onRequest": true,
+   "pages": 23,
+   "note": {
+    "ar": "العرض الكامل: المناطق الست ودليل PRT والمخطط النهائي.",
+    "en": "Full deck: the six sub-areas, PRT guide and final plan."
+   },
+   "email": "farisx2002x@gmail.com"
+  }
+ },
+ {
+  "id": "khobar-hackathon",
+  "order": 3,
+  "featured": true,
+  "added": "2026-10-23",
+  "title": {
+   "ar": "هاكاثون الخبر: نعيد وصل الحي ببحره",
+   "en": "Khobar hackathon: reconnecting the district to its sea"
+  },
+  "summary": {
+   "ar": "مقترح لتحسين الترابط العمراني بين وسط الخبر والواجهة البحرية بشبكة محاور للمشاة تتجاوز حاجز طريق شرياني بعرض 80 م.",
+   "en": "A proposal to reconnect Khobar's centre with its waterfront through a network of pedestrian axes crossing an 80-m arterial barrier."
+  },
+  "categories": [
+   "planning",
+   "urban-design",
+   "transport"
+  ],
+  "type": "competition",
+  "course": "هاكاثون التنمية الحضرية 2026 · هيئة تطوير المنطقة الشرقية",
+  "year": 2026,
+  "status": "completed",
+  "role": {
+   "ar": "عضو الفريق: تحليل الموقع، منهجية اختيار المحاور، وتقييم البدائل",
+   "en": "Team member: site analysis, axis-selection method and alternatives evaluation"
+  },
+  "team": {
+   "ar": "عمل جماعي",
+   "en": "Team project"
+  },
+  "tools": [
+   "ArcGIS Pro",
+   "Photoshop",
+   "PowerPoint"
+  ],
+  "skills": [
+   "urban-design",
+   "field-survey",
+   "site-selection"
+  ],
+  "metrics": [
+   {
+    "value": "315",
+    "label": {
+     "ar": "هكتار منطقة الدراسة",
+     "en": "ha study area"
+    }
+   },
+   {
+    "value": "80 م",
+    "label": {
+     "ar": "عرض الطريق الفاصل",
+     "en": "barrier road width"
+    }
+   },
+   {
+    "value": "4",
+    "label": {
+     "ar": "محاور مشاة نحو البحر",
+     "en": "pedestrian axes"
+    }
+   },
+   {
+    "value": "25/30",
+    "label": {
+     "ar": "درجة البديل المختار",
+     "en": "chosen alternative score"
+    }
+   }
+  ],
+  "cover": "media/projects/khobar-hackathon/cover.webp",
+  "gallery": [],
+  "slides": [
+   {
+    "src": "media/projects/khobar-hackathon/slides/slide-01.webp",
+    "caption": {
+     "ar": "الشريحة 1 من الملخص",
+     "en": "Summary slide 1"
+    }
+   },
+   {
+    "src": "media/projects/khobar-hackathon/slides/slide-02.webp",
+    "caption": {
+     "ar": "الشريحة 2 من الملخص",
+     "en": "Summary slide 2"
+    }
+   },
+   {
+    "src": "media/projects/khobar-hackathon/slides/slide-03.webp",
+    "caption": {
+     "ar": "الشريحة 3 من الملخص",
+     "en": "Summary slide 3"
+    }
+   },
+   {
+    "src": "media/projects/khobar-hackathon/slides/slide-04.webp",
+    "caption": {
+     "ar": "الشريحة 4 من الملخص",
+     "en": "Summary slide 4"
+    }
+   },
+   {
+    "src": "media/projects/khobar-hackathon/slides/slide-05.webp",
+    "caption": {
+     "ar": "الشريحة 5 من الملخص",
+     "en": "Summary slide 5"
+    }
+   }
+  ],
+  "files": [
+   {
+    "label": {
+     "ar": "ملخص المشروع (PDF)",
+     "en": "Project summary (PDF)"
+    },
+    "request": true,
+    "driveId": "1DQPjlyteQ6SgVR-7AdPYnvUgWry0mtMm"
+   }
+  ],
+  "links": [],
+  "location": {
+   "name": {
+    "ar": "حي الخبر الشمالية، الخبر",
+    "en": "Al Khobar Al Shamaliyah, Khobar"
+   },
+   "lat": 26.3,
+   "lon": 50.21
+  },
+  "problem": {
+   "ar": "ضعف الترابط العمراني والحركي بين وسط المدينة والكورنيش بسبب طريق شرياني بعرض 80 م يعطي الأولوية للسيارة؛ والجذر، بتحليل «لماذا» الخمس، رؤية تخطيطية وظيفية بحتة لا تقوم على مدينة صديقة للمشاة.",
+   "en": "Weak urban and movement links between the centre and the corniche because of an 80-m car-first arterial; the root cause (five-whys) is a purely functional planning vision rather than a walkable city."
+  },
+  "method": {
+   "ar": "قراءة الموقع طبقة طبقة، تحليل SWOT على الخريطة، معايير لاختيار المحاور (لا تعطل المداخل، شوارع حيوية، استثمار الأراضي الفضاء، توزيع متوازن)، ثم تقييم ثلاثة بدائل بستة معايير من 5: معابر سطحية 25/30، ممر معلق ونفق 23/30، جسر مشاة 21/30.",
+   "en": "Layered site reading, mapped SWOT, criteria for choosing the axes, then three alternatives scored on six criteria: at-grade crossings 25/30, deck and tunnel 23/30, pedestrian bridge 21/30."
+  },
+  "result": {
+   "ar": "البديل المختار: أربعة محاور مشاة نحو البحر، بولاردات هيدروليكية تحوّل شارع الكورنيش إلى ممشى في نهاية الأسبوع، أرصفة 3–4 م، عبور مرتفع عند التقاطعات، وتشجير خطي. الأثر المقدّر من الفريق: اتصالية ×4 و20 ألف م² مسارات مشاة.",
+   "en": "Chosen alternative: four pedestrian axes to the sea, hydraulic bollards turning the corniche street into a weekend promenade, 3–4 m sidewalks, raised crossings and linear planting. Team-estimated impact: ×4 connectivity and 20,000 m² of pedestrian paths."
+  },
+  "summaryDriveId": "1DQPjlyteQ6SgVR-7AdPYnvUgWry0mtMm",
+  "summaryPages": 5,
+  "driveFolder": "15EKUKbh9VSMRxZ-mO5BHf2TmScOwG8tW",
+  "fullDeck": {
+   "onRequest": true,
+   "pages": 20,
+   "note": {
+    "ar": "العرض الكامل: زيارة الموقع، الموجهات، البدائل كاملة ومقاطع الشوارع.",
+    "en": "Full deck: site visit, guidelines, all alternatives and street sections."
+   },
+   "email": "farisx2002x@gmail.com"
+  }
+ },
+ {
+  "id": "ruwais-regeneration",
+  "order": 4,
+  "featured": false,
+  "added": "2026-10-23",
+  "title": {
+   "ar": "حي الرويس: تجديد بلا محو الهوية",
+   "en": "Al-Ruwais: regeneration without erasing identity"
+  },
+  "summary": {
+   "ar": "نسيج عمراني متدهور وبنية تحتية قاصرة وفراغات عامة قليلة؛ المشروع يعيد تنظيم الحي ويضيف الخدمات والحدائق مع الحفاظ على طابعه المحلي.",
+   "en": "A deteriorating fabric with weak infrastructure and few public spaces; the project reorganises the district and adds services and parks while keeping its local character."
+  },
+  "categories": [
+   "planning",
+   "urban-design"
+  ],
+  "type": "course",
+  "course": "التجديد الحضري · قسم التخطيط الحضري والإقليمي",
+  "year": 2026,
+  "status": "completed",
+  "role": {
+   "ar": "ضمن المجموعة الرابعة: الوضع الراهن، التحليل الرباعي على الخريطة، وتصميم منطقة المجموعة",
+   "en": "Group 4: existing conditions, mapped SWOT and the group's area design"
+  },
+  "team": {
+   "ar": "عمل جماعي · المجموعة الرابعة",
+   "en": "Team project · Group 4"
+  },
+  "tools": [
+   "ArcGIS Pro",
+   "AutoCAD",
+   "Photoshop"
+  ],
+  "skills": [
+   "land-use",
+   "field-survey",
+   "urban-design"
+  ],
+  "metrics": [
+   {
+    "value": "175",
+    "label": {
+     "ar": "هكتار منطقة الدراسة",
+     "en": "ha study area"
+    }
+   },
+   {
+    "value": "34 ألف",
+    "label": {
+     "ar": "نسمة تقريباً",
+     "en": "residents approx."
+    }
+   },
+   {
+    "value": "3 → 20",
+    "label": {
+     "ar": "حديقة قبل وبعد",
+     "en": "parks before → after"
+    }
+   },
+   {
+    "value": "76.5%",
+    "label": {
+     "ar": "من المباني حُفظت في منطقتنا",
+     "en": "buildings kept in our area"
+    }
+   }
+  ],
+  "cover": "media/projects/ruwais-regeneration/cover.webp",
+  "gallery": [
+   {
+    "src": "media/projects/ruwais-regeneration/boards/board-1.webp",
+    "caption": {
+     "ar": "لوحة المعرض 1 من 4 (عمل جماعي)",
+     "en": "Exhibition board 1 of 4 (team work)"
+    }
+   },
+   {
+    "src": "media/projects/ruwais-regeneration/boards/board-2.webp",
+    "caption": {
+     "ar": "لوحة المعرض 2 من 4 (عمل جماعي)",
+     "en": "Exhibition board 2 of 4 (team work)"
+    }
+   },
+   {
+    "src": "media/projects/ruwais-regeneration/boards/board-3.webp",
+    "caption": {
+     "ar": "لوحة المعرض 3 من 4 (عمل جماعي)",
+     "en": "Exhibition board 3 of 4 (team work)"
+    }
+   },
+   {
+    "src": "media/projects/ruwais-regeneration/boards/board-4.webp",
+    "caption": {
+     "ar": "لوحة المعرض 4 من 4 (عمل جماعي)",
+     "en": "Exhibition board 4 of 4 (team work)"
+    }
+   }
+  ],
+  "slides": [
+   {
+    "src": "media/projects/ruwais-regeneration/slides/slide-01.webp",
+    "caption": {
+     "ar": "الشريحة 1 من الملخص",
+     "en": "Summary slide 1"
+    }
+   },
+   {
+    "src": "media/projects/ruwais-regeneration/slides/slide-02.webp",
+    "caption": {
+     "ar": "الشريحة 2 من الملخص",
+     "en": "Summary slide 2"
+    }
+   },
+   {
+    "src": "media/projects/ruwais-regeneration/slides/slide-03.webp",
+    "caption": {
+     "ar": "الشريحة 3 من الملخص",
+     "en": "Summary slide 3"
+    }
+   },
+   {
+    "src": "media/projects/ruwais-regeneration/slides/slide-04.webp",
+    "caption": {
+     "ar": "الشريحة 4 من الملخص",
+     "en": "Summary slide 4"
+    }
+   },
+   {
+    "src": "media/projects/ruwais-regeneration/slides/slide-05.webp",
+    "caption": {
+     "ar": "الشريحة 5 من الملخص",
+     "en": "Summary slide 5"
+    }
+   }
+  ],
+  "files": [
+   {
+    "label": {
+     "ar": "ملخص المشروع (PDF)",
+     "en": "Project summary (PDF)"
+    },
+    "request": true,
+    "driveId": "1Chi9gu2tLxeRmsL-uD10hdUBpsiPgIVb"
+   }
+  ],
+  "links": [],
+  "location": {
+   "name": {
+    "ar": "حي الرويس، جدة",
+    "en": "Al-Ruwais, Jeddah"
+   },
+   "lat": 21.53,
+   "lon": 39.17
+  },
+  "problem": {
+   "ar": "حي سكني بنسبة 80.4% إيجار، مبانٍ متوسطة الحالة في الوسط، طرق داخلية مختنقة، تكدس نفايات في الأراضي الفضاء، وضعف إنارة وتشجير.",
+   "en": "A largely rental district (80.4%), mid-condition buildings at the core, congested internal streets, waste on vacant land, poor lighting and greenery."
+  },
+  "method": {
+   "ar": "مسح ميداني واستبيان وعدّ مروري (6,210 مركبة/س على طريق المدينة)، ثم تحليل رباعي موقّع على الخريطة، وثلاثة قرارات للمباني: إزالة، ترميم، إعادة إعمار.",
+   "en": "Field survey, questionnaire and traffic counts (6,210 veh/h on Madinah Road), a mapped SWOT, and three building decisions: demolish, restore, rebuild."
+  },
+  "result": {
+   "ar": "خدمات أكثر (17 حديقة جديدة) وارتفاعات تتدرج 4–12 دوراً نحو الواجهة البحرية، وشارع السيد ممراً عمرانياً. في منطقة مجموعتنا حُفظ 76.5% من المباني وأُزيل 23.5% لصالح الفراغات والخدمات، مع ممشى ومسار دراجات في كل اتجاه.",
+   "en": "More services (17 new parks), heights stepping 4–12 floors towards the waterfront, Al-Sayed Street as an urban corridor. In our group's area 76.5% of buildings were kept and 23.5% removed for open space and services, with walking and cycling paths in each direction."
+  },
+  "summaryDriveId": "1Chi9gu2tLxeRmsL-uD10hdUBpsiPgIVb",
+  "summaryPages": 5,
+  "driveFolder": "1zYITnIHHvhpnTI-MUAyjkrOmU4bAc8HG",
+  "fullDeck": {
+   "onRequest": true,
+   "pages": 4,
+   "note": {
+    "ar": "أربع لوحات كبيرة: التحليل والموجهات وكل المجموعات.",
+    "en": "Four large boards: analysis, guidelines and all groups."
+   },
+   "email": "farisx2002x@gmail.com"
+  }
+ },
+ {
+  "id": "fawaz-urban-survey",
+  "order": 5,
+  "featured": false,
+  "added": "2026-10-23",
+  "title": {
+   "ar": "حي الأمير فواز: قراءة حي من الداخل",
+   "en": "Prince Fawaz district: reading a district from within"
+  },
+  "summary": {
+   "ar": "مسح ميداني شامل لجزء من الحي: كل قطعة وكل مبنى، مقابلات مع الأسر، عدّ للحركة المرورية، وقراءة لصورته البصرية.",
+   "en": "A comprehensive field survey of part of the district: every plot and building, household interviews, traffic counts and a visual reading."
+  },
+  "categories": [
+   "planning"
+  ],
+  "type": "course",
+  "course": "URP-122 · 2025",
+  "year": 2025,
+  "status": "completed",
+  "role": {
+   "ar": "ضمن المجموعة الثانية (6 طلاب): المسح العمراني والمروري وتحليل النتائج",
+   "en": "Group 2 (6 students): urban and traffic survey and analysis"
+  },
+  "team": {
+   "ar": "عمل جماعي · 6 طلاب",
+   "en": "Team project · 6 students"
+  },
+  "tools": [
+   "ArcGIS Pro",
+   "Excel",
+   "PowerPoint"
+  ],
+  "skills": [
+   "field-survey",
+   "land-use",
+   "transport-planning"
+  ],
+  "metrics": [
+   {
+    "value": "176",
+    "label": {
+     "ar": "قطعة أرض مُسحت",
+     "en": "plots surveyed"
+    }
+   },
+   {
+    "value": "90",
+    "label": {
+     "ar": "أسرة في الاستبيان",
+     "en": "households interviewed"
+    }
+   },
+   {
+    "value": "88%",
+    "label": {
+     "ar": "حدائق مخططة لم تُنفّذ",
+     "en": "planned parks not built"
+    }
+   },
+   {
+    "value": "96",
+    "label": {
+     "ar": "صفحة في العرض الكامل",
+     "en": "pages in the full deck"
+    }
+   }
+  ],
+  "cover": "media/projects/fawaz-urban-survey/cover.webp",
+  "gallery": [],
+  "slides": [
+   {
+    "src": "media/projects/fawaz-urban-survey/slides/slide-01.webp",
+    "caption": {
+     "ar": "الشريحة 1 من الملخص",
+     "en": "Summary slide 1"
+    }
+   },
+   {
+    "src": "media/projects/fawaz-urban-survey/slides/slide-02.webp",
+    "caption": {
+     "ar": "الشريحة 2 من الملخص",
+     "en": "Summary slide 2"
+    }
+   },
+   {
+    "src": "media/projects/fawaz-urban-survey/slides/slide-03.webp",
+    "caption": {
+     "ar": "الشريحة 3 من الملخص",
+     "en": "Summary slide 3"
+    }
+   },
+   {
+    "src": "media/projects/fawaz-urban-survey/slides/slide-04.webp",
+    "caption": {
+     "ar": "الشريحة 4 من الملخص",
+     "en": "Summary slide 4"
+    }
+   },
+   {
+    "src": "media/projects/fawaz-urban-survey/slides/slide-05.webp",
+    "caption": {
+     "ar": "الشريحة 5 من الملخص",
+     "en": "Summary slide 5"
+    }
+   }
+  ],
+  "files": [
+   {
+    "label": {
+     "ar": "ملخص المشروع (PDF)",
+     "en": "Project summary (PDF)"
+    },
+    "request": true,
+    "driveId": "1Y01J8rD4V2YtoYUjGscWjKdu4e43DLGi"
+   }
+  ],
+  "links": [],
+  "location": {
+   "name": {
+    "ar": "حي الأمير فواز الجنوبي، جدة",
+    "en": "Prince Fawaz South, Jeddah"
+   },
+   "lat": 21.41,
+   "lon": 39.27
+  },
+  "method": {
+   "ar": "أربعة مسوح: عمراني (176 قطعة، 13 تحليلاً)، اقتصادي واجتماعي (90 أسرة و321 فرداً)، مروري (562 موقفاً، 29 تقاطعاً، أوقات الذروة الأربع)، وبصري (خط السماء والطرز ونطاقات الخدمة).",
+   "en": "Four surveys: urban (176 plots, 13 analyses), socio-economic (90 households, 321 people), traffic (562 parking spaces, 29 junctions, four peaks) and visual (skyline, styles, service catchments)."
+  },
+  "result": {
+   "ar": "82% استعمال سكني و81% مبانٍ قديمة بحالة ممتازة غالباً؛ 88% من الحدائق المخططة لم تُنشأ؛ منطقة العمائر الجنوبية بلا مواقف؛ و71% غير راضين عن الطرق بسبب الحفريات. التوصيات: إكمال الحدائق، مواقف نظامية، صيانة الشوارع، ورفع الوعي المالي للأسر.",
+   "en": "82% residential and 81% older buildings mostly in excellent condition; 88% of planned parks never built; the southern apartment zone has no parking; 71% dissatisfied with roads due to works. Recommendations: complete the parks, formal parking, street maintenance and household financial awareness."
+  },
+  "summaryDriveId": "1Y01J8rD4V2YtoYUjGscWjKdu4e43DLGi",
+  "summaryPages": 5,
+  "driveFolder": "14qkfQ8NBTyStQqYWXVqCboC2uz3tff6G",
+  "fullDeck": {
+   "onRequest": true,
+   "pages": 96,
+   "note": {
+    "ar": "العرض الكامل: كل الخرائط والجداول والتحليلات.",
+    "en": "Full deck: all maps, tables and analyses."
+   },
+   "email": "farisx2002x@gmail.com"
+  }
+ },
+ {
+  "id": "urp244-density-far2",
+  "order": 6,
+  "featured": false,
+  "added": "2026-10-23",
+  "title": {
+   "ar": "بلوك سكني مكثّف (معامل بناء 2)",
+   "en": "Dense residential block (FAR 2)"
+  },
+  "summary": {
+   "ar": "تمرين تصميم على قطعة 100×100 م: استيعاب 77 وحدة سكنية مع استعمالات أخرى، وترك معظم الأرض مفتوحة للمشاة والخضرة.",
+   "en": "A design exercise on a 100×100 m plot: fitting 77 units plus other uses while leaving most of the ground open for pedestrians and greenery."
+  },
+  "categories": [
+   "planning",
+   "urban-design"
+  ],
+  "type": "course",
+  "course": "URP-244 · تمرين الكثافة العمرانية",
+  "year": 2026,
+  "status": "completed",
+  "role": {
+   "ar": "عمل فردي",
+   "en": "Individual"
+  },
+  "tools": [
+   "AutoCAD",
+   "Photoshop"
+  ],
+  "skills": [
+   "land-use",
+   "urban-design"
+  ],
+  "metrics": [
+   {
+    "value": "2",
+    "label": {
+     "ar": "معامل البناء FAR",
+     "en": "FAR"
+    }
+   },
+   {
+    "value": "77",
+    "label": {
+     "ar": "وحدة سكنية",
+     "en": "units"
+    }
+   },
+   {
+    "value": "385",
+    "label": {
+     "ar": "نسمة/هكتار",
+     "en": "people per ha"
+    }
+   },
+   {
+    "value": "0.37",
+    "label": {
+     "ar": "نسبة التغطية",
+     "en": "coverage"
+    }
+   }
+  ],
+  "cover": "media/projects/urp244-density-far2/cover.webp",
+  "gallery": [],
+  "slides": [
+   {
+    "src": "media/projects/urp244-density-far2/slides/slide-01.webp",
+    "caption": {
+     "ar": "الشريحة 1 من الملخص",
+     "en": "Summary slide 1"
+    }
+   },
+   {
+    "src": "media/projects/urp244-density-far2/slides/slide-02.webp",
+    "caption": {
+     "ar": "الشريحة 2 من الملخص",
+     "en": "Summary slide 2"
+    }
+   },
+   {
+    "src": "media/projects/urp244-density-far2/slides/slide-03.webp",
+    "caption": {
+     "ar": "الشريحة 3 من الملخص",
+     "en": "Summary slide 3"
+    }
+   }
+  ],
+  "files": [
+   {
+    "label": {
+     "ar": "ملخص المشروع (PDF)",
+     "en": "Project summary (PDF)"
+    },
+    "request": true,
+    "driveId": "1MkD4pI6IFhtUPhnsyyjmBMBltlnDikLj"
+   }
+  ],
+  "links": [],
+  "method": {
+   "ar": "الكثافة ترتفع بالارتفاع لا بالانتشار: نوعان من المباني بمسطح 210 م² للدور حول ساحة مركزية حرة، ومحاور مشاة تربط المداخل بالساحة من كل الجهات.",
+   "en": "Density goes up, not out: two building types of 210 m² per floor around a free central square, with pedestrian axes linking every entrance to it."
+  },
+  "result": {
+   "ar": "معامل بناء 2 ونسبة تغطية 0.37: المباني تغطي ثلث الأرض تقريباً و62.7% من القطعة مفتوحة (مشاة 17.4%، خضرة 25.7%، مواقف 19.5%). إجمالي مسطحات البناء 20,060 م².",
+   "en": "FAR 2 with 0.37 coverage: buildings cover about a third, 62.7% of the plot is open (paths 17.4%, green 25.7%, parking 19.5%). Total floor area 20,060 m²."
+  },
+  "summaryDriveId": "1MkD4pI6IFhtUPhnsyyjmBMBltlnDikLj",
+  "summaryPages": 3,
+  "driveFolder": "1KT_lffn-p-pnGF8jnNaD-xKEq8vYpHhX",
+  "fullDeck": {
+   "onRequest": true,
+   "pages": 2,
+   "note": {
+    "ar": "لوحتا المسقط والكتل بالدقة الكاملة، مع السيناريو الثاني.",
+    "en": "Plan and massing boards at full resolution, with the second scenario."
+   },
+   "email": "farisx2002x@gmail.com"
+  },
+  "related": [
+   "urp244-density-far07"
+  ]
+ },
+ {
+  "id": "urp244-density-far07",
+  "order": 7,
+  "featured": false,
+  "added": "2026-10-23",
+  "title": {
+   "ar": "بلوك سكني هادئ (معامل بناء 0.7)",
+   "en": "Quiet residential block (FAR 0.7)"
+  },
+  "summary": {
+   "ar": "القطعة نفسها 100×100 م بكثافة أقل: 20 وحدة سكنية في مبانٍ منخفضة تلتف حول ساحة خضراء ومسار مشاة متفرع.",
+   "en": "The same 100×100 m plot at lower density: 20 units in low buildings wrapped around a green square with a branching path."
+  },
+  "categories": [
+   "planning",
+   "urban-design"
+  ],
+  "type": "course",
+  "course": "URP-244 · تمرين الكثافة العمرانية",
+  "year": 2026,
+  "status": "completed",
+  "role": {
+   "ar": "عمل فردي",
+   "en": "Individual"
+  },
+  "tools": [
+   "AutoCAD",
+   "Photoshop"
+  ],
+  "skills": [
+   "land-use",
+   "urban-design"
+  ],
+  "metrics": [
+   {
+    "value": "0.7",
+    "label": {
+     "ar": "معامل البناء FAR",
+     "en": "FAR"
+    }
+   },
+   {
+    "value": "20",
+    "label": {
+     "ar": "وحدة سكنية",
+     "en": "units"
+    }
+   },
+   {
+    "value": "100",
+    "label": {
+     "ar": "نسمة/هكتار",
+     "en": "people per ha"
+    }
+   },
+   {
+    "value": "32.5%",
+    "label": {
+     "ar": "مساحات خضراء",
+     "en": "green space"
+    }
+   }
+  ],
+  "cover": "media/projects/urp244-density-far07/cover.webp",
+  "gallery": [],
+  "slides": [
+   {
+    "src": "media/projects/urp244-density-far07/slides/slide-01.webp",
+    "caption": {
+     "ar": "الشريحة 1 من الملخص",
+     "en": "Summary slide 1"
+    }
+   },
+   {
+    "src": "media/projects/urp244-density-far07/slides/slide-02.webp",
+    "caption": {
+     "ar": "الشريحة 2 من الملخص",
+     "en": "Summary slide 2"
+    }
+   },
+   {
+    "src": "media/projects/urp244-density-far07/slides/slide-03.webp",
+    "caption": {
+     "ar": "الشريحة 3 من الملخص",
+     "en": "Summary slide 3"
+    }
+   }
+  ],
+  "files": [
+   {
+    "label": {
+     "ar": "ملخص المشروع (PDF)",
+     "en": "Project summary (PDF)"
+    },
+    "request": true,
+    "driveId": "18vg8wyk1d23iyuYwDZ3RhivUKu5jKdnd"
+   }
+  ],
+  "links": [],
+  "method": {
+   "ar": "ثلاثة نماذج مبانٍ بعمق 18–19 م، سكني بالكامل (6,760 م²)، ومسار مشاة واحد متفرع يجمع كل المداخل في ساحة وسطى.",
+   "en": "Three building types 18–19 m deep, fully residential (6,760 m²), and one branching path gathering every entrance into a central square."
+  },
+  "result": {
+   "ar": "معامل بناء 0.7 ونسبة تغطية 0.45 — أعلى من السيناريو المكثف رغم بناء أقل لأن المباني منخفضة وممتدة؛ ثلث الأرض خضرة (32.5%) والمواقف أقل من 7%.",
+   "en": "FAR 0.7 with 0.45 coverage — higher than the dense scenario despite less floor area, because the buildings are low and spread; a third of the plot is green (32.5%) and parking under 7%."
+  },
+  "summaryDriveId": "18vg8wyk1d23iyuYwDZ3RhivUKu5jKdnd",
+  "summaryPages": 3,
+  "driveFolder": "1KT_lffn-p-pnGF8jnNaD-xKEq8vYpHhX",
+  "fullDeck": {
+   "onRequest": true,
+   "pages": 2,
+   "note": {
+    "ar": "لوحتا المسقط والكتل بالدقة الكاملة، مع السيناريو الأول.",
+    "en": "Plan and massing boards at full resolution, with the first scenario."
+   },
+   "email": "farisx2002x@gmail.com"
+  },
+  "related": [
+   "urp244-density-far2"
+  ]
+ },
+ {
+  "id": "asir-architecture-hawra",
+  "order": 8,
+  "featured": false,
+  "added": "2026-10-23",
+  "title": {
+   "ar": "عمارة عسير وقرية الهورة",
+   "en": "Asir architecture & Hawra village"
+  },
+  "summary": {
+   "ar": "عملان عن المكان نفسه: قراءة لهوية العمارة الجبلية بالحجر والطين والخشب، ثم قرية الهورة في جبال بللسمر نموذجاً للسياحة القائمة على الطبيعة والتراث.",
+   "en": "Two works on the same place: a reading of mountain architecture in stone, mud and wood, then Hawra village in the Ballasmar mountains as a nature-and-heritage tourism model."
+  },
+  "categories": [
+   "planning",
+   "heritage",
+   "urban-design"
+  ],
+  "type": "course",
+  "course": "GEOM 427 · العمارة السعودية",
+  "year": 2026,
+  "status": "completed",
+  "role": {
+   "ar": "البوستر الأول عمل جماعي من ثلاثة طلاب (عمارة عسير)، والثاني عمل فردي (قرية الهورة)",
+   "en": "First poster: team of three (Asir architecture); second: individual (Hawra village)"
+  },
+  "team": {
+   "ar": "بوستر جماعي + بوستر فردي",
+   "en": "One team poster + one individual poster"
+  },
+  "tools": [
+   "ArcGIS Pro",
+   "Photoshop",
+   "Illustrator"
+  ],
+  "skills": [
+   "field-survey",
+   "urban-design",
+   "arcgis-pro"
+  ],
+  "metrics": [
+   {
+    "value": "4",
+    "label": {
+     "ar": "مبانٍ حُللت واجهاتها",
+     "en": "facades analysed"
+    }
+   },
+   {
+    "value": "3",
+    "label": {
+     "ar": "طبقات للواجهة العسيرية",
+     "en": "facade layers"
+    }
+   },
+   {
+    "value": "4",
+    "label": {
+     "ar": "مواقع تراثية في الهورة",
+     "en": "heritage sites in Hawra"
+    }
+   }
+  ],
+  "cover": "media/projects/asir-architecture-hawra/cover.webp",
+  "gallery": [],
+  "slides": [
+   {
+    "src": "media/projects/asir-architecture-hawra/slides/slide-01.webp",
+    "caption": {
+     "ar": "الشريحة 1 من الملخص",
+     "en": "Summary slide 1"
+    }
+   },
+   {
+    "src": "media/projects/asir-architecture-hawra/slides/slide-02.webp",
+    "caption": {
+     "ar": "الشريحة 2 من الملخص",
+     "en": "Summary slide 2"
+    }
+   },
+   {
+    "src": "media/projects/asir-architecture-hawra/slides/slide-03.webp",
+    "caption": {
+     "ar": "الشريحة 3 من الملخص",
+     "en": "Summary slide 3"
+    }
+   },
+   {
+    "src": "media/projects/asir-architecture-hawra/slides/slide-04.webp",
+    "caption": {
+     "ar": "الشريحة 4 من الملخص",
+     "en": "Summary slide 4"
+    }
+   }
+  ],
+  "files": [
+   {
+    "label": {
+     "ar": "ملخص المشروع (PDF)",
+     "en": "Project summary (PDF)"
+    },
+    "request": true,
+    "driveId": "1Yr0t_LHgKdYgY8D_16PLkwpPvWcw13-2"
+   }
+  ],
+  "links": [],
+  "location": {
+   "name": {
+    "ar": "رجال ألمع والهورة، عسير",
+    "en": "Rijal Almaa & Hawra, Asir"
+   },
+   "lat": 18.2,
+   "lon": 42.28
+  },
+  "method": {
+   "ar": "تحليل أربعة مبانٍ في رجال ألمع والمجاردة: نسبة العرض إلى الارتفاع، نسبة الحجر إلى الفراغ (8.9–15% فراغ)، والتقسيم الثلاثي للواجهة (قاعدة سميكة، وسط بنوافذ مزخرفة، تاج من الشرفات المسننة). ثم قراءة الهورة: موقعها على الكنتور ومواقعها التراثية الأربعة ومواسمها.",
+   "en": "Analysis of four buildings in Rijal Almaa and Al-Majardah: width-to-height, stone-to-void (8.9–15% void) and the tripartite facade. Then Hawra: its contour setting, four heritage sites and four seasons."
+  },
+  "result": {
+   "ar": "تحديد عناصر الهوية العسيرية القابلة للترجمة بمواد اليوم، واقتراح الهورة وجهة سياحة مستدامة: بئران (110 و120 سنة)، مطحنة (90 سنة)، ومدرجات زراعية على مسار زيارة واحد.",
+   "en": "Identified Asiri identity elements translatable into today's materials, and proposed Hawra as a sustainable destination: two wells (110 and 120 years), a mill (90 years) and terraces on one visitor route."
+  },
+  "summaryDriveId": "1Yr0t_LHgKdYgY8D_16PLkwpPvWcw13-2",
+  "summaryPages": 4,
+  "driveFolder": "1cXSxFPaiURD3VeLNkkOXWBhTDwIlD0Eh",
+  "fullDeck": {
+   "onRequest": true,
+   "pages": 2,
+   "note": {
+    "ar": "اللوحتان كاملتان بكل المخططات والصور بدقة الطباعة.",
+    "en": "Both posters at print resolution."
+   },
+   "email": "farisx2002x@gmail.com"
+  }
+ },
+ {
+  "id": "hawra-poster-a1",
+  "order": 9,
+  "featured": false,
+  "added": "2026-10-23",
+  "title": {
+   "ar": "بوستر A1: قرية الهورة الأثرية نموذجاً للسياحة المتكاملة",
+   "en": "A1 poster: Hawra heritage village as an integrated-tourism model"
+  },
+  "summary": {
+   "ar": "قرية جبلية يلتقي فيها التاريخ والطبيعة والآثار والجيولوجيا. البوستر يقرأ موقعها ومواقعها التراثية ومناخها، ويقترحها وجهة سياحة مستدامة.",
+   "en": "A mountain village where history, nature, archaeology and geology meet. The poster reads its setting, heritage sites and climate and proposes it as a sustainable destination."
+  },
+  "categories": [
+   "planning",
+   "heritage"
+  ],
+  "type": "course",
+  "course": "GEOM 427",
+  "year": 2026,
+  "status": "completed",
+  "role": {
+   "ar": "عمل فردي: البحث والخرائط والتصميم",
+   "en": "Individual: research, maps and design"
+  },
+  "tools": [
+   "ArcGIS Pro",
+   "Photoshop"
+  ],
+  "skills": [
+   "arcgis-pro",
+   "terrain-analysis",
+   "presentations"
+  ],
+  "metrics": [
+   {
+    "value": "4",
+    "label": {
+     "ar": "مواقع تراثية موثقة",
+     "en": "documented heritage sites"
+    }
+   },
+   {
+    "value": "120",
+    "label": {
+     "ar": "سنة عمر أقدم بئر",
+     "en": "years, oldest well"
+    }
+   },
+   {
+    "value": "A1",
+    "label": {
+     "ar": "حجم البوستر",
+     "en": "poster size"
+    }
+   }
+  ],
+  "cover": "media/projects/hawra-poster-a1/cover.webp",
+  "gallery": [],
+  "slides": [
+   {
+    "src": "media/projects/hawra-poster-a1/slides/slide-01.webp",
+    "caption": {
+     "ar": "الشريحة 1 من الملخص",
+     "en": "Summary slide 1"
+    }
+   },
+   {
+    "src": "media/projects/hawra-poster-a1/slides/slide-02.webp",
+    "caption": {
+     "ar": "الشريحة 2 من الملخص",
+     "en": "Summary slide 2"
+    }
+   },
+   {
+    "src": "media/projects/hawra-poster-a1/slides/slide-03.webp",
+    "caption": {
+     "ar": "الشريحة 3 من الملخص",
+     "en": "Summary slide 3"
+    }
+   },
+   {
+    "src": "media/projects/hawra-poster-a1/slides/slide-04.webp",
+    "caption": {
+     "ar": "الشريحة 4 من الملخص",
+     "en": "Summary slide 4"
+    }
+   }
+  ],
+  "files": [
+   {
+    "label": {
+     "ar": "ملخص المشروع (PDF)",
+     "en": "Project summary (PDF)"
+    },
+    "request": true,
+    "driveId": "1jSr1iaPQkm9RNKfAYtdtd6PD-MUYaoLB"
+   }
+  ],
+  "links": [],
+  "location": {
+   "name": {
+    "ar": "الهورة، بللسمر، عسير",
+    "en": "Hawra, Ballasmar, Asir"
+   },
+   "lat": 18.17,
+   "lon": 42.34
+  },
+  "method": {
+   "ar": "خريطة الحدود على خطوط كنتور بفاصل متر، لقطة جوية للمواقع الأربعة، وجدول مناخي يحدد تجربة كل موسم.",
+   "en": "Boundary map on 1-m contours, an aerial view of the four sites, and a climate table defining each season's experience."
+  },
+  "result": {
+   "ar": "الماء والحبوب والزراعة على مسافة مشي داخل القرية: المدرجات تربط المواقع في مسار واحد، والقرية تستقبل الزوار طوال السنة.",
+   "en": "Water, grain and farming within walking distance: terraces link the sites on one route and the village welcomes visitors year-round."
+  },
+  "summaryDriveId": "1jSr1iaPQkm9RNKfAYtdtd6PD-MUYaoLB",
+  "summaryPages": 4,
+  "driveFolder": "1YU13YUIjPmoYqptIuZmr1m82QMOb9hrA",
+  "fullDeck": {
+   "onRequest": true,
+   "pages": 1,
+   "note": {
+    "ar": "البوستر بحجم A1 مع المعرض الكامل.",
+    "en": "The A1 poster with the full gallery."
+   },
+   "email": "farisx2002x@gmail.com"
+  },
+  "related": [
+   "asir-architecture-hawra"
+  ]
+ },
+ {
+  "id": "jeddah-albalad-poster",
+  "order": 10,
+  "featured": false,
+  "added": "2026-10-23",
+  "title": {
+   "ar": "البلد: جدة التاريخية قبل التجديد وبعده",
+   "en": "Al-Balad: historic Jeddah before and after regeneration"
+  },
+  "summary": {
+   "ar": "بوستر يقارن حال جدة التاريخية قبل برنامج التجديد الحضري وبعده، بصور التقطتها بنفسي في الموقع.",
+   "en": "A poster comparing historic Jeddah before and after the regeneration programme, with my own site photography."
+  },
+  "categories": [
+   "urban-design",
+   "heritage"
+  ],
+  "type": "personal",
+  "course": "بوستر التراث العمراني",
+  "year": 2025,
+  "status": "completed",
+  "role": {
+   "ar": "عمل فردي · تصوير شخصي",
+   "en": "Individual · own photography"
+  },
+  "tools": [
+   "Photoshop",
+   "Canva"
+  ],
+  "skills": [
+   "urban-design",
+   "presentations"
+  ],
+  "metrics": [
+   {
+    "value": "2014",
+    "label": {
+     "ar": "إدراج اليونسكو",
+     "en": "UNESCO listing"
+    }
+   },
+   {
+    "value": "600+",
+    "label": {
+     "ar": "مبنى تاريخي رُمّم",
+     "en": "historic buildings restored"
+    }
+   },
+   {
+    "value": "4 → 5",
+    "label": {
+     "ar": "مشكلات قبل، تحسينات بعد",
+     "en": "problems before, improvements after"
+    }
+   }
+  ],
+  "cover": "media/projects/jeddah-albalad-poster/cover.webp",
+  "gallery": [
+   {
+    "src": "media/posters/poster-albalad.webp",
+    "caption": {
+     "ar": "البوستر كاملاً (A3)",
+     "en": "Full poster (A3)"
+    }
+   }
+  ],
+  "slides": [
+   {
+    "src": "media/projects/jeddah-albalad-poster/slides/slide-01.webp",
+    "caption": {
+     "ar": "الشريحة 1 من الملخص",
+     "en": "Summary slide 1"
+    }
+   },
+   {
+    "src": "media/projects/jeddah-albalad-poster/slides/slide-02.webp",
+    "caption": {
+     "ar": "الشريحة 2 من الملخص",
+     "en": "Summary slide 2"
+    }
+   },
+   {
+    "src": "media/projects/jeddah-albalad-poster/slides/slide-03.webp",
+    "caption": {
+     "ar": "الشريحة 3 من الملخص",
+     "en": "Summary slide 3"
+    }
+   }
+  ],
+  "files": [
+   {
+    "label": {
+     "ar": "ملخص المشروع (PDF)",
+     "en": "Project summary (PDF)"
+    },
+    "request": true,
+    "driveId": "11_RhAQogRXMl4OqtT3I4JRbaqLyiy6Ve"
+   }
+  ],
+  "links": [],
+  "location": {
+   "name": {
+    "ar": "البلد (جدة التاريخية)، جدة",
+    "en": "Al-Balad (Historic Jeddah), Jeddah"
+   },
+   "lat": 21.4858,
+   "lon": 39.1863
+  },
+  "problem": {
+   "ar": "قبل التطوير: رواشين متهالكة، مبانٍ مهددة بالانهيار، ضعف المياه والصرف والإنارة، واستثمار سياحي قليل.",
+   "en": "Before: decaying rawashin, buildings at risk of collapse, weak utilities and lighting, little tourism investment."
+  },
+  "result": {
+   "ar": "بعد برنامج تطوير جدة التاريخية: ترميم أكثر من 600 مبنى تاريخي، تحسين الشبكات، مسارات مشاة وساحات، ومتاحف ومقاهٍ تحافظ على لغة المكان. ملاحظتي: المحل الجديد الذي يُصمَّم بلغة المكان يصير جزءاً من المشهد لا دخيلاً عليه.",
+   "en": "After the programme: 600+ historic buildings restored, better networks, walkways and squares, and museums and cafés that keep the place's language. My observation: a new shop designed in the local idiom becomes part of the scene, not an intruder."
+  },
+  "summaryDriveId": "11_RhAQogRXMl4OqtT3I4JRbaqLyiy6Ve",
+  "summaryPages": 3,
+  "driveFolder": "1_vHnVmE8xkedIUMnq6slxEtqvYp_HTA-",
+  "fullDeck": {
+   "onRequest": true,
+   "pages": 1,
+   "note": {
+    "ar": "البوستر كاملاً بجودة الطباعة.",
+    "en": "The full poster at print quality."
+   },
+   "email": "farisx2002x@gmail.com"
+  }
+ },
+ {
+  "id": "geom300-uav-office-profile",
+  "order": 11,
+  "featured": false,
+  "added": "2026-10-23",
+  "title": {
+   "ar": "من السماء إلى الخريطة: ملف مكتب مهني للمسح بالدرون",
+   "en": "From sky to map: a UAV survey office profile"
+  },
+  "summary": {
+   "ar": "دراسة لمكتب سعودي متخصص في المسح الجوي: كيف يجمع البيانات بالطائرات المسيّرة، وكيف يحوّلها إلى خرائط ونماذج ثلاثية الأبعاد وتقارير.",
+   "en": "A profile of a Saudi aerial-survey office: how it collects data with UAVs and turns it into maps, 3D models and reports."
+  },
+  "categories": [
+   "geomatics",
+   "gis"
+  ],
+  "type": "course",
+  "course": "GEOM 300",
+  "year": 2026,
+  "status": "completed",
+  "role": {
+   "ar": "عمل فردي",
+   "en": "Individual"
+  },
+  "tools": [
+   "Agisoft Metashape",
+   "DJI Pilot",
+   "ArcGIS Pro"
+  ],
+  "skills": [
+   "drones",
+   "photogrammetry",
+   "gnss",
+   "terrain-analysis"
+  ],
+  "metrics": [
+   {
+    "value": "3",
+    "label": {
+     "ar": "مراحل عمل",
+     "en": "workflow stages"
+    }
+   },
+   {
+    "value": "6",
+    "label": {
+     "ar": "مجالات تخصص",
+     "en": "specialisms"
+    }
+   }
+  ],
+  "cover": "media/projects/geom300-uav-office-profile/cover.webp",
+  "gallery": [],
+  "slides": [
+   {
+    "src": "media/projects/geom300-uav-office-profile/slides/slide-01.webp",
+    "caption": {
+     "ar": "الشريحة 1 من الملخص",
+     "en": "Summary slide 1"
+    }
+   },
+   {
+    "src": "media/projects/geom300-uav-office-profile/slides/slide-02.webp",
+    "caption": {
+     "ar": "الشريحة 2 من الملخص",
+     "en": "Summary slide 2"
+    }
+   },
+   {
+    "src": "media/projects/geom300-uav-office-profile/slides/slide-03.webp",
+    "caption": {
+     "ar": "الشريحة 3 من الملخص",
+     "en": "Summary slide 3"
+    }
+   }
+  ],
+  "files": [
+   {
+    "label": {
+     "ar": "ملخص المشروع (PDF)",
+     "en": "Project summary (PDF)"
+    },
+    "request": true,
+    "driveId": "1yrevi3T6Dc6Ac7WGebHNT_dv5m9hmC4Y"
+   }
+  ],
+  "links": [],
+  "method": {
+   "ar": "ثلاث مراحل من الميدان إلى المخرجات: جمع البيانات (كاميرات، LiDAR، حساسات حرارية وطيفية ومغناطيسية)، المعالجة (تصحيحات GNSS، فوتوغرامتري، دمج GIS)، والمخرجات (KMZ، SHP، GeoTIFF).",
+   "en": "Three stages from field to deliverables: capture (cameras, LiDAR, thermal, spectral and magnetic sensors), processing (GNSS corrections, photogrammetry, GIS fusion) and outputs (KMZ, SHP, GeoTIFF)."
+  },
+  "result": {
+   "ar": "ستة مجالات تخصص (المسح الجوي، الأثري، الجيولوجيا والتعدين، الرصد البيئي، النمذجة ثلاثية الأبعاد، التخطيط والبنية التحتية) ولماذا تهم المخطط: بيانات أساس دقيقة وسريعة لأي دراسة موقع.",
+   "en": "Six specialisms and why they matter to a planner: fast, accurate base data for any site study."
+  },
+  "summaryDriveId": "1yrevi3T6Dc6Ac7WGebHNT_dv5m9hmC4Y",
+  "summaryPages": 3,
+  "driveFolder": "1-p77c7AcFvj2d8jurmDUZipMdvIqxNLE",
+  "fullDeck": {
+   "onRequest": true,
+   "pages": 1,
+   "note": {
+    "ar": "لوحة الملف المهني وصفحة التعريف.",
+    "en": "The profile board and intro page."
+   },
+   "email": "farisx2002x@gmail.com"
+  }
+ },
+ {
+  "id": "residential-water-saving",
+  "order": 12,
+  "featured": false,
+  "added": "2026-10-23",
+  "title": {
+   "ar": "ترشيد المياه في البيئة السكنية",
+   "en": "Water saving in residential environments"
+  },
+  "summary": {
+   "ar": "أربعة محاور تقلل استهلاك المياه في الحي: أدوات الصرف المنزلي، المياه المعالجة، الري الذكي، وإعادة استخدام المياه الرمادية.",
+   "en": "Four levers that cut neighbourhood water use: efficient fixtures, treated water, smart irrigation and greywater reuse."
+  },
+  "categories": [
+   "planning",
+   "sustainability"
+  ],
+  "type": "course",
+  "course": "بحث في الاستدامة",
+  "year": 2026,
+  "status": "completed",
+  "role": {
+   "ar": "ضمن فريق من أربعة طلاب",
+   "en": "Team of four"
+  },
+  "team": {
+   "ar": "عمل جماعي · 4 طلاب",
+   "en": "Team project · 4 students"
+  },
+  "tools": [
+   "PowerPoint",
+   "Word"
+  ],
+  "skills": [
+   "report-writing"
+  ],
+  "metrics": [
+   {
+    "value": "4",
+    "label": {
+     "ar": "محاور",
+     "en": "levers"
+    }
+   },
+   {
+    "value": "4",
+    "label": {
+     "ar": "مراجع رسمية",
+     "en": "official references"
+    }
+   }
+  ],
+  "cover": "media/projects/residential-water-saving/cover.webp",
+  "gallery": [],
+  "slides": [
+   {
+    "src": "media/projects/residential-water-saving/slides/slide-01.webp",
+    "caption": {
+     "ar": "الشريحة 1 من الملخص",
+     "en": "Summary slide 1"
+    }
+   },
+   {
+    "src": "media/projects/residential-water-saving/slides/slide-02.webp",
+    "caption": {
+     "ar": "الشريحة 2 من الملخص",
+     "en": "Summary slide 2"
+    }
+   },
+   {
+    "src": "media/projects/residential-water-saving/slides/slide-03.webp",
+    "caption": {
+     "ar": "الشريحة 3 من الملخص",
+     "en": "Summary slide 3"
+    }
+   }
+  ],
+  "files": [
+   {
+    "label": {
+     "ar": "ملخص المشروع (PDF)",
+     "en": "Project summary (PDF)"
+    },
+    "request": true,
+    "driveId": "1fQ18zDcBorEIcLmLwGKabw-7rUC62zV1"
+   }
+  ],
+  "links": [],
+  "method": {
+   "ar": "مراجعة مراجع رسمية (وزارة البيئة والمياه والزراعة، الكود السعودي للبناء، FAO، GORD) لتقدير أثر كل محور، ثم ربط التقنية بالتنظيم والتوعية.",
+   "en": "Review of official references (MEWA, Saudi Building Code, FAO, GORD) to estimate each lever's effect, then linking technology with regulation and awareness."
+  },
+  "result": {
+   "ar": "وفورات مرجعية: أدوات الصرف حتى 50%، المياه المعالجة 30%، الري بالتنقيط 60%، والمياه الرمادية 50–70% من صرف البيت. توصيات: تعميم الأدوات الموفرة، نباتات محلية كالسدر والأثل، فصل تام لشبكة المياه المعالجة، وحملات توعية.",
+   "en": "Reference savings: fixtures up to 50%, treated water 30%, drip irrigation 60%, greywater 50–70% of household discharge. Recommendations: efficient fixtures, native plants, full separation of treated-water networks and awareness campaigns."
+  },
+  "summaryDriveId": "1fQ18zDcBorEIcLmLwGKabw-7rUC62zV1",
+  "summaryPages": 3,
+  "driveFolder": "1XJK_b3pkPlP7woSvjHEPinuL0Tnd0D6L",
+  "fullDeck": {
+   "onRequest": true,
+   "pages": 1,
+   "note": {
+    "ar": "العرض الكامل: المحاور الأربعة بالتفصيل والتحديات والمراجع.",
+    "en": "Full deck: the four levers in detail, challenges and references."
+   },
+   "email": "farisx2002x@gmail.com"
+  }
+ },
+ {
+  "id": "kau-campus-survey",
+  "order": 13,
+  "featured": false,
+  "added": "2026-10-23",
+  "title": {
+   "ar": "رفع فراغ حضري باليد: من القياس إلى المجسم",
+   "en": "Hand survey of an urban space: from measurement to model"
+  },
+  "summary": {
+   "ar": "قياس ورسم الفراغ الخارجي حول مباني كلية الاقتصاد والإدارة ومعهد الاقتصاد الإسلامي في جامعة الملك عبدالعزيز، في ست لوحات مرسومة يدوياً.",
+   "en": "Measuring and drawing the outdoor space around the Economics faculty and the Islamic Economics institute at KAU, in six hand-drawn boards."
+  },
+  "categories": [
+   "geomatics",
+   "urban-design"
+  ],
+  "type": "course",
+  "course": "URP-111 · مهارات التخطيط الأساسية",
+  "year": 2025,
+  "status": "completed",
+  "role": {
+   "ar": "عمل فردي",
+   "en": "Individual"
+  },
+  "tools": [
+   "رسم يدوي",
+   "GNSS"
+  ],
+  "skills": [
+   "surveying",
+   "field-survey"
+  ],
+  "metrics": [
+   {
+    "value": "6",
+    "label": {
+     "ar": "لوحات يدوية",
+     "en": "hand-drawn boards"
+    }
+   }
+  ],
+  "cover": "media/projects/kau-campus-survey/cover.webp",
+  "gallery": [
+   {
+    "src": "media/projects/kau-campus-survey/boards/page-1.webp",
+    "caption": {
+     "ar": "اللوحات اليدوية — صفحة 1 من 5",
+     "en": "Hand-drawn boards — page 1 of 5"
+    }
+   },
+   {
+    "src": "media/projects/kau-campus-survey/boards/page-2.webp",
+    "caption": {
+     "ar": "اللوحات اليدوية — صفحة 2 من 5",
+     "en": "Hand-drawn boards — page 2 of 5"
+    }
+   },
+   {
+    "src": "media/projects/kau-campus-survey/boards/page-3.webp",
+    "caption": {
+     "ar": "اللوحات اليدوية — صفحة 3 من 5",
+     "en": "Hand-drawn boards — page 3 of 5"
+    }
+   },
+   {
+    "src": "media/projects/kau-campus-survey/boards/page-4.webp",
+    "caption": {
+     "ar": "اللوحات اليدوية — صفحة 4 من 5",
+     "en": "Hand-drawn boards — page 4 of 5"
+    }
+   },
+   {
+    "src": "media/projects/kau-campus-survey/boards/page-5.webp",
+    "caption": {
+     "ar": "اللوحات اليدوية — صفحة 5 من 5",
+     "en": "Hand-drawn boards — page 5 of 5"
+    }
+   }
+  ],
+  "slides": [
+   {
+    "src": "media/projects/kau-campus-survey/slides/slide-01.webp",
+    "caption": {
+     "ar": "الشريحة 1 من الملخص",
+     "en": "Summary slide 1"
+    }
+   },
+   {
+    "src": "media/projects/kau-campus-survey/slides/slide-02.webp",
+    "caption": {
+     "ar": "الشريحة 2 من الملخص",
+     "en": "Summary slide 2"
+    }
+   },
+   {
+    "src": "media/projects/kau-campus-survey/slides/slide-03.webp",
+    "caption": {
+     "ar": "الشريحة 3 من الملخص",
+     "en": "Summary slide 3"
+    }
+   }
+  ],
+  "files": [
+   {
+    "label": {
+     "ar": "ملخص المشروع (PDF)",
+     "en": "Project summary (PDF)"
+    },
+    "request": true,
+    "driveId": "1-porl1xZOVgfcU8PceL4vXMalBy2FvpT"
+   }
+  ],
+  "links": [],
+  "location": {
+   "name": {
+    "ar": "جامعة الملك عبدالعزيز، جدة",
+    "en": "KAU campus, Jeddah"
+   },
+   "lat": 21.4955,
+   "lon": 39.2451
+  },
+  "method": {
+   "ar": "تصوير ← قياس بالشريط ← كروكي في الموقع ← لوحات: المسقط العام، الموقع، القطاعات والواجهات، الأيزومتري، المسقط المائل، وتكبير جزء من الموقع.",
+   "en": "Photograph → tape measurement → on-site sketch → boards: master plan, site plan, sections and elevations, isometric, oblique, and an enlarged detail."
+  },
+  "result": {
+   "ar": "قراءة المقياس والقياس الدقيق في الميدان، والتحويل بين المسقط والقطاع والمنظور، وإخراج لوحات بإطار ومعلومات ومقياس موحد.",
+   "en": "Reading scale and measuring precisely in the field, converting between plan, section and perspective, and producing boards with a consistent frame, title block and scale."
+  },
+  "summaryDriveId": "1-porl1xZOVgfcU8PceL4vXMalBy2FvpT",
+  "summaryPages": 3,
+  "driveFolder": "1338kcwf4z25sx6HZmek7y4uwj02itutU",
+  "fullDeck": {
+   "onRequest": true,
+   "pages": 6,
+   "note": {
+    "ar": "ست لوحات بالدقة الكاملة.",
+    "en": "Six boards at full resolution."
+   },
+   "email": "farisx2002x@gmail.com"
+  }
+ },
+ {
+  "id": "cad-revit-portfolio",
+  "order": 14,
+  "featured": false,
+  "added": "2026-10-23",
+  "title": {
+   "ar": "فيلا سكنية: من الخط إلى الإظهار",
+   "en": "Villa: from line to render"
+  },
+  "summary": {
+   "ar": "رسم المساقط في AutoCAD، ثم بناء النموذج ثلاثي الأبعاد في Revit، ثم إخراجه بإظهارات واقعية في Lumion على نسختين: أولى ومعدّلة.",
+   "en": "Plans in AutoCAD, a 3D model in Revit, then realistic renders in Lumion, in two versions: first and revised."
+  },
+  "categories": [
+   "design"
+  ],
+  "type": "course",
+  "course": "الحاسوب لتصاميم البيئة · السنة التحضيرية",
+  "year": 2024,
+  "status": "completed",
+  "role": {
+   "ar": "عمل فردي",
+   "en": "Individual"
+  },
+  "tools": [
+   "AutoCAD",
+   "Revit 2023",
+   "Lumion"
+  ],
+  "skills": [
+   "autocad",
+   "revit",
+   "rendering"
+  ],
+  "metrics": [
+   {
+    "value": "3",
+    "label": {
+     "ar": "برامج في مسار واحد",
+     "en": "tools in one workflow"
+    }
+   },
+   {
+    "value": "2",
+    "label": {
+     "ar": "نسختان",
+     "en": "versions"
+    }
+   },
+   {
+    "value": "34",
+    "label": {
+     "ar": "صفحة في الملف الكامل",
+     "en": "pages"
+    }
+   }
+  ],
+  "cover": "media/projects/cad-revit-portfolio/cover.webp",
+  "gallery": [],
+  "slides": [
+   {
+    "src": "media/projects/cad-revit-portfolio/slides/slide-01.webp",
+    "caption": {
+     "ar": "الشريحة 1 من الملخص",
+     "en": "Summary slide 1"
+    }
+   },
+   {
+    "src": "media/projects/cad-revit-portfolio/slides/slide-02.webp",
+    "caption": {
+     "ar": "الشريحة 2 من الملخص",
+     "en": "Summary slide 2"
+    }
+   },
+   {
+    "src": "media/projects/cad-revit-portfolio/slides/slide-03.webp",
+    "caption": {
+     "ar": "الشريحة 3 من الملخص",
+     "en": "Summary slide 3"
+    }
+   }
+  ],
+  "files": [
+   {
+    "label": {
+     "ar": "ملخص المشروع (PDF)",
+     "en": "Project summary (PDF)"
+    },
+    "request": true,
+    "driveId": "1Tda8luP-7TwI5joWAHFLTX8fBR_H6InD"
+   }
+  ],
+  "links": [],
+  "method": {
+   "ar": "ثلاث أدوات، كل واحدة تبني على التي قبلها: مساقط ثنائية الأبعاد ← نموذج BIM بواجهات وقطاعين ومناظير من نموذج واحد ← إظهار بالإضاءة والمواد والتشجير.",
+   "en": "Three tools, each building on the last: 2D plans → a BIM model with elevations, two sections and perspectives → renders with lighting, materials and planting."
+  },
+  "result": {
+   "ar": "بيت من دورين مع الحوش والسطح، بنسختين أولى ومعدّلة، في ملف من 34 صفحة.",
+   "en": "A two-storey house with courtyard and roof, in first and revised versions, in a 34-page file."
+  },
+  "summaryDriveId": "1Tda8luP-7TwI5joWAHFLTX8fBR_H6InD",
+  "summaryPages": 3,
+  "driveFolder": "1Wj8CcbhtB2LAEyfU5CmtMmbc1Q7seorj",
+  "fullDeck": {
+   "onRequest": true,
+   "pages": 34,
+   "note": {
+    "ar": "الملف الكامل: الواجبات والاختبارات بنسختيها.",
+    "en": "Full file: assignments and tests in both versions."
+   },
+   "email": "farisx2002x@gmail.com"
+  }
+ },
+ {
+  "id": "brt-jeddah",
+  "order": 20,
+  "featured": true,
+  "added": "2026-10-23",
+  "title": {
+   "ar": "BRT جدة",
+   "en": "BRT Jeddah"
+  },
+  "summary": {
+   "ar": "دراسة شبكة حافلات نقل سريع لمدينة جدة كاملة مع مثال تطبيقي على ممر واحد.",
+   "en": "A bus-rapid-transit network study for all of Jeddah with a worked example on one corridor."
+  },
+  "categories": [
+   "planning",
+   "transport",
+   "gis"
+  ],
+  "type": "graduation",
+  "course": "URP477",
+  "year": 2026,
+  "status": "in-progress",
+  "role": {
+   "ar": "عمل فردي",
+   "en": "Individual"
+  },
+  "tools": [
+   "ArcGIS Pro",
+   "Network Analyst"
+  ],
+  "skills": [
+   "transport-planning",
+   "network-analysis"
+  ],
+  "metrics": [],
+  "cover": "",
+  "gallery": [],
+  "slides": [],
+  "files": [],
+  "links": [],
+  "location": {
+   "name": {
+    "ar": "جدة",
+    "en": "Jeddah"
+   },
+   "lat": 21.57,
+   "lon": 39.19
+  },
+  "noSummary": true
+ },
+ {
+  "id": "smart-school-mobility",
+  "order": 21,
+  "featured": true,
+  "added": "2026-10-23",
+  "title": {
+   "ar": "التنقل المدرسي الذكي في جدة",
+   "en": "Smart school mobility, Jeddah"
+  },
+  "summary": {
+   "ar": "تقييم سهولة وصول الحافلة المدرسية الكبيرة إلى منزل كل طالب على ثلاثة مستويات.",
+   "en": "Assessing how easily a large school bus can reach each student's home, on three levels."
+  },
+  "categories": [
+   "transport",
+   "gis"
+  ],
+  "type": "graduation",
+  "course": "URP477",
+  "year": 2026,
+  "status": "in-progress",
+  "role": {
+   "ar": "عمل فردي",
+   "en": "Individual"
+  },
+  "tools": [
+   "ArcGIS Pro",
+   "ArcPy"
+  ],
+  "skills": [
+   "transport-planning",
+   "accessibility",
+   "automation"
+  ],
+  "metrics": [],
+  "cover": "",
+  "gallery": [],
+  "slides": [],
+  "files": [],
+  "links": [],
+  "location": {
+   "name": {
+    "ar": "جدة",
+    "en": "Jeddah"
+   },
+   "lat": 21.5,
+   "lon": 39.2
+  },
+  "noSummary": true
+ },
+ {
+  "id": "madinah-gis",
+  "order": 22,
+  "featured": false,
+  "added": "2026-10-23",
+  "title": {
+   "ar": "قاعدة بيانات المدينة المنورة",
+   "en": "Madinah GIS database"
+  },
+  "summary": {
+   "ar": "بناء قاعدة بيانات مكانية تفصيلية للمدينة المنورة كاملة انطلاقاً من قاعدة بيانات الأمانة.",
+   "en": "Building a detailed spatial database for all of Madinah from the municipality's database."
+  },
+  "categories": [
+   "gis"
+  ],
+  "type": "graduation",
+  "course": "",
+  "year": 2026,
+  "status": "in-progress",
+  "role": {
+   "ar": "عمل فردي",
+   "en": "Individual"
+  },
+  "tools": [
+   "ArcGIS Pro"
+  ],
+  "skills": [
+   "geodatabase",
+   "arcgis-pro"
+  ],
+  "metrics": [],
+  "cover": "",
+  "gallery": [],
+  "slides": [],
+  "files": [],
+  "links": [],
+  "location": {
+   "name": {
+    "ar": "المدينة المنورة",
+    "en": "Madinah"
+   },
+   "lat": 24.467,
+   "lon": 39.611
+  },
+  "noSummary": true
+ },
+ {
+  "id": "multipolar-development",
+  "order": 23,
+  "featured": false,
+  "added": "2026-10-23",
+  "title": {
+   "ar": "التنمية متعددة الأقطاب: ساحل تبوك",
+   "en": "Multi-polar regional development, Tabuk coast"
+  },
+  "summary": {
+   "ar": "تحليل ملاءمة لتوزيع أقطاب النمو بين الوجه وضباء والبدع وأشواق.",
+   "en": "A suitability analysis for distributing growth poles among Al Wajh, Duba, Al Bad' and Ashwaq."
+  },
+  "categories": [
+   "regional",
+   "gis",
+   "planning"
+  ],
+  "type": "course",
+  "course": "",
+  "year": 2026,
+  "status": "in-progress",
+  "role": {
+   "ar": "",
+   "en": ""
+  },
+  "tools": [
+   "ArcGIS Pro"
+  ],
+  "skills": [
+   "suitability-analysis",
+   "regional-planning"
+  ],
+  "metrics": [],
+  "cover": "",
+  "gallery": [],
+  "slides": [],
+  "files": [],
+  "links": [],
+  "location": {
+   "name": {
+    "ar": "ساحل تبوك",
+    "en": "Tabuk coast"
+   },
+   "lat": 27.5,
+   "lon": 35.9
+  },
+  "noSummary": true
+ },
+ {
+  "id": "tabuk-alula-studio",
+  "order": 24,
+  "featured": false,
+  "added": "2026-10-23",
+  "title": {
+   "ar": "دراسات تبوك والعلا",
+   "en": "Tabuk & AlUla planning studies"
+  },
+  "summary": {
+   "ar": "استديو تخطيطي يدرس محافظتي تبوك والعلا.",
+   "en": "A planning studio on Tabuk and AlUla governorates."
+  },
+  "categories": [
+   "planning",
+   "regional"
+  ],
+  "type": "course",
+  "course": "URP355",
+  "year": 2026,
+  "status": "in-progress",
+  "role": {
+   "ar": "",
+   "en": ""
+  },
+  "tools": [
+   "ArcGIS Pro"
+  ],
+  "skills": [
+   "regional-planning",
+   "arcgis-pro"
+  ],
+  "metrics": [],
+  "cover": "",
+  "gallery": [],
+  "slides": [],
+  "files": [],
+  "links": [],
+  "location": {
+   "name": {
+    "ar": "تبوك والعلا",
+    "en": "Tabuk & AlUla"
+   },
+   "lat": 27.3,
+   "lon": 37.3
+  },
+  "noSummary": true
+ },
+ {
+  "id": "lynch-waterfront",
+  "order": 25,
+  "featured": false,
+  "added": "2026-10-23",
+  "title": {
+   "ar": "صورة المدينة: الواجهة البحرية في جدة",
+   "en": "Image of the City: Jeddah waterfront"
+  },
+  "summary": {
+   "ar": "تطبيق عناصر كيفن لينش الخمسة على الواجهة البحرية مع تصوير الممشى بكاميرا 360°.",
+   "en": "Applying Kevin Lynch's five elements to the waterfront, with 360° photography of the promenade."
+  },
+  "categories": [
+   "urban-design",
+   "planning"
+  ],
+  "type": "course",
+  "course": "",
+  "year": 2026,
+  "status": "in-progress",
+  "role": {
+   "ar": "ضمن فريق",
+   "en": "Team member"
+  },
+  "team": {
+   "ar": "عمل جماعي",
+   "en": "Team project"
+  },
+  "tools": [
+   "Insta360",
+   "ArcGIS Pro"
+  ],
+  "skills": [
+   "urban-design",
+   "field-survey"
+  ],
+  "metrics": [],
+  "gallery": [],
+  "files": [],
+  "links": [],
+  "location": {
+   "name": {
+    "ar": "الواجهة البحرية، جدة",
+    "en": "Jeddah waterfront"
+   },
+   "lat": 21.6,
+   "lon": 39.1
+  },
+  "noSummary": true
+ },
+ {
+  "id": "jeddah-removals",
+  "order": 26,
+  "featured": false,
+  "added": "2026-10-23",
+  "title": {
+   "ar": "إزالات جدة والأراضي المستعادة",
+   "en": "Jeddah removals & reclaimed lands"
+  },
+  "summary": {
+   "ar": "دراسة لعمليات الإزالة في جدة مع التركيز على الأراضي المستعادة وفرص إعادة توظيفها.",
+   "en": "A study of Jeddah's demolitions focusing on reclaimed land and reuse opportunities."
+  },
+  "categories": [
+   "planning",
+   "gis"
+  ],
+  "type": "course",
+  "course": "",
+  "year": 2026,
+  "status": "in-progress",
+  "role": {
+   "ar": "",
+   "en": ""
+  },
+  "tools": [
+   "ArcGIS Pro"
+  ],
+  "skills": [
+   "land-use",
+   "arcgis-pro"
+  ],
+  "metrics": [],
+  "cover": "",
+  "gallery": [],
+  "slides": [],
+  "files": [],
+  "links": [],
+  "location": {
+   "name": {
+    "ar": "جدة",
+    "en": "Jeddah"
+   },
+   "lat": 21.54,
+   "lon": 39.2
+  },
+  "noSummary": true
+ },
+ {
+  "id": "taxi-rank-priority",
+  "order": 27,
+  "featured": false,
+  "added": "2026-10-23",
+  "title": {
+   "ar": "أولويات مواقف التاكسي في جدة",
+   "en": "Jeddah taxi-rank prioritisation"
+  },
+  "summary": {
+   "ar": "تصنيف مواقف عامة وخاصة بفئات A/B/C واختيار خمسة مواقع لكل فئة.",
+   "en": "Classifying public and private ranks into A/B/C and picking five sites per class."
+  },
+  "categories": [
+   "transport",
+   "gis"
+  ],
+  "type": "course",
+  "course": "",
+  "year": 2026,
+  "status": "completed",
+  "role": {
+   "ar": "عمل فردي · مشروع أكاديمي",
+   "en": "Individual · academic project"
+  },
+  "tools": [
+   "ArcGIS Pro"
+  ],
+  "skills": [
+   "site-selection",
+   "transport-planning"
+  ],
+  "metrics": [],
+  "cover": "",
+  "gallery": [],
+  "slides": [],
+  "files": [],
+  "links": [],
+  "location": {
+   "name": {
+    "ar": "جدة",
+    "en": "Jeddah"
+   },
+   "lat": 21.5,
+   "lon": 39.18
+  },
+  "noSummary": true
+ },
+ {
+  "id": "transport-toolbox",
+  "order": 28,
+  "featured": false,
+  "added": "2026-10-23",
+  "title": {
+   "ar": "أداة النقل الموحدة",
+   "en": "Unified transport toolbox"
+  },
+  "summary": {
+   "ar": "دمج برامج النقل العام والمدرسي وسيارات الأجرة في واجهة واحدة.",
+   "en": "Merging the public-, school- and taxi-transport programs into one interface."
+  },
+  "categories": [
+   "digital",
+   "transport"
+  ],
+  "type": "personal",
+  "course": "",
+  "year": 2026,
+  "status": "in-progress",
+  "role": {
+   "ar": "عمل فردي",
+   "en": "Individual"
+  },
+  "tools": [
+   "Python",
+   "ArcPy"
+  ],
+  "skills": [
+   "automation",
+   "transport-planning"
+  ],
+  "metrics": [],
+  "cover": "",
+  "gallery": [],
+  "slides": [],
+  "files": [],
+  "links": [],
+  "noSummary": true
+ },
+ {
+  "id": "urp233-building-survey",
+  "order": 29,
+  "featured": false,
+  "added": "2026-10-23",
+  "title": {
+   "ar": "قاعدة بيانات مباني (حصر ميداني)",
+   "en": "Building survey database"
+  },
+  "summary": {
+   "ar": "جدول حصر للمباني: استعمال الأرض ونوع السكن والارتفاع والحالة.",
+   "en": "A building inventory: land use, housing type, height and condition."
+  },
+  "categories": [
+   "gis",
+   "planning"
+  ],
+  "type": "course",
+  "course": "URP233",
+  "year": 2025,
+  "status": "in-progress",
+  "role": {
+   "ar": "",
+   "en": ""
+  },
+  "tools": [
+   "Excel"
+  ],
+  "skills": [
+   "field-survey",
+   "excel"
+  ],
+  "metrics": [],
+  "cover": "",
+  "gallery": [],
+  "slides": [],
+  "files": [],
+  "links": [],
+  "driveFolder": "1EXWuk0kjo3rJwnWBfNUYlheUTr8O4HQ7",
+  "noSummary": true
+ }
+]

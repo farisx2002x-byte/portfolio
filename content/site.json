@@ -1,0 +1,92 @@
+{
+ "defaultLang": "ar",
+ "siteUrl": "https://example.github.io/portfolio",
+ "sections": [
+  "hero",
+  "now",
+  "model",
+  "about",
+  "atlas",
+  "projects",
+  "library",
+  "posters",
+  "skills",
+  "certificates",
+  "experience",
+  "education",
+  "gis",
+  "stats",
+  "datasets",
+  "notes",
+  "services",
+  "testimonials",
+  "contact"
+ ],
+ "formspreeId": "",
+ "analytics": {
+  "provider": "",
+  "id": ""
+ },
+ "bookingUrl": "",
+ "reviewBeforePublish": false,
+ "seo": {
+  "title": {
+   "ar": "فارس الأسمري · مخطط حضري وإقليمي",
+   "en": "Fares Al-Asmari · Urban & Regional Planner"
+  },
+  "description": {
+   "ar": "بورتفوليو فارس الأسمري، طالب تخطيط حضري وإقليمي في جامعة الملك عبدالعزيز: مشاريع تخطيط ونقل وGIS مرتبة بنموذج ملاءمة حسب ما يبحث عنه الزائر.",
+   "en": "Portfolio of Fares Al-Asmari, Urban & Regional Planning student at KAU: planning, transport and GIS work ranked by a suitability model."
+  },
+  "ogImage": "media/og.png"
+ },
+ "presets": [
+  {
+   "id": "transport",
+   "label": {
+    "ar": "أبحث عن مخطط نقل",
+    "en": "I need a transport planner"
+   },
+   "weights": {
+    "planning": 5,
+    "gis": 3,
+    "geomatics": 1,
+    "design": 1,
+    "digital": 1
+   },
+   "theme": "transport"
+  },
+  {
+   "id": "gis",
+   "label": {
+    "ar": "أبحث عن محلل GIS",
+    "en": "I need a GIS analyst"
+   },
+   "weights": {
+    "planning": 2,
+    "gis": 5,
+    "geomatics": 4,
+    "design": 1,
+    "digital": 3
+   },
+   "theme": "gis"
+  },
+  {
+   "id": "design",
+   "label": {
+    "ar": "أبحث عن عروض وتقارير",
+    "en": "I need presentations & reports"
+   },
+   "weights": {
+    "planning": 2,
+    "gis": 1,
+    "geomatics": 0,
+    "design": 4,
+    "digital": 5
+   },
+   "theme": "design"
+  }
+ ],
+ "requestFullEmail": "farisx2002x@gmail.com",
+ "downloadsRequireApproval": true
+}

@@ -1,0 +1,4 @@
+﻿publish,group,group_tier,group_title_ar,group_title_en,id,name_ar,name_en,level,is_tool
+نعم,planning,core,التخطيط الحضري والنقل,Urban & transport planning,transport-planning,تخطيط النقل,Transport planning,5,لا
+نعم,gis,core,نظم المعلومات الجغرافية,GIS,spatial-analysis,التحليل المكاني,Spatial analysis,5,لا
+نعم,,,,,arcgis-pro,,ArcGIS Pro,5,نعم

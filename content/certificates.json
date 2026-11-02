@@ -1,0 +1,212 @@
+[
+ {
+  "id": "kau-excellence",
+  "title": {
+   "ar": "شهادة التفوق للعام الجامعي 2025–2026",
+   "en": "Certificate of Excellence, 2025–2026"
+  },
+  "issuer": {
+   "ar": "عمادة شؤون الطلاب، جامعة الملك عبدالعزيز",
+   "en": "Deanship of Student Affairs, KAU"
+  },
+  "date": "2026",
+  "category": "honors",
+  "driveName": "شهادة تفوق - عمادة شؤون الطلاب 2025-2026 نسخة للموقع",
+  "added": "2026-10-23",
+  "image": "media/certificates/kau-excellence.webp",
+  "pdf": "",
+  "verifyUrl": "",
+  "skills": [],
+  "driveId": "11ipdAseuINp_bl98dsETQG4C0nsuMbsb"
+ },
+ {
+  "id": "studio2025-nhc",
+  "title": {
+   "ar": "شكر وتقدير: معرض استديو 2025 مع الشركة الوطنية للإسكان",
+   "en": "Appreciation: Studio 2025 exhibition with NHC"
+  },
+  "issuer": {
+   "ar": "كلية العمارة والتخطيط، جامعة الملك عبدالعزيز",
+   "en": "Faculty of Architecture & Planning, KAU"
+  },
+  "date": "2025",
+  "category": "honors",
+  "skills": [
+   "urban-design"
+  ],
+  "driveName": "شهادة شكر - استديو 2025 مع الوطنية للإسكان",
+  "added": "2026-10-23",
+  "image": "media/certificates/studio2025-nhc.webp",
+  "pdf": "",
+  "verifyUrl": ""
+ },
+ {
+  "id": "urban-october-2025",
+  "title": {
+   "ar": "شكر وتقدير: فعاليات أكتوبر الحضري 2025",
+   "en": "Appreciation: Urban October 2025"
+  },
+  "issuer": {
+   "ar": "كلية العمارة والتخطيط، جامعة الملك عبدالعزيز",
+   "en": "Faculty of Architecture & Planning, KAU"
+  },
+  "date": "2025-10",
+  "category": "honors",
+  "driveName": "شهادة شكر - أكتوبر الحضري 2025",
+  "added": "2026-10-23",
+  "image": "media/certificates/urban-october-2025.webp",
+  "pdf": "",
+  "verifyUrl": "",
+  "skills": []
+ },
+ {
+  "id": "research-day-2025-26",
+  "title": {
+   "ar": "شكر: فريق تنظيم ملتقى الدراسات العليا (Research Day)",
+   "en": "Appreciation: Graduate Studies Forum organising team"
+  },
+  "issuer": {
+   "ar": "قسم التخطيط الحضري والإقليمي، جامعة الملك عبدالعزيز",
+   "en": "Dept. of Urban & Regional Planning, KAU"
+  },
+  "date": "2026",
+  "category": "honors",
+  "driveName": "شهادة شكر - تنظيم ملتقى الدراسات العليا 2025-2026",
+  "added": "2026-10-23",
+  "image": "media/certificates/research-day-2025-26.webp",
+  "pdf": "",
+  "verifyUrl": "",
+  "skills": []
+ },
+ {
+  "id": "eng-urban-day-26",
+  "title": {
+   "ar": "شكر: اليوم الهندسي والعمراني 26 (فريق KAUPT)",
+   "en": "Appreciation: Engineering & Urban Day 26 (KAUPT team)"
+  },
+  "issuer": {
+   "ar": "قسم التخطيط الحضري والإقليمي، جامعة الملك عبدالعزيز",
+   "en": "Dept. of Urban & Regional Planning, KAU"
+  },
+  "date": "2026-02",
+  "category": "honors",
+  "driveName": "شهادة شكر - اليوم الهندسي والعمراني 26",
+  "added": "2026-10-23",
+  "image": "media/certificates/eng-urban-day-26.webp",
+  "pdf": "",
+  "verifyUrl": "",
+  "skills": []
+ },
+ {
+  "id": "volunteer-104h-2025",
+  "title": {
+   "ar": "شهادة عمل تطوعي — فعالية أكتوبر الحضري",
+   "en": "Volunteering certificate — Urban October"
+  },
+  "issuer": {
+   "ar": "المنصة الوطنية للعمل التطوعي · المركز الوطني لتنمية القطاع غير الربحي",
+   "en": "National Volunteer Platform · National Center for Non-Profit Sector Development"
+  },
+  "date": "2025-11",
+  "category": "volunteer",
+  "note": {
+   "ar": "9 أكتوبر – 3 نوفمبر 2025، مع الإدارة العامة للمسؤولية الاجتماعية وخدمة المجتمع بالجامعة. رقم الهوية ورمز التحقق مغطّيان في الصورة.",
+   "en": "9 Oct – 3 Nov 2025 with KAU’s Social Responsibility & Community Service administration. ID number and QR masked."
+  },
+  "noFile": false,
+  "added": "2026-10-23",
+  "image": "media/certificates/volunteer-104h-2025.webp",
+  "pdf": "",
+  "verifyUrl": "",
+  "skills": []
+ },
+ {
+  "id": "volunteer-log",
+  "title": {
+   "ar": "فرص تطوعية أخرى على المنصة الوطنية",
+   "en": "Other volunteering on the national platform"
+  },
+  "issuer": {
+   "ar": "المنصة الوطنية للعمل التطوعي",
+   "en": "National Volunteer Platform"
+  },
+  "date": "2026",
+  "category": "volunteer",
+  "note": {
+   "ar": "تنظيم وتنسيق وإدارة معرض «عبق الماضي» بكلية العمارة والتخطيط (10–12 فبراير)، والمشاركة في مبادرة تنظيف وتعقيم المساجد في جدة (8 سبتمبر).",
+   "en": "Organising and managing the 'Fragrance of the Past' exhibition at the Faculty (10–12 Feb), and the mosque cleaning initiative in Jeddah (8 Sep)."
+  },
+  "driveName": "سجل التطوع - لقطة من المنصة الوطنية",
+  "added": "2026-10-23",
+  "image": "media/certificates/volunteer-log.webp",
+  "pdf": "",
+  "verifyUrl": "",
+  "skills": []
+ },
+ {
+  "id": "ai-bootcamp",
+  "title": {
+   "ar": "إتمام معسكر الذكاء الاصطناعي (10 ساعات)",
+   "en": "AI Bootcamp completion (10 hours)"
+  },
+  "issuer": {
+   "ar": "مجموعة عزيز للطائرات المسيّرة والروبوتات DRAG، عمادة شؤون الطلاب",
+   "en": "Drone & Robotics Aziz Group (DRAG), KAU Student Affairs"
+  },
+  "date": "2023-11",
+  "category": "professional",
+  "skills": [
+   "ai-tools"
+  ],
+  "note": {
+   "ar": "13–16 نوفمبر 2023: الجبر الخطي، الانحدار، الإحصاء والشبكات العصبية.",
+   "en": "13–16 Nov 2023: linear algebra, regression, statistics and neural networks."
+  },
+  "driveName": "شهادة إتمام - معسكر الذكاء الاصطناعي 2023",
+  "added": "2026-10-23",
+  "image": "media/certificates/ai-bootcamp.webp",
+  "pdf": "request",
+  "verifyUrl": ""
+ },
+ {
+  "id": "smart-cities-ssce",
+  "title": {
+   "ar": "حضور محاضرة: مفاهيم تقنيات المدن الذكية",
+   "en": "Attendance: Smart City Technologies lecture"
+  },
+  "issuer": {
+   "ar": "الجمعية السعودية للهندسة المدنية",
+   "en": "Saudi Society of Civil Engineering"
+  },
+  "date": "2024-02",
+  "category": "planning",
+  "credentialId": "SSCE/T/O/2024/294",
+  "skills": [
+   "15-min-city"
+  ],
+  "driveName": "شهادة حضور - محاضرة المدن الذكية 2024",
+  "added": "2026-10-23",
+  "image": "media/certificates/smart-cities-ssce.webp",
+  "pdf": "request",
+  "verifyUrl": ""
+ },
+ {
+  "id": "ncg-english",
+  "title": {
+   "ar": "دورة اللغة الإنجليزية العامة، دبلن",
+   "en": "General English course, Dublin"
+  },
+  "issuer": {
+   "ar": "New College Group، دبلن، أيرلندا",
+   "en": "New College Group, Dublin, Ireland"
+  },
+  "date": "2022-09",
+  "category": "language",
+  "driveName": "شهادة دورة - اللغة الإنجليزية دبلن 2022",
+  "added": "2026-10-23",
+  "image": "media/certificates/ncg-english.webp",
+  "pdf": "request",
+  "verifyUrl": "",
+  "skills": []
+ }
+]

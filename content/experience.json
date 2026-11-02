@@ -1,0 +1,115 @@
+[
+ {
+  "id": "hafil-parttime",
+  "role": {
+   "ar": "مساعد تخطيط ونظم معلومات جغرافية (دوام جزئي)",
+   "en": "Planning & GIS Assistant (part-time)"
+  },
+  "org": {
+   "ar": "شركة حافل للنقل · مجموعة محمد يوسف ناغي · إدارة هندسة المرافق",
+   "en": "Hafil Transport · Mohamed Yousuf Naghi Group · Facilities Engineering"
+  },
+  "type": "job",
+  "start": "2026-08",
+  "end": "present",
+  "location": {
+   "ar": "جدة",
+   "en": "Jeddah"
+  },
+  "skills": [
+   "arcgis-pro",
+   "site-selection"
+  ],
+  "summary": {
+   "ar": "تحليل جغرافي لـ 19 مستودعاً للنقل المدرسي تخدم 4,097 مدرسة، ودراسات مواقع وتخطيط مرافق النقل، وعرض النتائج على الفريق.",
+   "en": "GIS analysis of 19 school-transport depots serving 4,097 schools, site studies and transport-facility planning, presenting results to the team."
+  },
+  "logo": "media/orgs/hafil.png",
+  "orgShort": {
+   "ar": "شركة حافل للنقل",
+   "en": "Hafil Transport"
+  },
+  "since": "2026-06"
+ },
+ {
+  "id": "aisuav",
+  "role": {
+   "ar": "مصور جوي وفني جيوماتكس",
+   "en": "Aerial photographer & geomatics technician"
+  },
+  "org": {
+   "ar": "شركة حلول المعلومات الجوية للطائرات بدون طيار (AISUAV)",
+   "en": "Aerial Information Solutions UAV (AISUAV)"
+  },
+  "type": "job",
+  "start": "2024",
+  "end": "present",
+  "location": {
+   "ar": "المملكة العربية السعودية",
+   "en": "Saudi Arabia"
+  },
+  "summary": {
+   "ar": "التصوير الجوي بالطائرات المسيّرة، والمسح التصويري، والاستشعار عن بعد، والنمذجة ثلاثية الأبعاد لجهات حكومية وهندسية وبحثية — إلى جانب الدراسة.",
+   "en": "Drone aerial photography, photogrammetry, remote sensing and 3D modelling for government, engineering and research clients — alongside study."
+  },
+  "skills": [
+   "drones",
+   "photogrammetry",
+   "rendering",
+   "gnss"
+  ],
+  "logo": "media/orgs/aisuav.png",
+  "orgShort": {
+   "ar": "شركة حلول المعلومات الجوية",
+   "en": "Air Information Solutions UAV"
+  }
+ },
+ {
+  "id": "hafil-coop",
+  "role": {
+   "ar": "متدرب تعاوني: تخطيط حضري ونظم معلومات جغرافية",
+   "en": "Cooperative trainee: urban planning & GIS"
+  },
+  "org": {
+   "ar": "شركة حافل للنقل · مجموعة محمد يوسف ناغي · إدارة هندسة المرافق",
+   "en": "Hafil Transport · Mohamed Yousuf Naghi Group · Facilities Engineering"
+  },
+  "type": "training",
+  "start": "2026-06",
+  "end": "2026-08",
+  "location": {
+   "ar": "جدة",
+   "en": "Jeddah"
+  },
+  "skills": [
+   "network-analysis",
+   "terrain-analysis",
+   "web-mapping",
+   "site-selection",
+   "report-writing"
+  ],
+  "summary": {
+   "ar": "تدريب تعاوني في إدارة هندسة المرافق، انتهى بتقرير التدريب وعرضه، ثم الاستمرار بدوام جزئي.",
+   "en": "Co-op training with Facilities Engineering, concluded with the training report and presentation, then retained part-time."
+  }
+ },
+ {
+  "id": "volunteering",
+  "role": {
+   "ar": "عضو لجان تنظيم ومتطوع",
+   "en": "Organising-committee member & volunteer"
+  },
+  "org": {
+   "ar": "المنصة الوطنية للعمل التطوعي · كلية العمارة والتخطيط",
+   "en": "National Volunteer Platform · Faculty of Architecture & Planning"
+  },
+  "type": "volunteer",
+  "start": "2025-10",
+  "end": "present",
+  "summary": {
+   "ar": "عضو لجنة المناطق في «أكتوبر الحضري 2025» و«ملتقى الدراسات العليا» و«يوم الهندسة والعمران 26» مع تكريم من الجامعة في كل فعالية، وإدارة سير العمل في معرض «عبق الماضي»، ومشارك في كابستون 2025، وتطوع موثق عبر المنصة الوطنية للعمل التطوعي.",
+   "en": "Zones-committee member for Urban October 2025, the Graduate Studies Forum and Engineering & Urban Day 26 (honoured at each), ran operations for the \"Fragrance of the Past\" exhibition, Capstone 2025 participant, and documented volunteering via the National Volunteer Platform."
+  },
+  "skills": []
+ }
+]

@@ -1,0 +1,24 @@
+/* صفحة السيرة الذاتية: تُولَّد من ملفات المحتوى نفسها، وجاهزة للطباعة */
+import { boot, state, t, L, has, esc, $, fmtDate, setMeta, drawQR, injectJsonLd, personLd } from "./core.js";
+import { gateBtn, bindRequests } from "./app-shared.js";
+
+let c;
+function render() {
+  const p = c.profile, ct = p.contact || {}, G = state.graph;
+  const contactLines = [ct.email, ct.whatsapp ? `+${String(ct.whatsapp).replace(/\D/g, "")}` : "", has(p.location) ? L(p.location) : "", ct.linkedin ? ct.linkedin.replace(/^https?:\/\//, "") : ""].filter(Boolean);
+  const feat = c.projects.filter((x) => x.featured).concat(c.projects.filter((x) => !x.featured)).slice(0, 6);
+  $("#app").innerHTML = `<div class="wrap"><div class="cv-actions no-print" style="margin-top:20px"><button class="btn btn-primary btn-sm" type="button" onclick="print()">${esc(t("cv_print"))}</button>${has(p.cvFile) ? (p.cvFile === "request" || c.site.downloadsRequireApproval ? gateBtn(t("cv_download"), "CV") : `<a class="btn btn-ghost btn-sm" href="${esc(p.cvFile)}" download>${esc(t("cv_download"))}</a>`) : ""}<a class="btn btn-ghost btn-sm" href="index.html">← ${esc(L(p.name))}</a></div>
+    <div class="cv" id="cv"><div class="cv-head"><div><h1>${esc(L(p.name))}</h1>${has(p.title) ? `<div class="t">${esc(L(p.title))}</div>` : ""}</div><div class="c">${contactLines.map(esc).join("<br>")}<canvas id="cvqr" width="72" height="72" style="width:72px;height:72px;margin-top:8px;margin-inline-start:auto;background:#fff;padding:3px;border-radius:6px"></canvas></div></div>
+    ${has(p.bio) ? `<p style="margin:18px 0 0;font-size:14.5px">${esc(L(p.bio))}</p>` : ""}
+    ${c.education.length ? `<h2>${esc(t("education"))}</h2>${c.education.map((e) => `<div class="item"><b>${esc(L(e.degree))}</b><span class="d">${esc(e.start || "")}${e.end ? "–" + esc(e.end) : ""}</span>${has(e.institution) ? `<span class="o">${esc(L(e.institution))}</span>` : ""}${has(e.notes) ? `<p>${esc(L(e.notes))}</p>` : ""}</div>`).join("")}` : ""}
+    ${c.experience.length ? `<h2>${esc(t("experience"))}</h2>${c.experience.map((e) => `<div class="item"><b>${esc(L(e.role))}</b><span class="d">${esc(fmtDate(e.start))}–${esc(fmtDate(e.end || "present"))}</span>${has(e.org) ? `<span class="o">${esc(L(e.org))}${has(e.location) ? ` · ${esc(L(e.location))}` : ""}</span>` : ""}${has(e.summary) ? `<p>${esc(L(e.summary))}</p>` : ""}${(e.bullets || []).filter(has).length ? `<ul>${e.bullets.filter(has).map((b) => `<li>${esc(L(b))}</li>`).join("")}</ul>` : ""}</div>`).join("")}` : ""}
+    ${feat.length ? `<h2>${esc(t("cv_projects"))}</h2>${feat.map((x) => `<div class="item"><b>${esc(L(x.title))}</b><span class="d">${x.year || ""}${x.type ? ` · ${esc(t("type." + x.type))}` : ""}</span>${has(x.summary) ? `<p>${esc(L(x.summary))}</p>` : ""}${(x.tools || []).length ? `<p class="mono" style="font-size:11.5px">${esc(x.tools.join(" · "))}</p>` : ""}</div>`).join("")}` : ""}
+    ${c.skills.groups.length ? `<h2>${esc(t("cv_skills"))}</h2>${c.skills.groups.map((g) => `<div class="item" style="grid-template-columns:1fr"><b>${esc(L(g.title))}</b><div class="sk-line">${(g.items || []).map((s) => `<span>${esc(L(s.name))} <b>${s.level || 3}/5</b></span>`).join("")}</div></div>`).join("")}` : ""}
+    ${c.skills.tools.length ? `<h2>${esc(t("cv_tools"))}</h2><div class="sk-line">${c.skills.tools.map((x) => `<span>${esc(x.name)} <b>${x.level || 3}/5</b></span>`).join("")}</div>` : ""}
+    ${c.certificates.length ? `<h2>${esc(t("cv_certs"))}</h2>${c.certificates.map((x) => `<div class="item"><b>${esc(L(x.title))}</b><span class="d">${esc(fmtDate(x.date))}</span>${has(x.issuer) ? `<span class="o">${esc(L(x.issuer))}${has(x.credentialId) ? ` · ${esc(x.credentialId)}` : ""}</span>` : ""}</div>`).join("")}` : ""}
+    ${(p.languages || []).filter((l) => has(l.name)).length ? `<h2>${esc(t("languages"))}</h2><div class="sk-line">${p.languages.filter((l) => has(l.name)).map((l) => `<span>${esc(L(l.name))}${has(l.level) ? ` <b>${esc(L(l.level))}</b>` : ""}</span>`).join("")}</div>` : ""}
+    </div></div>`;
+  const q = $("#cvqr"); if (q) drawQR(q, location.href.split("#")[0]).then((ok) => { if (!ok) q.remove(); }); bindRequests();
+  setMeta(`${t("cv_title")} · ${L(p.name)}`, L(p.tagline), c.site.seo?.ogImage); injectJsonLd(personLd());
+}
+(async () => { c = await boot("cv"); render(); document.addEventListener("langchange", render); })();

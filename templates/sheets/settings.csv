@@ -1,0 +1,13 @@
+﻿key,value_ar,value_en,note
+default_lang,ar,,ar أو en
+site_url,https://USERNAME.github.io/REPO,,رابط الموقع بعد النشر (لوسوم OG وsitemap)
+sections,hero|model|about|projects|skills|certificates|experience|education|gis|stats|datasets|notes|services|testimonials|contact,,ترتيب الأقسام؛ احذف أي قسم لإخفائه
+formspree_id,,,معرّف نموذج Formspree
+analytics_provider,,,cloudflare أو goatcounter
+analytics_id,,,
+booking_url,,,رابط حجز موعد (اختياري)
+review_before_publish,لا,,نعم = المزامنة تفتح Pull Request للمراجعة
+seo_title,فارس الأسمري · نموذج الملاءمة,Fares Al-Asmari · Suitability Model,
+seo_description,وصف قصير للموقع,Short site description,
+og_image,media/og.png,,يُؤخذ من profile/og.* في Drive تلقائياً
+presets,"transport:أبحث عن مخطط نقل~I need a transport planner=planning 5,gis 3,geomatics 1,digital 1,design 1|gis:أبحث عن محلل GIS~I need a GIS analyst=planning 2,gis 5,geomatics 4,digital 3,design 1|design:أبحث عن عروض وتقارير~I need presentations & reports=planning 2,gis 1,geomatics 0,digital 2,design 5",,"id:label_ar~label_en=group weight,… مفصولة بـ |"

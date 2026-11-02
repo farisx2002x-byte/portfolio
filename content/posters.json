@@ -1,0 +1,152 @@
+[
+ {
+  "id": "poster-jamea-studio",
+  "title": {
+   "ar": "لوحة استديو 2025: حي الجامعة — وحدة محلية",
+   "en": "Studio 2025 board: Al-Jamea local unit"
+  },
+  "kind": "poster",
+  "size": "",
+  "course": "استديو 3-1",
+  "project": "al-jamea-local-unit",
+  "image": "media/posters/poster-jamea-studio.webp",
+  "publishable": true,
+  "driveId": "1DABxDOjnhQeGNpagoYAv2nDuT6IjZyIb",
+  "pdf": "request"
+ },
+ {
+  "id": "poster-hawra-a1",
+  "title": {
+   "ar": "قرية الهورة الأثرية (A1)",
+   "en": "Hawra heritage village (A1)"
+  },
+  "kind": "poster",
+  "size": "A1",
+  "course": "GEOM 427",
+  "project": "hawra-poster-a1",
+  "image": "media/posters/poster-hawra-a1.webp",
+  "publishable": true,
+  "driveId": "1-qbX9mf2sBFiqSgQ2h0J17mSDjPIGC6C",
+  "pdf": "request"
+ },
+ {
+  "id": "posters-asir-hawra",
+  "title": {
+   "ar": "عمارة عسير + قرية الهورة (بوستران)",
+   "en": "Asir architecture + Hawra (two posters)"
+  },
+  "kind": "poster",
+  "size": "",
+  "course": "GEOM 427",
+  "project": "asir-architecture-hawra",
+  "image": "media/posters/posters-asir-hawra.webp",
+  "publishable": true,
+  "driveId": "1wS8pnQDw-5NLtOQYAnXie02Gl4IA0GRN",
+  "pdf": "request"
+ },
+ {
+  "id": "poster-uav-office",
+  "title": {
+   "ar": "من السماء إلى الخريطة",
+   "en": "From sky to map"
+  },
+  "kind": "poster",
+  "size": "",
+  "course": "GEOM 300",
+  "project": "geom300-uav-office-profile",
+  "image": "media/posters/poster-uav-office.webp",
+  "publishable": true,
+  "driveId": "1qhdFKB0HfnwXOK9q9QxDmRLV8GtzpbnZ",
+  "pdf": "request"
+ },
+ {
+  "id": "board-far2",
+  "title": {
+   "ar": "لوحة بلوك كثافة عالية FAR 2",
+   "en": "High-density block board (FAR 2)"
+  },
+  "kind": "board",
+  "size": "",
+  "course": "URP-244",
+  "project": "urp244-density-far2",
+  "image": "media/posters/board-far2.webp",
+  "publishable": true,
+  "driveId": "1SPXTUAtGg7whA8Mjyl_5lQ2krz4s2ykA",
+  "pdf": "request"
+ },
+ {
+  "id": "board-far07",
+  "title": {
+   "ar": "لوحة بلوك كثافة متوسطة FAR 0.7",
+   "en": "Medium-density block board (FAR 0.7)"
+  },
+  "kind": "board",
+  "size": "",
+  "course": "URP-244",
+  "project": "urp244-density-far07",
+  "image": "media/posters/board-far07.webp",
+  "publishable": true,
+  "driveId": "1ffARI4wx5JyDSQFlvq0ONiMlqNfXXa_5",
+  "pdf": "request"
+ },
+ {
+  "id": "poster-albalad",
+  "title": {
+   "ar": "البلد: جدة التاريخية قبل التطوير وبعده",
+   "en": "Al-Balad: Jeddah historic district, before and after"
+  },
+  "kind": "poster",
+  "size": "A3",
+  "course": "",
+  "project": "jeddah-albalad-poster",
+  "image": "media/posters/poster-albalad.webp",
+  "publishable": true,
+  "driveId": "1-feGhLce3iu9Da8gtJa6NHTuNUp3Iwr_",
+  "pdf": "request"
+ },
+ {
+  "id": "boards-urp111",
+  "title": {
+   "ar": "سبع لوحات يدوية: رفع ورسم فراغ حضري (كلية الاقتصاد)",
+   "en": "Seven hand-drawn boards: urban-space survey & drawing (Economics faculty)"
+  },
+  "kind": "hand",
+  "size": "",
+  "course": "URP-111",
+  "project": "kau-campus-survey",
+  "image": "media/posters/boards-urp111.webp",
+  "publishable": true,
+  "driveId": "1X19pW1L3yroKnYKyuj7EwlnigZEBiCv5",
+  "pdf": "request"
+ },
+ {
+  "id": "boards-ruwais",
+  "title": {
+   "ar": "أربع لوحات: التجديد الحضري لحي الرويس (فريق)",
+   "en": "Four boards: Al-Ruwais urban regeneration (team)"
+  },
+  "kind": "board",
+  "size": "",
+  "course": "",
+  "project": "ruwais-regeneration",
+  "image": "media/posters/boards-ruwais.webp",
+  "publishable": true,
+  "driveId": "1d4QR_cEADlfsRIuhlG0wy7eVdE1LL50j",
+  "pdf": "request"
+ },
+ {
+  "id": "boards-tod",
+  "title": {
+   "ar": "لوحتا معرض مجاورة TOD: المشروع المشترك ومساهمتي (منطقة التصميم 2)",
+   "en": "TOD neighbourhood exhibition boards: joint scheme and my contribution (design area 2)"
+  },
+  "kind": "board",
+  "size": "",
+  "course": "URP-244",
+  "project": "urp244-tod-neighbourhood",
+  "image": "media/posters/boards-tod.webp",
+  "publishable": true,
+  "pdf": "request",
+  "driveId": "1i3TNAu9aoyv9Sd2mYrhrzYDrdp6IkLQG"
+ }
+]

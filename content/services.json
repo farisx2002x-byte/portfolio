@@ -1,0 +1,204 @@
+[
+ {
+  "id": "gis-maps",
+  "title": {
+   "ar": "خرائط وتحليل GIS",
+   "en": "GIS maps & analysis"
+  },
+  "description": {
+   "ar": "خرائط إخراج احترافية وتحليلات مكانية لمشاريع الطلاب والجهات.",
+   "en": "Professional map layouts and spatial analysis."
+  },
+  "includes": [
+   {
+    "ar": "خرائط إخراج",
+    "en": "خرائط إخراج"
+   },
+   {
+    "ar": "تحليل ملاءمة",
+    "en": "تحليل ملاءمة"
+   },
+   {
+    "ar": "تحليل شبكات",
+    "en": "تحليل شبكات"
+   }
+  ],
+  "priceFrom": null,
+  "currency": "SAR",
+  "icon": "map",
+  "skills": [
+   "arcgis-pro",
+   "suitability-analysis",
+   "network-analysis"
+  ]
+ },
+ {
+  "id": "presentations",
+  "title": {
+   "ar": "عروض تقديمية",
+   "en": "Presentation design"
+  },
+  "description": {
+   "ar": "عروض عربية وإنجليزية بهوية مرتبة.",
+   "en": "Arabic and English decks with a clean visual identity."
+  },
+  "includes": [
+   {
+    "ar": "مشاريع تخرج",
+    "en": "مشاريع تخرج"
+   },
+   {
+    "ar": "عروض شركات",
+    "en": "عروض شركات"
+   }
+  ],
+  "priceFrom": null,
+  "currency": "SAR",
+  "icon": "slides",
+  "skills": [
+   "presentations"
+  ]
+ },
+ {
+  "id": "reports",
+  "title": {
+   "ar": "تقارير وبحوث",
+   "en": "Reports & research"
+  },
+  "description": {
+   "ar": "كتابة وتنسيق تقارير ودراسات أكاديمية وفنية.",
+   "en": "Writing and formatting academic and technical reports."
+  },
+  "includes": [
+   {
+    "ar": "تنسيق",
+    "en": "تنسيق"
+   },
+   {
+    "ar": "توثيق APA",
+    "en": "توثيق APA"
+   }
+  ],
+  "priceFrom": null,
+  "currency": "SAR",
+  "icon": "report",
+  "skills": [
+   "report-writing"
+  ]
+ },
+ {
+  "id": "cv-portfolio",
+  "title": {
+   "ar": "سيرة ذاتية وبورتفوليو",
+   "en": "CV & portfolio"
+  },
+  "description": {
+   "ar": "سيرة ذاتية احترافية وصفحات شخصية.",
+   "en": "Professional CVs and personal portfolio pages."
+  },
+  "includes": [
+   {
+    "ar": "CV",
+    "en": "CV"
+   },
+   {
+    "ar": "موقع شخصي",
+    "en": "موقع شخصي"
+   }
+  ],
+  "priceFrom": null,
+  "currency": "SAR",
+  "icon": "user",
+  "skills": [
+   "presentations",
+   "ai-tools"
+  ]
+ },
+ {
+  "id": "automation",
+  "title": {
+   "ar": "أتمتة وأدوات",
+   "en": "Automation & tools"
+  },
+  "description": {
+   "ar": "سكربتات وبرامج تختصر العمل المتكرر.",
+   "en": "Scripts and tools that remove repetitive work."
+  },
+  "includes": [
+   {
+    "ar": "Python",
+    "en": "Python"
+   },
+   {
+    "ar": "ArcPy",
+    "en": "ArcPy"
+   },
+   {
+    "ar": "Excel",
+    "en": "Excel"
+   }
+  ],
+  "priceFrom": null,
+  "currency": "SAR",
+  "icon": "code",
+  "skills": [
+   "automation",
+   "excel"
+  ]
+ },
+ {
+  "id": "drone-survey",
+  "title": {
+   "ar": "رفع بالدرون ونمذجة",
+   "en": "Drone survey & 3D models"
+  },
+  "description": {
+   "ar": "رفع جوي ومعالجة صور لإنتاج نماذج ومخططات.",
+   "en": "Aerial survey and photogrammetric 3D models."
+  },
+  "includes": [
+   {
+    "ar": "Metashape",
+    "en": "Metashape"
+   },
+   {
+    "ar": "DJI",
+    "en": "DJI"
+   }
+  ],
+  "priceFrom": null,
+  "currency": "SAR",
+  "icon": "drone",
+  "skills": [
+   "drones",
+   "photogrammetry"
+  ]
+ },
+ {
+  "id": "qr",
+  "title": {
+   "ar": "QR وحلول رقمية",
+   "en": "QR & digital solutions"
+  },
+  "description": {
+   "ar": "أكواد QR ذكية ومنتجات رقمية بسيطة.",
+   "en": "Smart QR codes and simple digital products."
+  },
+  "includes": [
+   {
+    "ar": "QR دائم",
+    "en": "QR دائم"
+   },
+   {
+    "ar": "صفحات هبوط",
+    "en": "صفحات هبوط"
+   }
+  ],
+  "priceFrom": null,
+  "currency": "SAR",
+  "icon": "qr",
+  "skills": [
+   "ai-tools"
+  ]
+ }
+]

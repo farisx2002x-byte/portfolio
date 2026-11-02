@@ -1,0 +1,44 @@
+[
+ {
+  "id": "ksa-pop",
+  "value": "32,175,224",
+  "label": {
+   "ar": "إجمالي سكان المملكة",
+   "en": "KSA population"
+  },
+  "source": {
+   "ar": "الهيئة العامة للإحصاء، تعداد 2022",
+   "en": "GASTAT, Census 2022"
+  },
+  "sourceUrl": "https://www.stats.gov.sa",
+  "date": "2022"
+ },
+ {
+  "id": "ksa-saudi",
+  "value": "58.4%",
+  "label": {
+   "ar": "نسبة السعوديين",
+   "en": "Saudi nationals"
+  },
+  "source": {
+   "ar": "الهيئة العامة للإحصاء، تعداد 2022",
+   "en": "GASTAT, Census 2022"
+  },
+  "sourceUrl": "https://www.stats.gov.sa",
+  "date": "2022"
+ },
+ {
+  "id": "ksa-median-age",
+  "value": "29",
+  "label": {
+   "ar": "متوسط العمر",
+   "en": "Median age"
+  },
+  "source": {
+   "ar": "الهيئة العامة للإحصاء، تعداد 2022",
+   "en": "GASTAT, Census 2022"
+  },
+  "sourceUrl": "https://www.stats.gov.sa",
+  "date": "2022"
+ }
+]

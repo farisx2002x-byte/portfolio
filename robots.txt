@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /edit.html
+Disallow: /preview.html
+Sitemap: https://example.github.io/portfolio/sitemap.xml

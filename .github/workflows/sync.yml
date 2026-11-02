@@ -1,0 +1,55 @@
+# المزامنة اليومية من Google Sheets/Drive إلى content/ ثم النشر.
+name: sync-content
+on:
+  schedule:
+    - cron: "17 3 * * *"        # يومياً 03:17 UTC (06:17 بتوقيت الرياض)
+  workflow_dispatch:             # زر Run workflow
+permissions:
+  contents: write
+  pull-requests: write
+concurrency: { group: sync, cancel-in-progress: false }
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm }
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+      - run: npm ci
+      - name: Sync
+        id: sync
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          SHEET_ID: ${{ secrets.SHEET_ID }}
+          DRIVE_FOLDER_ID: ${{ secrets.DRIVE_FOLDER_ID }}
+        run: |
+          set +e
+          node scripts/sync.mjs; code=$?
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          cat SYNC-REPORT.md >> "$GITHUB_STEP_SUMMARY"
+          if [ "$code" = "1" ]; then echo "::error::فشل التحقق، راجع SYNC-REPORT.md"; exit 1; fi
+          exit $code
+      - name: Build (sitemap, OG pages)
+        run: node scripts/build.mjs
+      - name: Detect changes & review mode
+        id: diff
+        run: |
+          git add -A
+          if git diff --cached --quiet; then echo "changed=false" >> "$GITHUB_OUTPUT"; else echo "changed=true" >> "$GITHUB_OUTPUT"; fi
+          echo "review=$(node -e "console.log(!!JSON.parse(require('fs').readFileSync('content/site.json','utf8')).reviewBeforePublish)")" >> "$GITHUB_OUTPUT"
+      - name: Commit & push (direct publish)
+        if: steps.diff.outputs.changed == 'true' && steps.diff.outputs.review != 'true'
+        run: |
+          git config user.name "portfolio-sync[bot]"; git config user.email "sync@users.noreply.github.com"
+          git commit -m "sync: content update $(date -u +%F)"
+          git push
+      - name: Open pull request (review mode)
+        if: steps.diff.outputs.changed == 'true' && steps.diff.outputs.review == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: sync/content
+          title: "مراجعة تحديث المحتوى"
+          body-path: SYNC-REPORT.md
+          commit-message: "sync: content update"
+          delete-branch: true

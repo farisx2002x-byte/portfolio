@@ -1,0 +1,16 @@
+﻿key,value_ar,value_en,note
+name,فارس الأسمري,Fares Al-Asmari,الاسم
+title,مخطط حضري وإقليمي · بيانات مكانية,Urban & Regional Planner · Spatial Data,
+tagline,أحلّل المكان بالبيانات…,I analyse place with data…,
+bio,نبذة قصيرة (مثال),Short bio (sample),
+location,جدة، المملكة العربية السعودية,"Jeddah, Saudi Arabia",
+available,نعم,,نعم/لا
+availability_note,متاح لمشاريع جديدة,Available for new projects,
+email,example@example.com,,
+whatsapp,9665XXXXXXXX,,بصيغة دولية بلا +
+linkedin,https://www.linkedin.com/in/…,,
+x,https://x.com/…,,
+github,,,
+behance,,,
+languages,العربية~Arabic=اللغة الأم~Native|الإنجليزية~English=متوسط~Intermediate,,name_ar~name_en=level_ar~level_en مفصولة بـ |
+highlights,,,value=label_ar~label_en مفصولة بـ | (اتركها فارغة إن لم ترد أرقاماً)

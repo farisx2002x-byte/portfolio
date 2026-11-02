@@ -1,0 +1,2 @@
+﻿publish,id,added,title_ar,title_en,issuer_ar,issuer_en,date,category,credential_id,verify_url,skills
+نعم,example-cert-gis,2026-10-15,مثال: أساسيات ArcGIS Pro,Sample: ArcGIS Pro fundamentals,جهة مانحة,Issuer,2025-06,gis,EXAMPLE-0001,https://example.com/verify/EXAMPLE-0001,spatial-analysis|map-production
