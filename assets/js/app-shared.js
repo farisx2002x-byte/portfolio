@@ -81,3 +81,12 @@ export function wipPh(p) {
   }[k];
   return `<span class="wip-ph wip-${k}" aria-hidden="true">${scene}<span class="wip-stripes"></span><span class="wip-tape"><span>${esc(tape.repeat(8))}</span></span><span class="wip-lock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><b>${esc(state.lang === "ar" ? WIP_T.ar : WIP_T.en)}</b></span></span>`;
 }
+
+/* ═══ التخصص الأساسي: التخطيط يُميَّز بنجمة ذهبية ولون خاص في كل مكان ═══ */
+export const PRIMARY = "planning";
+export const STAR = `<svg class="pstar-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.2 6.8.8-5 4.7 1.3 6.8L12 17.6 6 21l1.3-6.8-5-4.7 6.8-.8z"/></svg>`;
+export function starLabel(id, label, opts = {}) {
+  if (id !== PRIMARY) return `<span class="sp-lab">${label}</span>`;
+  const ar = state.lang === "ar"; const cap = opts.caption === false ? "" : `<small class="pstar-cap">${ar ? "التخصص الأساسي" : "Primary field"}</small>`;
+  return `<span class="sp-lab prime">${label}${STAR}${cap}</span>`;
+}
