@@ -3,7 +3,7 @@
    ويختفي أي قسم بياناته فارغة.
    ───────────────────────────────────────────── */
 import { boot, state, t, L, has, esc, el, $, $$, fmtDate, isNew, openModal, closeModal, toast, initReveal, injectJsonLd, personLd, setMeta, drawQR, vcard, reduce } from "./core.js";
-import { ICONS, ico, kicker, projectHref, svgPh, wipPh, evidenceModal, certModal, metaCard, gateBtn, bindRequests } from "./app-shared.js";
+import { ICONS, ico, kicker, projectHref, svgPh, wipPh, starLabel, PRIMARY, STAR, evidenceModal, certModal, metaCard, gateBtn, bindRequests } from "./app-shared.js";
 import { weights, initWeights, setWeights, equalWeights, onWeights, groups, score, rankProjects, rankServices, classOf } from "./model.js";
 import { THEMES, pulseHero, applyTheme } from "./themes.js";
 import { atlasHtml, initAtlas } from "./atlas.js";
@@ -26,7 +26,7 @@ function hero() {
   return `<section class="hero wrap" id="hero">
     <div class="strip"><span>${esc(t("hero_kicker"))}</span><i></i><span class="mono">21.4858° N · 39.1925° E</span></div>
     <div class="hero-grid"><div class="hero-copy">
-    <div class="hero-top">${p.availability ? `<span class="pill ${p.availability.open ? "on" : ""}"><span class="pulse"></span>${esc(has(p.availability.note) ? L(p.availability.note) : t(p.availability.open ? "available" : "unavailable"))}</span>` : ""}${words.length ? `<span class="pill"><span class="disc" id="disc"><span>${esc(words[0])}</span></span></span>` : ""}</div>
+    <div class="hero-top">${p.availability ? `<span class="pill ${p.availability.open ? "on" : ""}"><span class="pulse"></span>${esc(has(p.availability.note) ? L(p.availability.note) : t(p.availability.open ? "available" : "unavailable"))}</span>` : ""}<span class="pill prime-pill">${STAR}${esc(t("primary_chip"))}</span>${words.length ? `<span class="pill"><span class="disc" id="disc"><span>${esc(words[0])}</span></span></span>` : ""}</div>
     <h1><span class="l">${esc(first)}</span>${rest ? `<span class="l">${esc(rest)}</span>` : ""}</h1>
     ${has(p.tagline) ? `<p class="tagline">${esc(L(p.tagline))}</p>` : ""}
     ${c.projects.length ? `<div class="ask"><p class="ask-q" id="askq">${esc(t("ask"))}</p><div class="presets" role="group" aria-labelledby="askq">
@@ -50,7 +50,7 @@ function model() {
     <details class="guide rv"><summary><b>${esc(t("guide_h"))}</b></summary><ol><li>${esc(t("guide_1"))}</li><li>${esc(t("guide_2"))}</li><li>${esc(t("guide_3"))}</li></ol><p class="note">${esc(t("guide_plain"))}</p></details>
     <div class="model-grid">
       <div class="card weights"><h3>${esc(t("weights_h"))}</h3><p class="sub">${esc(t("weights_sub"))}</p>
-        ${gs.map((g) => `<div class="wrow"><label for="w-${esc(g.id)}">${esc(L(g.title))}</label><span class="wv" id="wv-${esc(g.id)}">${weights[g.id]}</span><input type="range" min="0" max="5" step="1" id="w-${esc(g.id)}" data-w="${esc(g.id)}" value="${weights[g.id]}"><small>${esc((g.items || []).map((s) => L(s.name)).slice(0, 4).join(" · "))}${(g.items || []).length > 4 ? " …" : ""}</small></div>`).join("")}
+        ${gs.map((g) => `<div class="wrow"><label for="w-${esc(g.id)}">${starLabel(g.id, esc(L(g.title)), { caption: false })}</label><span class="wv" id="wv-${esc(g.id)}">${weights[g.id]}</span><input type="range" min="0" max="5" step="1" id="w-${esc(g.id)}" data-w="${esc(g.id)}" value="${weights[g.id]}"><small>${esc((g.items || []).map((s) => L(s.name)).slice(0, 4).join(" · "))}${(g.items || []).length > 4 ? " …" : ""}</small></div>`).join("")}
         <div class="weights-foot"><button class="btn btn-ghost btn-sm" type="button" id="w-reset">${esc(t("reset"))}</button></div></div>
       <div class="overlay-wrap">
         <div class="overlay"><div class="raster-head"><div><h3>${esc(t("overlay_h"))}</h3><p class="sub" style="margin:0">${esc(t("overlay_sub"))}</p></div><span class="mono" id="stack-dims"></span></div>
@@ -69,7 +69,7 @@ function renderRanked() {
   const host = $("#ranked"); if (!host) return;
   const cats = [...new Set(c.projects.flatMap((p) => p.categories || []))];
   const all = rankedCache.filter(okCat); const LIMIT = 6; const list = showAll ? all : all.slice(0, LIMIT);
-  const build = () => host.innerHTML = `<div class="rank-head"><h3 id="projects">${esc(t("ranked_h"))}</h3><div class="filters" role="group"><button class="chip" aria-pressed="${catFilter === "all"}" data-cat="all">${esc(t("all"))}</button>${cats.map((k) => `<button class="chip" aria-pressed="${catFilter === k}" data-cat="${esc(k)}">${esc(t("cat." + k) === "cat." + k ? k : t("cat." + k))}</button>`).join("")}</div></div>
+  const build = () => host.innerHTML = `<div class="rank-head"><h3 id="projects">${esc(t("ranked_h"))}</h3><div class="filters" role="group"><button class="chip" aria-pressed="${catFilter === "all"}" data-cat="all">${esc(t("all"))}</button>${cats.map((k) => `<button class="chip" aria-pressed="${catFilter === k}" data-cat="${esc(k)}">${k === PRIMARY ? STAR : ""}${esc(t("cat." + k) === "cat." + k ? k : t("cat." + k))}</button>`).join("")}</div></div>
     ${list.length ? list.map((r, i) => pcard(r, i)).join("") : `<div class="empty">${esc(t("no_projects"))}</div>`}
     ${all.length > LIMIT ? `<div class="ranked-more"><button class="btn btn-ghost btn-sm" type="button" id="more">${esc(showAll ? t("show_less") : t("show_more"))} (${all.length})</button></div>` : ""}`;
   flip(host, ".pcard", build);
@@ -79,13 +79,13 @@ function renderRanked() {
   $("#more", host)?.addEventListener("click", () => { showAll = !showAll; renderRanked(); });
 }
 function pcard(r, i) {
-  const p = r.p; const cat = (p.categories || []).map((k) => t("cat." + k) === "cat." + k ? k : t("cat." + k)).join(" · ");
+  const p = r.p; const cat = (p.categories || []).map((k) => (k === PRIMARY ? STAR : "") + esc(t("cat." + k) === "cat." + k ? k : t("cat." + k))).join(" · ");
   const totalW = r.parts.reduce((a, b) => a + b.w, 0) || 1;
   const why = r.top.map((x) => `<span>${esc(L(x.group.title))}<b>+${Math.round((x.contrib / totalW) * 100)}</b></span>`).join("");
   const th = THEMES[(p.categories || [])[0]] || THEMES.planning;
   return `<a class="pcard rv in" href="${projectHref(p)}" data-p="${esc(p.id)}" data-tacc style="--i:${i};--pc:${th.c}">
     <div class="thumb ${has(p.cover) ? "" : "none"}" style="view-transition-name:cv-${esc(p.id)}">${has(p.cover) ? `<img src="${esc(p.cover)}" alt="${esc(L(p.title))}" loading="lazy" decoding="async">` : wipPh(p)}</div>
-    <div class="body"><div class="row1"><span class="score k${r.k}" data-to="${r.score}" data-v="0">0<small>/100</small></span><span class="cat">${esc(cat)}${p.year ? ` · ${p.year}` : ""}${isNew(p.added) ? ` <span class="tag tag-new">${esc(t("new"))}</span>` : ""}</span></div>
+    <div class="body"><div class="row1"><span class="score k${r.k}" data-to="${r.score}" data-v="0">0<small>/100</small></span><span class="cat">${cat}${p.year ? ` · ${p.year}` : ""}${isNew(p.added) ? ` <span class="tag tag-new">${esc(t("new"))}</span>` : ""}</span></div>
       <h4>${esc(L(p.title))}</h4>${has(p.summary) ? `<p>${esc(L(p.summary))}</p>` : ""}
       <div class="bar"><i style="transform:scaleX(${r.score / 100})"></i></div>
       ${why ? `<div class="why" aria-label="${esc(t("why"))}">${why}</div>` : ""}${p.location && typeof p.location.lat === "number" ? `<button class="onmap" type="button" data-onmap="${esc(p.id)}" title="${esc(t("on_map"))}">${ico("map", 14)}<span>${esc(L(p.location.name))}</span></button>` : ""}</div></a>`;
@@ -128,7 +128,7 @@ function skills() {
   const G = state.graph;
   return `<section class="wrap" id="skills">${kicker(t("skills_kicker"))}<h2 class="h2 rv">${t("skills_h")}</h2><p class="lead">${esc(t("skills_lead"))}</p>
     ${radarHtml(gs, G)}
-    <div class="skill-groups">${gs.map((g) => `<div class="card sgroup rv"><div class="tier">${esc((g.tier === "support" ? t("support") : t("core")).toUpperCase())} · ${esc(g.id.toUpperCase())}</div><h3>${esc(L(g.title))}</h3><ul>
+    <div class="skill-groups">${gs.map((g) => `<div class="card sgroup rv"><div class="tier">${g.id === PRIMARY ? `${STAR}${esc(t("primary"))}` : esc(t("addition"))} · ${esc(g.id.toUpperCase())}</div><h3>${starLabel(g.id, esc(L(g.title)), { caption: false })}</h3><ul>
       ${(g.items || []).map((s) => { const n = G.skills.get(s.id); const ev = [[n.projects.length, "evidence_projects"], [n.certificates.length, "evidence_certs"], [n.experience.length, "evidence_exp"]].filter(([k]) => k);
         return `<li class="sk"><span class="name">${esc(L(s.name))}</span>${s.level ? `<span class="lv" aria-label="${esc(t("level"))} ${s.level}/5">${[1, 2, 3, 4, 5].map((i) => `<i class="${i <= s.level ? "on" : ""}"></i>`).join("")}</span>` : ""}
         ${ev.length ? `<span class="ev"><button type="button" data-ev="${esc(s.id)}">${ev.map(([k, key]) => `<b>${k}</b> ${esc(t(key))}`).join(" · ")}</button></span>` : ""}</li>`; }).join("")}</ul></div>`).join("")}</div>

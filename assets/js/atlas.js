@@ -4,7 +4,7 @@
    تكبير/تحريك بالسحب والعجلة، تصفية بالتصنيف، قراءة LAT/LON حية، جولة تلقائية، ورحلة عبر السنوات.
    ───────────────────────────────────────────── */
 import { state, t, L, has, esc, $, $$, reduce } from "./core.js";
-import { projectHref } from "./app-shared.js";
+import { projectHref, PRIMARY, STAR } from "./app-shared.js";
 import { THEMES, MOTIFS } from "./themes.js";
 import { KSA_OUTLINE, KSA_PROVINCES } from "./ksa-regions.js";
 
@@ -43,7 +43,7 @@ const districtOf = (p) => { const parts = nameParts(p); const d = parts[0] || ""
 export function atlasHtml(projects) {
   YEARS = [...new Set(projects.filter((p) => p.location && p.year).map((p) => +p.year))].sort();
   const cats = [...new Set(projects.flatMap((p) => p.categories || []))].filter((k) => ["planning", "transport", "gis", "urban-design", "heritage", "geomatics"].includes(k));
-  return `<div class="atlas-head"><p class="lead">${esc(s("lead"))}</p><div class="atlas-ctl"><div class="filters" id="atlas-f"><button class="chip" data-af="all" aria-pressed="true">${esc(s("all"))}</button>${cats.map((k) => `<button class="chip" data-af="${esc(k)}" aria-pressed="false">${esc(t("cat." + k))}</button>`).join("")}</div><button class="btn btn-ghost btn-sm" id="atlas-tour" type="button">▸ ${esc(s("tour"))}</button></div></div>
+  return `<div class="atlas-head"><p class="lead">${esc(s("lead"))}</p><div class="atlas-ctl"><div class="filters" id="atlas-f"><button class="chip" data-af="all" aria-pressed="true">${esc(s("all"))}</button>${cats.map((k) => `<button class="chip" data-af="${esc(k)}" aria-pressed="false">${k === PRIMARY ? STAR : ""}${esc(t("cat." + k))}</button>`).join("")}</div><button class="btn btn-ghost btn-sm" id="atlas-tour" type="button">▸ ${esc(s("tour"))}</button></div></div>
   <div class="atlas" id="atlas-map"><svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice" class="atlas-svg" id="atlas-svg" aria-label="${esc(s("ksa"))}">
     <defs><pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".8" fill="currentColor" opacity=".2"/></pattern><clipPath id="landclip"><path d="${poly(KSA)}"/></clipPath><linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="var(--accent-2)" stop-opacity="0"/><stop offset="1" stop-color="var(--accent-2)" stop-opacity=".22"/></linearGradient><pattern id="streets" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(28)"><path d="M0 13H26M13 0V26" stroke="var(--accent)" stroke-opacity=".12" stroke-width="1"/></pattern><radialGradient id="cityglow"><stop offset="0" stop-color="var(--accent)" stop-opacity=".22"/><stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></radialGradient></defs>
     <g id="atlas-g" class="atlas-g">

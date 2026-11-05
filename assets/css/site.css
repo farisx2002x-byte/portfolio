@@ -1434,3 +1434,20 @@ body.ob-open { overflow: hidden; }
   .ob-view { grid-template-columns: 1fr; } .ob-spine { display: none; }
   .ob-sum { font-size: 13px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 }
+
+/* ═══ التخصص الأساسي: نجمة ذهبية ═══ */
+.pstar-ic { display: inline-block; width: .95em; height: .95em; fill: var(--c3); vertical-align: -.12em; margin-inline: .25em; filter: drop-shadow(0 0 4px color-mix(in srgb, var(--c3) 70%, transparent)); animation: starTwinkle 2.6s ease-in-out infinite; flex: none; }
+@keyframes starTwinkle { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.18) rotate(12deg); opacity: .85; } }
+.sp-lab.prime { color: var(--c3); font-weight: 700; display: inline-flex; align-items: center; flex-wrap: wrap; gap: 0 2px; }
+.sp-lab.prime .pstar-cap { flex-basis: 100%; font-size: 11px; font-weight: 600; color: color-mix(in srgb, var(--c3) 80%, var(--fg)); letter-spacing: .02em; }
+.prime-pill { color: var(--c3) !important; border-color: color-mix(in srgb, var(--c3) 45%, transparent) !important; background: color-mix(in srgb, var(--c3) 12%, transparent) !important; font-weight: 600; }
+.prime-pill .pstar-ic { margin-inline-end: .35em; }
+.chip .pstar-ic { margin-inline: 0 .3em; }
+.chip:has(.pstar-ic) { border-color: color-mix(in srgb, var(--c3) 45%, transparent); color: var(--c3); }
+.chip:has(.pstar-ic)[aria-pressed="true"] { background: var(--c3); color: #1b1600; } .chip:has(.pstar-ic)[aria-pressed="true"] .pstar-ic { fill: #1b1600; filter: none; animation: none; }
+.pcard .cat .pstar-ic { width: .85em; height: .85em; }
+.sgroup .tier:has(.pstar-ic) { color: var(--c3); }
+.radar .rl.prime { fill: var(--c3); font-weight: 700; }
+.ll b:first-letter { }
+.ll[data-ll="planning"] b { color: var(--c3); }
+.wrow label .sp-lab.prime { font-size: inherit; }
