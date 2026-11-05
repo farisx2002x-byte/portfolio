@@ -8,11 +8,12 @@ import { state, L, esc, el, t, base, reduce } from "./core.js";
 const STYLES = { dark: "https://tiles.openfreemap.org/styles/dark", light: "https://tiles.openfreemap.org/styles/positron" };
 const isDark = () => (document.documentElement.dataset.theme ? document.documentElement.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches);
 let libP = null;
+export const baseStyle = () => (isDark() ? STYLES.dark : STYLES.light);
 export function loadMapLibre() {
   if (window.maplibregl) return Promise.resolve(window.maplibregl);
   libP ??= new Promise((res, rej) => {
-    document.head.appendChild(el("link", { rel: "stylesheet", href: "https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" }));
-    const s = el("script", { src: "https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js" }); s.onload = () => res(window.maplibregl); s.onerror = rej; document.head.appendChild(s);
+    const b = new URL("../vendor/", import.meta.url); document.head.appendChild(el("link", { rel: "stylesheet", href: b + "maplibre-gl.css" }));
+    const s = el("script", { src: b + "maplibre-gl.js" }); s.onload = () => res(window.maplibregl); s.onerror = rej; document.head.appendChild(s);
   });
   return libP;
 }

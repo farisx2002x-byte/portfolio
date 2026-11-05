@@ -20,9 +20,12 @@ const PROVINCES = KSA_PROVINCES.map((p) => ({ ...p, poly: p.rings[0], label: LAB
 /* مدن للسياق: الاسم، الإحداثيات، المنطقة، وهل التسمية تحت النقطة */
 const CITIES = [["جدة", "Jeddah", 39.17, 21.54, "makkah"], ["الرياض", "Riyadh", 46.68, 24.71, "riyadh"], ["مكة المكرمة", "Makkah", 39.83, 21.42, "makkah", 1], ["المدينة المنورة", "Madinah", 39.61, 24.47, "madinah", 1], ["الدمام", "Dammam", 50.1, 26.43, "eastern", 1], ["تبوك", "Tabuk", 36.57, 28.38, "tabuk"], ["أبها", "Abha", 42.5, 18.22, "asir", 1], ["حائل", "Hail", 41.69, 27.52, "hail"], ["جازان", "Jazan", 42.55, 16.89, "jazan"], ["العلا", "AlUla", 37.9, 26.6, "madinah"], ["الخبر", "Khobar", 50.2, 26.3, "eastern"], ["بريدة", "Buraidah", 43.97, 26.33, "qassim"], ["نجران", "Najran", 44.13, 17.49, "najran"], ["سكاكا", "Sakaka", 40.2, 29.97, "jawf"], ["عرعر", "Arar", 41.02, 30.98, "north"], ["الباحة", "Al-Bahah", 41.47, 20.01, "bahah"], ["الطائف", "Taif", 40.42, 21.27, "makkah", 1], ["ينبع", "Yanbu", 38.06, 24.09, "madinah"], ["الأحساء", "Al-Ahsa", 49.6, 25.38, "eastern", 1], ["الوجه", "Al Wajh", 36.46, 26.24, "tabuk"], ["ضباء", "Duba", 35.69, 27.35, "tabuk"]];
 
-/* إسقاط بسيط: 1 درجة = 46 وحدة، مع ضغط الطول بجيب تمام 24° */
-const W = 1100, H = 800, S = 46, KX = Math.cos(24 * Math.PI / 180), KXX = S * KX * 1.18;
-const px = (lon) => (lon - 33.5) * KXX, py = (lat) => (33.2 - lat) * S;
+/* إسقاط ميركاتور (مطابق لخرائط الويب) حتى تنطبق خريطة أساس حقيقية تحت الرسم تماماً. المقياس: ~46 وحدة لكل درجة عند خط عرض 24 */
+const W = 1100, H = 800, RAD = Math.PI / 180, SM = 46 * Math.cos(24 * RAD) / RAD, KXX = SM * RAD, S = 46;
+const merc = (lat) => Math.log(Math.tan(Math.PI / 4 + lat * RAD / 2)), imerc = (y) => (2 * Math.atan(Math.exp(y)) - Math.PI / 2) / RAD;
+const LON0 = 33.5, LAT0 = 33.2, M0 = merc(LAT0);
+const px = (lon) => (lon - LON0) * KXX, py = (lat) => (M0 - merc(lat)) * SM;
+const lonOf = (x) => x / KXX + LON0, latOf = (y) => imerc(M0 - y / SM);
 const poly = (pts) => pts.map(([a, b], i) => `${i ? "L" : "M"}${px(a).toFixed(1)} ${py(b).toFixed(1)}`).join(" ") + "Z";
 const inPoly = (pts, lon, lat) => { let c = false; for (let i = 0, j = pts.length - 1; i < pts.length; j = i++) { const [xi, yi] = pts[i], [xj, yj] = pts[j]; if (((yi > lat) !== (yj > lat)) && (lon < (xj - xi) * (lat - yi) / (yj - yi) + xi)) c = !c; } return c; };
 const centroid = (pts) => { let x = 0, y = 0; for (const [a, b] of pts) { x += a; y += b; } return [x / pts.length, y / pts.length]; };
@@ -44,7 +47,7 @@ export function atlasHtml(projects) {
   YEARS = [...new Set(projects.filter((p) => p.location && p.year).map((p) => +p.year))].sort();
   const cats = [...new Set(projects.flatMap((p) => p.categories || []))].filter((k) => ["planning", "transport", "gis", "urban-design", "heritage", "geomatics"].includes(k));
   return `<div class="atlas-head"><p class="lead">${esc(s("lead"))}</p><div class="atlas-ctl"><div class="filters" id="atlas-f"><button class="chip" data-af="all" aria-pressed="true">${esc(s("all"))}</button>${cats.map((k) => `<button class="chip" data-af="${esc(k)}" aria-pressed="false">${k === PRIMARY ? STAR : ""}${esc(t("cat." + k))}</button>`).join("")}</div><button class="btn btn-ghost btn-sm" id="atlas-tour" type="button">▸ ${esc(s("tour"))}</button></div></div>
-  <div class="atlas" id="atlas-map"><svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice" class="atlas-svg" id="atlas-svg" aria-label="${esc(s("ksa"))}">
+  <div class="atlas" id="atlas-map"><div class="atlas-base" id="atlas-base" aria-hidden="true"></div><svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice" class="atlas-svg" id="atlas-svg" aria-label="${esc(s("ksa"))}">
     <defs><pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".8" fill="currentColor" opacity=".2"/></pattern><clipPath id="landclip"><path d="${poly(KSA)}"/></clipPath><linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="var(--accent-2)" stop-opacity="0"/><stop offset="1" stop-color="var(--accent-2)" stop-opacity=".22"/></linearGradient><pattern id="streets" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(28)"><path d="M0 13H26M13 0V26" stroke="var(--accent)" stroke-opacity=".12" stroke-width="1"/></pattern><radialGradient id="cityglow"><stop offset="0" stop-color="var(--accent)" stop-opacity=".22"/><stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></radialGradient></defs>
     <g id="atlas-g" class="atlas-g">
       <g class="grat">${Array.from({ length: 14 }, (_, i) => `<line x1="${px(30 + i * 2)}" y1="-400" x2="${px(30 + i * 2)}" y2="${H + 400}"/>`).join("")}${Array.from({ length: 12 }, (_, i) => `<line x1="-400" y1="${py(36 - i * 2)}" x2="${W + 400}" y2="${py(36 - i * 2)}"/>`).join("")}</g>
@@ -63,7 +66,7 @@ export function atlasHtml(projects) {
     <div class="atlas-crumb" id="atlas-crumb"></div>
     <div class="atlas-read mono" id="atlas-read"><span>LAT</span> —<br><span>LON</span> —<br><span>${esc(s("zoom"))}</span> <b>×1.0</b></div>
     <div class="atlas-zoom"><button type="button" data-z="1">+</button><button type="button" data-z="-1">−</button><button type="button" data-z="0" aria-label="${esc(s("reset"))}">⊕</button></div>
-    <div class="atlas-foot"><span class="atlas-title">${esc(s("ksa"))}</span><span class="atlas-scale mono"><i></i> <b id="atlas-km">343 km</b></span></div>
+    <div class="atlas-attrib">© OpenFreeMap · OpenMapTiles · OpenStreetMap</div><div class="atlas-foot"><span class="atlas-title">${esc(s("ksa"))}</span><span class="atlas-scale mono"><i></i> <b id="atlas-km">343 km</b></span></div>
     <div class="atlas-hint" id="atlas-hint"><i></i><span>${esc(s("hint0"))}</span></div>
     <div class="atlas-tip" id="atlas-tip" hidden></div>
     <div class="atlas-card" id="atlas-card" hidden></div>
@@ -86,13 +89,24 @@ export function initAtlas(projects) {
 
   /* التحويل بوحدات viewBox: transform واحد على المجموعة = حركة سلسة */
   const box = () => { const r = svg.getBoundingClientRect(); const sc = Math.max(r.width / W, r.height / H); return { r, sc, ox: (r.width - W * sc) / 2, oy: (r.height - H * sc) / 2 }; };
-  const apply = (anim = true, dur = .9) => { g.style.transition = anim && !reduce ? `transform ${dur}s cubic-bezier(.2,.8,.2,1)` : "none"; g.style.transform = `translate(${view.x}px, ${view.y}px) scale(${view.k})`; root.style.setProperty("--k", view.k); root.style.setProperty("--ps", Math.min(innerWidth < 640 ? 1.25 : 1.7, Math.max(1, 1 / box().sc)).toFixed(2));
-    placePop(); $("#atlas-km").textContent = (view.k >= 8 ? (343 / view.k).toFixed(1) : Math.round(343 / view.k)) + " km"; const z = read.querySelector("b"); if (z) z.textContent = `×${view.k.toFixed(1)}`; };
+  /* خريطة الأساس الحقيقية (MapLibre + OpenFreeMap) تحت الرسم: تُزامَن مع كل إطار حركة */
+  let base = null, shownView = { ...view }, tweenId = 0;
+  const syncBase = () => { if (!base) return; const { r, sc } = box(); const [mx, my] = [((r.width / 2) - (r.width - W * sc) / 2) / sc, ((r.height / 2) - (r.height - H * sc) / 2) / sc]; const cx = (mx - shownView.x) / shownView.k, cy = (my - shownView.y) / shownView.k; const z = Math.log2(SM * shownView.k * sc * 2 * Math.PI / 512); try { base.jumpTo({ center: [lonOf(cx), latOf(cy)], zoom: z }); } catch {} };
+  const paint = () => { g.style.transform = `translate(${shownView.x}px, ${shownView.y}px) scale(${shownView.k})`; root.style.setProperty("--k", shownView.k); syncBase(); };
+  const apply = (anim = true, dur = .9) => { g.style.transition = "none"; root.style.setProperty("--ps", Math.min(innerWidth < 640 ? 1.25 : 1.7, Math.max(1, 1 / box().sc)).toFixed(2));
+    placePop(); $("#atlas-km").textContent = (view.k >= 8 ? (343 / view.k).toFixed(1) : Math.round(343 / view.k)) + " km"; const z = read.querySelector("b"); if (z) z.textContent = `×${view.k.toFixed(1)}`;
+    const id = ++tweenId; if (!anim || reduce) { shownView = { ...view }; paint(); return; }
+    const from = { ...shownView }, to = { ...view }, t0 = performance.now(), ease = (u) => 1 - Math.pow(1 - u, 3); const lk0 = Math.log(from.k), lk1 = Math.log(to.k);
+    const step = (ts) => { if (id !== tweenId) return; const u = Math.min(1, (ts - t0) / (dur * 1000)), e = ease(u); const k = Math.exp(lk0 + (lk1 - lk0) * e); shownView = { k, x: from.x + (to.x - from.x) * e, y: from.y + (to.y - from.y) * e }; paint(); placePop(); if (u < 1) requestAnimationFrame(step); }; requestAnimationFrame(step); };
+  const initBase = async () => { if (base || root.dataset.nobase) return; try { const { loadMapLibre, baseStyle } = await import("./maps.js"); const ml = await loadMapLibre(); const host = $("#atlas-base");
+      base = new ml.Map({ container: host, style: baseStyle(), interactive: false, attributionControl: false, center: [45, 24], zoom: 4, fadeDuration: 300, renderWorldCopies: false, pitchWithRotate: false });
+      base.on("load", () => { root.classList.add("has-base"); syncBase(); }); base.on("error", () => {}); addEventListener("resize", () => { base.resize(); syncBase(); });
+      document.addEventListener("themechange", () => { try { base.setStyle(baseStyle()); } catch {} }); syncBase(); } catch { base = null; } };
   const toUser = (clientX, clientY) => { const { r, sc, ox, oy } = box(); return [(clientX - r.left - ox) / sc, (clientY - r.top - oy) / sc]; };
   const svgPt = (clientX, clientY) => { const [x, y] = toUser(clientX, clientY); return [(x - view.x) / view.k, (y - view.y) / view.k]; };
   const visibleSize = () => { const { r, sc } = box(); return [r.width / sc, r.height / sc]; };
   const zoomAt = (cx, cy, k2) => { k2 = Math.min(90, Math.max(minK, k2)); view.x = cx - (cx - view.x) * (k2 / view.k); view.y = cy - (cy - view.y) * (k2 / view.k); view.k = k2; };
-  const fitView = () => { const [vw] = visibleSize(); minK = Math.min(1, vw / 1070); view = { k: minK, x: W / 2 - (W / 2) * minK, y: H / 2 - (H / 2) * minK }; };
+  const fitView = () => { const [vw] = visibleSize(); minK = Math.min(1, vw / 930); view = { k: minK, x: W / 2 - (W / 2) * minK, y: H / 2 - (H / 2) * minK }; };
   /* ملاءمة مستطيل (بوحدات الخريطة) داخل الإطار المرئي */
   const fitBox = (x0, y0, x1, y1, pad = .18, kMin = 1, kMax = 24) => { const [vw, vh] = visibleSize(); const bw = Math.max(x1 - x0, 1), bh = Math.max(y1 - y0, 1); let k = Math.min(vw / (bw * (1 + pad * 2)), vh / (bh * (1 + pad * 2))); k = Math.min(kMax, Math.max(kMin, k)); const cx = (x0 + x1) / 2, cy = (y0 + y1) / 2; view = { k, x: W / 2 - cx * k, y: H / 2 - cy * k }; };
   const flyTo = (lon, lat, k) => { view.k = k; view.x = W / 2 - px(lon) * k; view.y = H / 2 - py(lat) * k; apply(); };
@@ -160,7 +174,7 @@ export function initAtlas(projects) {
 
   /* فقاعة المشروع: تظهر ملاصقة للدبوس، والنقرة الثانية (أو المزدوجة) تفتح المشروع مباشرة */
   const go = (id) => { const p = projects.find((x) => x.id === id); if (p) location.href = projectHref(p); };
-  const toScreen = (x, y) => { const { sc, ox, oy } = box(); return [ox + (view.x + x * view.k) * sc, oy + (view.y + y * view.k) * sc]; };
+  const toScreen = (x, y) => { const { sc, ox, oy } = box(); return [ox + (shownView.x + x * shownView.k) * sc, oy + (shownView.y + y * shownView.k) * sc]; };
   const pinXY = (sel) => { const n = pins.querySelector(sel); const m = n && /translate\(([\d.-]+) ([\d.-]+)\)/.exec(n.getAttribute("transform")); return m ? [+m[1], +m[2]] : null; };
   let popAt = null;
   const placePop = () => { if (card.hidden || !popAt) return; if (mob()) { card.style.left = card.style.top = ""; card.classList.remove("below"); return; } const [sx, sy] = toScreen(popAt[0], popAt[1]); const r = root.getBoundingClientRect(); const w = card.offsetWidth || 260, h = card.offsetHeight || 200; const lift = popAt[2] ? 34 : 58;
@@ -190,7 +204,7 @@ export function initAtlas(projects) {
   root.addEventListener("pointerleave", () => { tip.hidden = true; });
   root.addEventListener("pointerdown", (e) => { if (e.target.closest(".atlas-card, .atlas-zoom, .atlas-crumb, button")) return; const [ux, uy] = toUser(e.clientX, e.clientY); drag = { ux, uy, vx: view.x, vy: view.y, moved: false, id: e.pointerId }; root._dragged = false; });
   root.addEventListener("pointermove", (e) => { if (drag) { const [ux, uy] = toUser(e.clientX, e.clientY); const dx = ux - drag.ux, dy = uy - drag.uy; if (!drag.moved && Math.hypot(dx, dy) > 3) { drag.moved = true; root._dragged = true; try { root.setPointerCapture(drag.id); } catch {} } if (!drag.moved) return; view.x = drag.vx + dx; view.y = drag.vy + dy; apply(false); }
-    const [mx, my] = svgPt(e.clientX, e.clientY); const lon = mx / KXX + 33.5, lat = 33.2 - my / S; read.innerHTML = `<span>LAT</span> ${lat.toFixed(4)}° N<br><span>LON</span> ${lon.toFixed(4)}° E<br><span>${esc(s("zoom"))}</span> <b>×${view.k.toFixed(1)}</b>`; });
+    const [mx, my] = svgPt(e.clientX, e.clientY); const lon = lonOf(mx), lat = latOf(my); read.innerHTML = `<span>LAT</span> ${lat.toFixed(4)}° N<br><span>LON</span> ${lon.toFixed(4)}° E<br><span>${esc(s("zoom"))}</span> <b>×${view.k.toFixed(1)}</b>`; });
   root.addEventListener("pointerup", () => { drag = null; setTimeout(() => { root._dragged = false; }, 0); });
   root.addEventListener("pointercancel", () => { drag = null; });
   root.addEventListener("wheel", (e) => { e.preventDefault(); const [cx, cy] = toUser(e.clientX, e.clientY); zoomAt(cx, cy, view.k * (e.deltaY < 0 ? 1.25 : .8)); apply(false); }, { passive: false });
@@ -211,6 +225,7 @@ export function initAtlas(projects) {
   // تشغيل
   setLevel(0, null, null, false); addEventListener("resize", () => { clearTimeout(root._rt); root._rt = setTimeout(() => { if (level === 0) { fitView(); apply(false); } }, 150); });
   root.classList.add("boot"); const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { root.classList.add("in"); io.disconnect(); setTimeout(() => root.classList.remove("boot"), 3200); } }), { threshold: .2 }); io.observe(root);
+  const io2 = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { io2.disconnect(); initBase(); } }), { rootMargin: "600px" }); io2.observe(root);
   // فتح مشروع من الخارج (مثلاً من بطاقة في قسم المشاريع)
   document.addEventListener("atlas:open", (e) => { const p = projects.find((x) => x.id === e.detail); if (p && meta.has(p.id)) { root.scrollIntoView({ behavior: "smooth", block: "center" }); setTimeout(() => goProject(p), 500); } });
 }
