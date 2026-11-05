@@ -14,7 +14,7 @@ rmSync(OUT, { recursive: true, force: true }); mkdirSync(OUT, { recursive: true 
 for (const n of [...COPY, ...HTML]) { const src = join(ROOT, n); if (existsSync(src)) cpSync(src, join(OUT, n), { recursive: true }); }
 
 let js = 0, css = 0, html = 0;
-const walk = (d) => { for (const f of readdirSync(d)) { const p = join(d, f); const st = statSync(p); if (st.isDirectory()) { walk(p); continue; }
+const walk = (d) => { if (d.endsWith("/vendor")) return; for (const f of readdirSync(d)) { const p = join(d, f); const st = statSync(p); if (st.isDirectory()) { walk(p); continue; }
   const ext = extname(f);
   if (ext === ".js") { const code = readFileSync(p, "utf8"); const r = transformSync(code, { minify: true, format: "esm", target: "es2020", legalComments: "none", charset: "utf8" }); writeFileSync(p, BANNER + "\n" + r.code); js++; }
   else if (ext === ".css") { const code = readFileSync(p, "utf8"); const r = transformSync(code, { loader: "css", minify: true, legalComments: "none", charset: "utf8" }); writeFileSync(p, BANNER + r.code); css++; }
