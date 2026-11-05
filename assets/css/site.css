@@ -1518,3 +1518,28 @@ body.ob-open { overflow: hidden; }
 .ob-box { grid-template-rows: auto 1fr auto auto auto; }
 @media (max-width: 760px) { .ob-thumbs { display: none; } .ob-box { grid-template-rows: auto 1fr auto auto; } }
 .ob-x:hover { transform: rotate(90deg) !important; }
+
+/* ═══ مزيج الأعمال ═══ */
+.mix { padding: 18px 18px 16px; }
+.mix-h { font-weight: 700; font-size: 15.5px; margin-bottom: 12px; }
+.mix-bar { display: flex; height: 26px; border-radius: 99px; overflow: hidden; background: var(--line); gap: 2px; }
+.mix-bar .seg { flex: 0 0 var(--w); background: var(--c); display: grid; place-items: center; color: #fff; font-size: 11px; font-weight: 700; transform: scaleX(0); transform-origin: inline-start; transition: transform .7s var(--ease), opacity .25s, flex-basis .4s; transition-delay: calc(var(--i) * .08s), 0s, 0s; cursor: default; }
+.rv.in .mix-bar .seg { transform: none; }
+.mix-bar .seg b { opacity: 0; transition: opacity .2s; } .mix-bar .seg:hover b, .mix-bar .seg:first-child b { opacity: 1; }
+.mix-bar .seg.dim { opacity: .3; } .mix-bar .seg.prime { box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--c3) 70%, transparent); }
+.mix-legend { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.mk { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 99px; border: 1px solid var(--line); background: transparent; color: var(--muted); font: 500 12px var(--sans); cursor: pointer; transition: all .2s; }
+.mk i { width: 8px; height: 8px; border-radius: 50%; background: var(--c); } .mk small { color: var(--dim); }
+.mk:hover, .mk.on { border-color: var(--c); color: var(--fg); background: color-mix(in srgb, var(--c) 12%, transparent); }
+.ybars { display: flex; align-items: flex-end; gap: 10px; height: 92px; padding: 0 4px; }
+.yb { flex: 1; display: grid; grid-template-rows: auto 1fr auto; justify-items: center; height: 100%; gap: 4px; }
+.yb i { width: 100%; max-width: 46px; border-radius: 8px 8px 3px 3px; background: linear-gradient(180deg, var(--accent-2), color-mix(in srgb, var(--accent-2) 60%, var(--accent))); align-self: end; height: 0; transition: height .9s var(--ease); transition-delay: calc(.2s + var(--i) * .12s); }
+.rv.in .yb i { height: var(--h); }
+.yb b { font-size: 13px; color: var(--fg); } .yb span { font-size: 11px; color: var(--dim); }
+
+/* ═══ ميلان البطاقات ═══ */
+.tilt { transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); transition: transform .25s ease, box-shadow .25s ease; will-change: transform; }
+.tilt:hover { box-shadow: 0 24px 50px -24px rgba(0,0,0,.55); }
+.tilt::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: radial-gradient(300px 200px at var(--mx, 50%) var(--my, 50%), rgba(255,255,255,.07), transparent 60%); opacity: 0; transition: opacity .25s; pointer-events: none; }
+.tilt:hover::after { opacity: 1; }
+.pcard.tilt, .drive-tile.tilt, .num.tilt, .svc.tilt { position: relative; }

@@ -5,7 +5,7 @@
    ───────────────────────────────────────────── */
 import { state, t, L, has, esc, $, $$, reduce, fmtDate } from "./core.js";
 import { cityOf } from "./atlas.js";
-import { MOTIFS } from "./themes.js";
+import { MOTIFS, THEMES } from "./themes.js";
 
 const UI = {
   ar: { now_k: "حالياً", now_h: "أعمل الآن <em>مع</em>", now_lead: "عقدان مستمران إلى جانب الدراسة.", ongoing: "مستمر حتى الآن", since: "منذ", months: "شهراً", month: "شهر", years: "سنوات", year: "سنة", and: "و", two_years: "سنتان", two_months: "شهران", projects: "مشروعاً", cities: "مدناً على الخريطة", boards: "بوستراً ولوحة", certs: "شهادة وتكريماً", honors: "تكريماً", tools: "أداة", years: "سنوات نشاط", since: "منذ", journey_k: "خط الرحلة", journey_h: "محطات <em>الرحلة</em>.", journey_lead: "كل محطة تاريخ: دراسة، عمل، تطوع، أو تكريم. مرّر على المحطة لتقرأها.", details: "التفاصيل الكاملة", work: "عمل", study: "دراسة", volunteer: "تطوع", honor: "تكريم", course: "دورة", future: "متوقع", radar_h: "خريطة المعايير", radar_sub: "حجم الدليل لكل معيار: مشاريع وشهادات وخبرات", more: "المزيد", less: "أقل", now: "الآن" },
@@ -156,4 +156,32 @@ export function nowHtml(c) {
       <div class="now-b"><div class="now-k"><span class="live"><i></i>${esc(s("ongoing"))}</span><span class="mono">${esc(s("since"))} ${esc(fmtDate(e.since || e.start))}</span></div><h3>${esc(L(e.orgShort || e.org))}</h3><div class="now-role">${esc(L(e.role))}</div>
       <div class="now-bar" aria-hidden="true"><i class="fill"></i><b class="head"></b>${yearTicks.map((tk) => `<span class="tick" style="--p:${tk.p.toFixed(3)}"><small class="mono">${tk.y}</small></span>`).join("")}</div>
       <div class="now-dur">${yearOnly[i] ? `+<b class="mono" data-count="${cur.y - st.y}">0</b> ${esc(s("year"))} · ${esc(nthYear(cur.y - st.y + 1))}` : `<b class="mono" data-count="${len}">0</b> ${esc(len === 1 ? s("month") : s("months"))} · ${esc(durText(len))}`}</div></div></article>`; }).join("")}</div>`;
+}
+
+
+/* ═══ مزيج الأعمال: حصة كل مجال من المشاريع (شريط مكدّس تفاعلي) + مشاريع كل سنة ═══ */
+export function mixHtml(c) {
+  const ps = (c.projects || []).filter((p) => (p.categories || []).length); if (ps.length < 3) return "";
+  const ar = state.lang === "ar"; const cnt = new Map(); for (const p of ps) { const k = p.categories[0]; cnt.set(k, (cnt.get(k) || 0) + 1); }
+  const cats = [...cnt.entries()].sort((a, b) => b[1] - a[1]); const total = ps.length;
+  const years = new Map(); for (const p of ps) if (p.year) years.set(+p.year, (years.get(+p.year) || 0) + 1); const ys = [...years.entries()].sort((a, b) => a[0] - b[0]); const ymax = Math.max(...ys.map((y) => y[1]), 1);
+  const col = (k) => (THEMES[k] || THEMES.planning).c;
+  return `<div class="card mix rv"><div class="kicker" style="margin-bottom:6px">${esc(ar ? "مزيج الأعمال" : "Work mix")}</div><div class="mix-h">${esc(ar ? `${total} مشروعاً، ${Math.round(cats[0][1] / total * 100)}٪ منها تخطيط` : `${total} projects, ${Math.round(cats[0][1] / total * 100)}% planning`)}</div>
+    <div class="mix-bar" role="img" aria-label="${esc(ar ? "حصة كل مجال" : "Share by field")}">${cats.map(([k, n], i) => `<span class="seg${k === "planning" ? " prime" : ""}" style="--w:${(n / total * 100).toFixed(2)}%;--c:${col(k)};--i:${i}" data-k="${esc(k)}" tabindex="0"><b>${n}</b></span>`).join("")}</div>
+    <div class="mix-legend">${cats.map(([k, n]) => `<button type="button" class="mk" data-k="${esc(k)}" style="--c:${col(k)}"><i></i>${k === "planning" ? "★ " : ""}${esc(t("cat." + k) === "cat." + k ? k : t("cat." + k))} <small class="mono">${n}</small></button>`).join("")}</div>
+    <div class="mix-years"><div class="kicker" style="margin:14px 0 8px">${esc(ar ? "مشاريع كل سنة" : "Projects per year")}</div><div class="ybars">${ys.map(([y, n], i) => `<div class="yb" style="--h:${(n / ymax * 100).toFixed(1)}%;--i:${i}"><b class="mono" data-count="${n}">0</b><i></i><span class="mono">${y}</span></div>`).join("")}</div></div></div>`;
+}
+export function initMix(root = document) {
+  const m = $(".mix", root); if (!m) return;
+  const hi = (k) => { $$(".seg", m).forEach((e) => e.classList.toggle("dim", !!k && e.dataset.k !== k)); $$(".mk", m).forEach((e) => e.classList.toggle("on", !!k && e.dataset.k === k)); };
+  $$(".seg, .mk", m).forEach((e) => { e.addEventListener("pointerenter", () => hi(e.dataset.k)); e.addEventListener("pointerleave", () => hi(null)); e.addEventListener("focus", () => hi(e.dataset.k)); e.addEventListener("blur", () => hi(null)); });
+  $$(".mk", m).forEach((b) => b.addEventListener("click", () => { const f = document.querySelector(`[data-cat="${CSS.escape(b.dataset.k)}"]`); if (f) { f.click(); document.getElementById("projects")?.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" }); } }));
+}
+
+/* ═══ ميلان ثلاثي الأبعاد خفيف للبطاقات على الحاسوب (يتبع المؤشر) ═══ */
+export function initTilt(sel, root = document) {
+  if (reduce || !matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+  $$(sel, root).forEach((el) => { el.classList.add("tilt"); let raf = 0;
+    el.addEventListener("pointermove", (e) => { if (raf) return; raf = requestAnimationFrame(() => { raf = 0; const r = el.getBoundingClientRect(); const x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5; el.style.setProperty("--rx", (-y * 5).toFixed(2) + "deg"); el.style.setProperty("--ry", (x * 6).toFixed(2) + "deg"); el.style.setProperty("--mx", ((x + .5) * 100).toFixed(1) + "%"); el.style.setProperty("--my", ((y + .5) * 100).toFixed(1) + "%"); }); });
+    el.addEventListener("pointerleave", () => { el.style.setProperty("--rx", "0deg"); el.style.setProperty("--ry", "0deg"); }); });
 }

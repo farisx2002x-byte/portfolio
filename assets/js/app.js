@@ -10,7 +10,7 @@ import { atlasHtml, initAtlas } from "./atlas.js";
 import { dossierHtml, initDossier } from "./dossier.js";
 import { shelfHtml, initShelf } from "./shelf.js";
 import { initTour } from "./tour.js";
-import { numbersHtml, heroNumsHtml, initCounters, radarHtml, journeyHtml, initJourney, initDotsNav, collapseLists, nowHtml } from "./infographic.js";
+import { numbersHtml, heroNumsHtml, initCounters, radarHtml, journeyHtml, initJourney, initDotsNav, collapseLists, nowHtml, mixHtml, initMix, initTilt } from "./infographic.js";
 import { heroScene, bindHeroScene, ticker, stackHtml, fillStack, bindStack, flip, countUp, compassRose, initCursorFx, cycler, initProgress, staggerCards, introSplash } from "./fx.js";
 
 let c, app, rankedCache = [], catFilter = "all", showAll = false;
@@ -129,7 +129,7 @@ function about() {
   const langs = (p.languages || []).filter((l) => has(l.name));
   return `<section class="wrap" id="about">${kicker(t("about_kicker"))}<h2 class="h2 rv">${t("about_h")}</h2>
     <div class="about-grid"><div class="card bio rv">${has(p.photo) ? `<img src="${esc(p.photo)}" alt="${esc(L(p.name))}" loading="lazy">` : ""}<div><h3>${esc(L(p.name))}</h3>${has(p.title) ? `<div class="role">${esc(L(p.title))}</div>` : ""}${has(p.bio) ? `<p>${esc(L(p.bio))}</p>` : ""}</div></div>
-    <div class="side-stack">${numbersHtml(c)}
+    <div class="side-stack">${numbersHtml(c)}${mixHtml(c)}
     ${langs.length ? `<div class="card rv"><div class="kicker" style="margin-bottom:10px">${esc(t("languages"))}</div><div class="langs">${langs.map((l) => `<span class="pill">${esc(L(l.name))}${has(l.level) ? ` · ${esc(L(l.level))}` : ""}</span>`).join("")}</div></div>` : ""}
     ${c.education.length ? `<div class="card rv"><div class="kicker" style="margin-bottom:10px">${esc(t("education"))}</div>${c.education.map((e) => `<div><b>${esc(L(e.degree))}</b><div style="color:var(--muted);font-size:14px">${esc(L(e.institution))}${e.start || e.end ? ` · <span class="mono">${e.start ? esc(e.start) + (e.end ? "–" + esc(e.end) : "") : `${esc(t("expected"))} ${esc(e.end)}`}</span>` : ""}</div></div>`).join("")}</div>` : ""}</div></div></section>`;
 }
@@ -316,7 +316,7 @@ function render() {
   let n = 0; $$("#app > section > .kicker").forEach((k) => { if (/^\d\d\s*·/.test(k.textContent)) k.textContent = k.textContent.replace(/^\d\d/, String(++n).padStart(2, "0")); });
   // ربط التفاعلات
   bindModel(); if ($("#model")) recompute(); initAtlas(c.projects); initDossier(c.certificates, (id) => certModal(id)); initShelf(c.projects); initTour(); document.addEventListener("atlas:pick", (e) => $$(".pcard").forEach((x) => x.classList.toggle("rank-1", x.dataset.p === e.detail)), { once: false }); renderCerts(); renderServicesList(); bindContact(); initGis(); initReveal(); bindRequests(); initProgress(); staggerCards();
-  bindHeroScene(); initCursorFx(app); initCounters(app); initJourney(c); initDotsNav(); collapseLists(".sgroup ul", 5);
+  bindHeroScene(); initCursorFx(app); initCounters(app); initJourney(c); initDotsNav(); initMix(app); initTilt(".pcard, .drive-tile, .card.now, .num, .svc", app); collapseLists(".sgroup ul", 5);
   const disc = $("#disc"); if (disc) cycler(disc, [L(c.profile.title), ...groups().map((g) => L(g.title))].filter(Boolean));
   if ("IntersectionObserver" in window) { const so = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); so.unobserve(e.target); } }), { threshold: .4 }); $$(".strip, .kicker").forEach((e) => so.observe(e)); } else $$(".strip, .kicker").forEach((e) => e.classList.add("in"));
   app.addEventListener("click", (e) => { const om = e.target.closest("[data-onmap]"); if (om) { e.preventDefault(); e.stopPropagation(); document.dispatchEvent(new CustomEvent("atlas:open", { detail: om.dataset.onmap })); return; } const ev = e.target.closest("[data-ev]"); if (ev) { e.preventDefault(); evidenceModal(ev.dataset.ev); } const md = e.target.closest("[data-md]"); if (md) mdModal(md.dataset.md); });
