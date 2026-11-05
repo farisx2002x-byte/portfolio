@@ -109,7 +109,8 @@ export function initAtlas(projects) {
   const svgPt = (clientX, clientY) => { const [x, y] = toUser(clientX, clientY); return [(x - view.x) / view.k, (y - view.y) / view.k]; };
   const visibleSize = () => { const { r, sc } = box(); return [r.width / sc, r.height / sc]; };
   const zoomAt = (cx, cy, k2) => { k2 = Math.min(90, Math.max(minK, k2)); view.x = cx - (cx - view.x) * (k2 / view.k); view.y = cy - (cy - view.y) * (k2 / view.k); view.k = k2; };
-  const fitView = () => { const [vw] = visibleSize(); minK = Math.min(1, vw / 930); view = { k: minK, x: W / 2 - (W / 2) * minK, y: H / 2 - (H / 2) * minK }; };
+  const KB = bbox(KSA.map(([a, c]) => [px(a), py(c)]));
+  const fitView = () => { const [vw, vh] = visibleSize(); const bw = KB[2] - KB[0], bh = KB[3] - KB[1]; const pad = innerWidth < 640 ? .035 : .07; minK = Math.min(1, vw / (bw * (1 + pad * 2)), vh / (bh * (1 + pad * 2))); const cx = (KB[0] + KB[2]) / 2, cy = (KB[1] + KB[3]) / 2; view = { k: minK, x: W / 2 - cx * minK, y: H / 2 - cy * minK }; };
   /* ملاءمة مستطيل (بوحدات الخريطة) داخل الإطار المرئي */
   const fitBox = (x0, y0, x1, y1, pad = .18, kMin = 1, kMax = 24) => { const [vw, vh] = visibleSize(); const bw = Math.max(x1 - x0, 1), bh = Math.max(y1 - y0, 1); let k = Math.min(vw / (bw * (1 + pad * 2)), vh / (bh * (1 + pad * 2))); k = Math.min(kMax, Math.max(kMin, k)); const cx = (x0 + x1) / 2, cy = (y0 + y1) / 2; view = { k, x: W / 2 - cx * k, y: H / 2 - cy * k }; };
   const flyTo = (lon, lat, k) => { view.k = k; view.x = W / 2 - px(lon) * k; view.y = H / 2 - py(lat) * k; apply(); };
@@ -228,6 +229,7 @@ export function initAtlas(projects) {
   // تشغيل
   setLevel(0, null, null, false); addEventListener("resize", () => { clearTimeout(root._rt); root._rt = setTimeout(() => { if (level === 0) { fitView(); apply(false); } }, 150); });
   root.classList.add("boot"); const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { root.classList.add("in"); io.disconnect(); setTimeout(() => root.classList.remove("boot"), 3200); } }), { threshold: .2 }); io.observe(root);
+  root._initBase = initBase;
   const io2 = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { io2.disconnect(); initBase(); } }), { rootMargin: "600px" }); io2.observe(root);
   // فتح مشروع من الخارج (مثلاً من بطاقة في قسم المشاريع)
   document.addEventListener("atlas:open", (e) => { const p = projects.find((x) => x.id === e.detail); if (p && meta.has(p.id)) { root.scrollIntoView({ behavior: "smooth", block: "center" }); setTimeout(() => goProject(p), 500); } });

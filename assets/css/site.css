@@ -1488,3 +1488,12 @@ body.ob-open { overflow: hidden; }
 .atlas-attrib { position: absolute; inset-inline-start: 8px; bottom: 6px; font: 400 9.5px var(--mono); color: var(--dim); opacity: 0; pointer-events: none; }
 .atlas.has-base .atlas-attrib { opacity: .8; }
 .atlas-foot .atlas-title { display: inline-block; }
+
+/* ═══ الجوال: خط الرحلة يُمرَّر أفقياً بحجم مقروء، والأطلس يملأ العرض ═══ */
+@media (max-width: 640px) {
+  .journey { overflow-x: auto; overflow-y: visible; -webkit-overflow-scrolling: touch; scrollbar-width: thin; padding-bottom: 6px; scroll-snap-type: x proximity; }
+  .journey-svg { width: 920px; max-width: none; }
+  .journey-legend { position: sticky; inset-inline-start: 0; }
+  .journey::after { content: "⇆ اسحب للتنقل بين المحطات"; display: block; font-size: 11.5px; color: var(--dim); text-align: center; margin-top: 4px; position: sticky; inset-inline-start: 0; }
+  :root[lang="en"] .journey::after { content: "⇆ swipe to move between stations"; }
+}

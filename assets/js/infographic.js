@@ -109,6 +109,8 @@ export function journeyHtml(c) {
 const short = (x, n) => (x || "").length > n ? x.slice(0, n - 1) + "…" : (x || "");
 export function initJourney(c) {
   const root = $("#journey"); if (!root) return; const items = journeyItems(c); const card = $("#journey-card");
+  // على الجوال يبدأ التمرير من آخر محطة (الأحدث)
+  if (innerWidth < 640) requestAnimationFrame(() => { const rtl = document.documentElement.dir === "rtl"; root.scrollTo({ left: rtl ? -root.scrollWidth : root.scrollWidth }); });
   const show = (i) => { const it = items[i]; if (!it) return; $$(".st", root).forEach((g) => g.classList.toggle("on", +g.dataset.j === i)); card.hidden = false; card.className = `journey-card in jc-${it.kind}`;
     card.innerHTML = `<div class="jc-k mono">${esc(fmtDate(it.d))}${it.end ? ` → ${esc(it.end === "present" ? s("now") : fmtDate(it.end))}` : ""} · ${esc(s(it.kind))}</div><h4>${esc(it.title)}</h4>${it.org ? `<div class="jc-o">${esc(it.org)}</div>` : ""}${it.sum ? `<p>${esc(it.sum)}</p>` : ""}`; };
   $$(".st", root).forEach((g) => { g.addEventListener("pointerenter", () => show(+g.dataset.j)); g.addEventListener("focus", () => show(+g.dataset.j)); g.addEventListener("click", () => show(+g.dataset.j)); });
