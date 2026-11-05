@@ -95,5 +95,33 @@
    "ar": "طلب العرض الكامل",
    "en": "Request for the full deck"
   }
+ },
+ "drive": {
+  "why": {
+   "ar": "أحب التخطيط لأنه يجمع ما أستمتع به: البيانات، والخريطة، والناس. حين أرى شارعاً يمشي فيه الناس براحة أو حياً خدماته قريبة، أعرف أن خلف ذلك قراراً تخطيطياً جيداً، وهذا ما أريد أن أتقنه.",
+   "en": "I like planning because it joins what I enjoy most: data, the map, and people. When a street is comfortable to walk or a district has its services close by, there is a good planning decision behind it, and that is what I want to master."
+  },
+  "learn": {
+   "ar": "أتعلم بالتجربة: مشاريع المواد أطبّقها على مواقع حقيقية في جدة وتبوك والعلا، وأبني أدوات GIS صغيرة تحل مشكلة واحدة في كل مرة.",
+   "en": "I learn by doing: course projects on real sites in Jeddah, Tabuk and AlUla, and small GIS tools that solve one problem at a time."
+  },
+  "give": {
+   "ar": "أشارك في تنظيم فعاليات الكلية والجامعة وأقدّم العروض لفرق وزوار، وأحب أن أشرح التخطيط لمن هم خارج التخصص بلغة بسيطة.",
+   "en": "I help organise faculty and university events, present to teams and visitors, and enjoy explaining planning to people outside the field in plain language."
+  },
+  "next": [
+   {
+    "ar": "دمج أدواتي الثلاث في النقل (العام، المدرسي، التاكسي) في أداة واحدة",
+    "en": "Merge my three transport tools (public, school, taxi) into one unified toolbox"
+   },
+   {
+    "ar": "رسالة علمية قبل التخرج عن أحواض التشجير والظل في أرصفة جدة",
+    "en": "A research thesis before graduating on tree pits and shade on Jeddah's sidewalks"
+   },
+   {
+    "ar": "تمثيل جامعة الملك عبدالعزيز وقيمها أمام الطلاب والزوار",
+    "en": "Representing King Abdulaziz University and its values to students and guests"
+   }
+  ]
  }
 }

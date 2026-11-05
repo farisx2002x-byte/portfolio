@@ -42,6 +42,18 @@ function sw(w) { const vals = Object.values(w || {}).slice(0, 4); while (vals.le
 
 /* ═════ أعمل الآن مع ═════ */
 function now() { const h = nowHtml(c); if (!h) return ""; return `<section class="wrap" id="now">${kicker(t("now_kicker"))}<h2 class="h2 rv">${t("now_h")}</h2><p class="lead">${esc(t("now_lead"))}</p>${h}</section>`; }
+/* ═════ ما الذي يحرّكني: شغف وطموح بكلمات قليلة ═════ */
+function drive() {
+  const d = c.profile.drive; if (!d || !has(d.why)) return "";
+  const ic = { why: "M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11zM12 7v3M12 13h.01", learn: "M4 19V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14M4 19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2M8 7h8M8 11h6", give: "M12 3v12M7 10l5 5 5-5M4 19h16" };
+  const tile = (k, title) => `<article class="card drive-tile rv" style="--i:${k === "why" ? 0 : k === "learn" ? 1 : 2}"><span class="drive-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="${ic[k]}"/></svg></span><h3>${esc(title)}</h3><p>${esc(L(d[k]))}</p></article>`;
+  const next = (d.next || []).filter((x) => has(x));
+  return `<section class="wrap" id="drive">${kicker(t("drive_kicker"))}<h2 class="h2 rv">${t("drive_h")}</h2><p class="lead">${esc(t("drive_lead"))}</p>
+    <div class="drive-grid">${tile("why", t("drive_why"))}${tile("learn", t("drive_learn"))}${tile("give", t("drive_give"))}</div>
+    ${next.length ? `<div class="drive-next rv"><div class="dn-head"><span class="kicker" style="margin:0">${esc(t("drive_next"))}</span></div><ol class="dn-list">${next.map((x, i) => `<li style="--i:${i}"><i class="mono">0${i + 1}</i><span>${esc(L(x))}</span></li>`).join("")}</ol></div>` : ""}
+  </section>`;
+}
+
 /* ═════ النموذج ═════ */
 function model() {
   if (!c.projects.length || !groups().length) return "";
@@ -293,7 +305,7 @@ function bindContact() {
 }
 
 /* ═════ التجميع ═════ */
-const SECTIONS = { hero, now, model, about, atlas, projects: () => "", library, posters, skills, certificates, experience, education: () => "", gis, stats, datasets, notes, services, testimonials, contact };
+const SECTIONS = { hero, now, model, about, drive, atlas, projects: () => "", library, posters, skills, certificates, experience, education: () => "", gis, stats, datasets, notes, services, testimonials, contact };
 function render() {
   const order = (c.site.sections || Object.keys(SECTIONS)).filter((s) => SECTIONS[s]);
   for (const k of Object.keys(SECTIONS)) if (!order.includes(k)) {} // أقسام غير مذكورة لا تُعرض
