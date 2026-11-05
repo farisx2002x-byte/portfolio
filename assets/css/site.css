@@ -1468,18 +1468,21 @@ body.ob-open { overflow: hidden; }
 @media (max-width: 560px) { .drive-tile { padding: 18px 16px; } }
 
 /* ═══ خريطة أساس حقيقية تحت الأطلس ═══ */
-.atlas-base { position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .9s ease; filter: saturate(.78) contrast(1.02); }
+.atlas-base { position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .9s ease; filter: saturate(.85) contrast(1.02); }
+.atlas-base { --fl: saturate(.85) contrast(1.02); --fd: invert(1) hue-rotate(185deg) saturate(.55) brightness(.78) contrast(1.05); filter: var(--fd); }
+:root[data-theme="light"] .atlas-base { filter: var(--fl); }
+@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) .atlas-base { filter: var(--fl); } }
+:root[data-theme="dark"] .atlas-base { filter: var(--fd); }
 .atlas-base .maplibregl-canvas { width: 100% !important; height: 100% !important; }
 .atlas-base .maplibregl-ctrl-bottom-right, .atlas-base .maplibregl-ctrl-bottom-left { display: none; }
 .atlas.has-base .atlas-base { opacity: 1; }
 .atlas.has-base { background: var(--sea); }
 .atlas.has-base .grat, .atlas.has-base .nb, .atlas.has-base .sea, .atlas.has-base .land-dots, .atlas.has-base .sea-lbl, .atlas.has-base .land-glow2 { display: none; }
-.atlas.has-base .land { fill: var(--panel); fill-opacity: .14; stroke: var(--accent-2); stroke-opacity: .55; stroke-width: 1.2; }
+.atlas.has-base .land { fill: var(--panel); fill-opacity: 0; stroke: var(--accent-2); stroke-opacity: .55; stroke-width: 1.2; }
 .atlas.has-base .land-glow { stroke-opacity: .22; stroke-width: 8; }
 .atlas.has-base .prov { stroke-opacity: .5; stroke: var(--fg); fill-opacity: 0; }
 .atlas.has-base .prov.has { fill-opacity: .06; } .atlas.has-base .prov.hover { fill-opacity: .16; } .atlas.has-base .prov.active { fill-opacity: .08; }
 .atlas.has-base .prov.dim { opacity: .6; fill: var(--bg); fill-opacity: .32; }
-.atlas.has-base[data-level="0"] .atlas-base { filter: saturate(.7) contrast(1.02) brightness(var(--base-b, 1)); }
 .atlas.has-base .fabric .streets { display: none; } .atlas.has-base .fabric .ring, .atlas.has-base .fabric .ray { stroke-opacity: .18; }
 .atlas.has-base .cmark.ctx .lbl { paint-order: stroke; stroke: var(--bg); stroke-width: 3px; }
 .atlas-attrib { position: absolute; inset-inline-start: 8px; bottom: 6px; font: 400 9.5px var(--mono); color: var(--dim); opacity: 0; pointer-events: none; }

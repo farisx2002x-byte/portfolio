@@ -98,10 +98,10 @@ export function initAtlas(projects) {
     const id = ++tweenId; if (!anim || reduce) { shownView = { ...view }; paint(); return; }
     const from = { ...shownView }, to = { ...view }, t0 = performance.now(), ease = (u) => 1 - Math.pow(1 - u, 3); const lk0 = Math.log(from.k), lk1 = Math.log(to.k);
     const step = (ts) => { if (id !== tweenId) return; const u = Math.min(1, (ts - t0) / (dur * 1000)), e = ease(u); const k = Math.exp(lk0 + (lk1 - lk0) * e); shownView = { k, x: from.x + (to.x - from.x) * e, y: from.y + (to.y - from.y) * e }; paint(); placePop(); if (u < 1) requestAnimationFrame(step); }; requestAnimationFrame(step); };
-  const initBase = async () => { if (base || root.dataset.nobase) return; try { const { loadMapLibre, baseStyle } = await import("./maps.js"); const ml = await loadMapLibre(); const host = $("#atlas-base");
-      base = new ml.Map({ container: host, style: baseStyle(), interactive: false, attributionControl: false, center: [45, 24], zoom: 4, fadeDuration: 300, renderWorldCopies: false, pitchWithRotate: false });
+  const initBase = async () => { if (base || root.dataset.nobase) return; try { const { loadMapLibre, atlasStyle } = await import("./maps.js"); const ml = await loadMapLibre(); const host = $("#atlas-base");
+      base = new ml.Map({ container: host, style: atlasStyle(), interactive: false, attributionControl: false, center: [45, 24], zoom: 4, fadeDuration: 300, renderWorldCopies: false, pitchWithRotate: false });
       base.on("load", () => { root.classList.add("has-base"); syncBase(); }); base.on("error", () => {}); addEventListener("resize", () => { base.resize(); syncBase(); });
-      document.addEventListener("themechange", () => { try { base.setStyle(baseStyle()); } catch {} }); syncBase(); } catch { base = null; } };
+       syncBase(); } catch { base = null; } };
   const toUser = (clientX, clientY) => { const { r, sc, ox, oy } = box(); return [(clientX - r.left - ox) / sc, (clientY - r.top - oy) / sc]; };
   const svgPt = (clientX, clientY) => { const [x, y] = toUser(clientX, clientY); return [(x - view.x) / view.k, (y - view.y) / view.k]; };
   const visibleSize = () => { const { r, sc } = box(); return [r.width / sc, r.height / sc]; };

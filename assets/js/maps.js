@@ -9,6 +9,8 @@ const STYLES = { dark: "https://tiles.openfreemap.org/styles/dark", light: "http
 const isDark = () => (document.documentElement.dataset.theme ? document.documentElement.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches);
 let libP = null;
 export const baseStyle = () => (isDark() ? STYLES.dark : STYLES.light);
+export const atlasStyle = () => "https://tiles.openfreemap.org/styles/liberty";
+export { isDark };
 export function loadMapLibre() {
   if (window.maplibregl) return Promise.resolve(window.maplibregl);
   libP ??= new Promise((res, rej) => {
