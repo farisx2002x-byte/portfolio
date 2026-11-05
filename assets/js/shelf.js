@@ -46,14 +46,16 @@ export function initShelf(projects) {
   const pageImg = (pg, cls) => pg ? `<div class="pg ${cls}${pg.cover ? " cover" : ""}" style="--c:${pg.c};--c2:${pg.c2}">${pg.src ? `<img src="${esc(pg.src)}" alt="${esc(pg.alt || "")}" decoding="async">` : `<div class="pg-blank"><span class="pg-ttl">${esc(pg.title || "")}</span></div>`}<span class="pg-n mono">${pg.n}</span></div>` : `<div class="pg empty"></div>`;
   const render = () => {
     if (!lb) return; const n = pages.length; spread = isNarrow() ? 1 : 2; const i = Math.max(0, Math.min(page, n - 1));
-    const view = $(".ob-view", lb); const a = pages[i], b = spread === 2 ? pages[i + 1] : null;
-    view.innerHTML = spread === 2 ? `${pageImg(a, "r")}${pageImg(b, "l")}` : pageImg(a, "single");
-    view.classList.remove("flip"); void view.offsetWidth; view.classList.add("flip");
-    $(".ob-count", lb).textContent = spread === 2 && b ? `${i + 1}–${i + 2} / ${n}` : `${i + 1} / ${n}`;
-    $("[data-ob=prev]", lb).disabled = i <= 0; $("[data-ob=next]", lb).disabled = i + spread >= n;
-    $$(".ob-dots i", lb).forEach((d, k) => d.classList.toggle("on", k >= i && k < i + spread));
+    const view = $(".ob-view", lb); const closed = spread === 2 && i === 0 && n > 1; const a = pages[i], b = spread === 2 && !closed ? pages[i + 1] : null;
+    view.innerHTML = closed ? pageImg(a, "single closed") : spread === 2 ? `${pageImg(a, "r")}${pageImg(b, "l")}` : pageImg(a, "single");
+    view.classList.toggle("is-closed", closed); view.classList.remove("flip"); void view.offsetWidth; view.classList.add("flip");
+    $(".ob-count", lb).textContent = b ? `${i + 1}–${i + 2} / ${n}` : `${i + 1} / ${n}`;
+    $("[data-ob=prev]", lb).disabled = i <= 0; $("[data-ob=next]", lb).disabled = closed ? false : i + spread >= n;
+    const last = b ? i + 1 : i; $$(".ob-dots i", lb).forEach((d, k) => d.classList.toggle("on", k >= i && k <= last)); $$(".ob-th", lb).forEach((d, k) => d.classList.toggle("on", k >= i && k <= last));
+    const th = $(".ob-th.on", lb); if (th) th.scrollIntoView({ block: "nearest", inline: "center", behavior: reduce ? "auto" : "smooth" });
   };
-  const go = (d) => { page = Math.max(0, Math.min(pages.length - 1, page + d * spread)); if (spread === 2 && page % 2) page -= 1; render(); };
+  const go = (d) => { const n = pages.length; if (spread === 2) { if (page === 0) page = d > 0 ? 1 : 0; else { page = page + d * 2; if (page < 1) page = 0; } page = Math.min(page, n - 1); if (page > 0 && page % 2 === 0) page -= 1; } else page = Math.max(0, Math.min(n - 1, page + d)); render(); };
+  const jump = (k) => { page = spread === 2 ? (k === 0 ? 0 : (k % 2 ? k : k - 1)) : k; render(); };
   const open = (id) => {
     const p = projects.find((x) => x.id === id); if (!p) return;
     if (cur === id) { close(); return; } if (cur) closeNow(); cur = id; root.dataset.open = id;
@@ -65,19 +67,22 @@ export function initShelf(projects) {
     lb.innerHTML = `<div class="ob-bg"></div><div class="ob-box" style="--c:${th.c};--c2:${th.c2}">
       <div class="ob-top"><div class="ob-meta"><span class="mono">${esc(String(p.year || ""))}${p.course ? ` · ${esc(p.course)}` : ""} · ${esc(String(pagesOf(p)))} ${esc(s("pages"))}${has(p.team) ? ` · ${esc(s("team"))}` : ""}${p.noSummary ? ` · ${esc(s("wip"))}` : ""}</span><h3>${esc(L(p.title))}</h3></div><button class="ob-x" type="button" data-ob="close" aria-label="${esc(s("close"))}">×</button></div>
       <div class="ob-stage"><button class="ob-nav" type="button" data-ob="prev" aria-label="prev">‹</button><div class="ob-book"><div class="ob-view"></div><i class="ob-spine"></i></div><button class="ob-nav" type="button" data-ob="next" aria-label="next">›</button></div>
+      <div class="ob-thumbs" aria-label="pages">${pages.map((pg, k) => `<button type="button" class="ob-th" data-th="${k}" aria-label="${k + 1}">${pg.src ? `<img src="${esc(pg.src)}" alt="" loading="lazy" decoding="async">` : `<i style="--c:${pg.c}"></i>`}<span class="mono">${k + 1}</span></button>`).join("")}</div>
       <div class="ob-foot"><div class="ob-dots">${pages.map(() => "<i></i>").join("")}</div><span class="ob-count mono"></span><div class="ob-acts"><a class="btn btn-primary btn-sm" href="${projectHref(p)}">${esc(s("open"))} ↗</a>${located ? `<button class="btn btn-ghost btn-sm" type="button" data-onmap="${esc(p.id)}">${esc(s("map"))}</button>` : ""}<button class="btn btn-ghost btn-sm" type="button" data-ob="close">${esc(s("close"))}</button></div></div>
       <p class="ob-sum">${esc(L(p.summary) || "")}</p></div>`;
     document.body.appendChild(lb); document.body.classList.add("ob-open");
-    lb.addEventListener("click", (e) => { const t = e.target.closest("[data-ob]"); if (t) { const a = t.dataset.ob; if (a === "close") close(); else if (a === "prev") go(-1); else if (a === "next") go(1); return; } if (e.target.classList.contains("ob-bg")) close(); const pg = e.target.closest(".pg"); if (pg && !isNarrow()) { if (pg.classList.contains("l")) go(1); else if (pg.classList.contains("r")) go(-1); } });
+    lb.addEventListener("click", (e) => { const th = e.target.closest("[data-th]"); if (th) { jump(+th.dataset.th); return; } const t = e.target.closest("[data-ob]"); if (t) { const a = t.dataset.ob; if (a === "close") close(); else if (a === "prev") go(-1); else if (a === "next") go(1); return; } if (e.target.classList.contains("ob-bg")) close(); const pg = e.target.closest(".pg"); if (pg && !isNarrow()) { if (pg.classList.contains("l")) go(1); else if (pg.classList.contains("r")) go(-1); } });
     // سحب/تمرير بالإصبع على الجوال
     let x0 = null; lb.addEventListener("pointerdown", (e) => { x0 = e.clientX; }); lb.addEventListener("pointerup", (e) => { if (x0 == null) return; const dx = e.clientX - x0; x0 = null; if (Math.abs(dx) > 40) { const rtl = document.documentElement.dir === "rtl"; go((dx < 0) === rtl ? -1 : 1); } });
     lb._key = (e) => { if (e.key === "Escape") close(); if (e.key === "ArrowRight") go(document.documentElement.dir === "rtl" ? -1 : 1); if (e.key === "ArrowLeft") go(document.documentElement.dir === "rtl" ? 1 : -1); }; document.addEventListener("keydown", lb._key);
     lb._rs = () => render(); addEventListener("resize", lb._rs);
+    const bookEl = root.querySelector(`[data-book="${CSS.escape(id)}"]`); const box = $(".ob-box", lb);
+    if (bookEl && !reduce) { const r0 = bookEl.getBoundingClientRect(); const r1 = box.getBoundingClientRect(); const dx = (r0.left + r0.width / 2) - (r1.left + r1.width / 2), dy = (r0.top + r0.height / 2) - (r1.top + r1.height / 2); const sx = Math.max(.04, r0.width / r1.width), sy = Math.max(.04, r0.height / r1.height); box.style.transition = "none"; box.style.transform = `translate(${dx}px, ${dy}px) scale(${sx}, ${sy})`; box.style.opacity = ".4"; void box.offsetWidth; box.style.transition = "transform .6s cubic-bezier(.2,.8,.2,1), opacity .4s"; box.style.transform = ""; box.style.opacity = ""; }
     requestAnimationFrame(() => { lb.classList.add("in"); render(); $(".ob-x", lb).focus({ preventScroll: true }); });
     if (reading) reading.innerHTML = `<div class="read-hint"><i></i>${esc(s("hint"))}</div>`;
   };
   const closeNow = () => { if (lb) { document.removeEventListener("keydown", lb._key); removeEventListener("resize", lb._rs); lb.remove(); lb = null; } document.body.classList.remove("ob-open"); $$(".book.pulled", root).forEach((b) => b.classList.remove("pulled")); cur = null; delete root.dataset.open; };
-  const close = () => { if (!lb) { closeNow(); return; } const el = lb; el.classList.remove("in"); el.classList.add("out"); const b = root.querySelector(".book.pulled"); if (b) b.classList.remove("pulled"); setTimeout(() => { if (lb === el) closeNow(); }, reduce ? 0 : 320); };
+  const close = () => { if (!lb) { closeNow(); return; } const el = lb; el.classList.remove("in"); el.classList.add("out"); const bookEl = cur && root.querySelector(`[data-book="${CSS.escape(cur)}"]`); const box = $(".ob-box", el); if (bookEl && box && !reduce) { const r0 = bookEl.getBoundingClientRect(); const r1 = box.getBoundingClientRect(); box.style.transition = "transform .32s cubic-bezier(.4,0,.6,1), opacity .3s"; box.style.transform = `translate(${(r0.left + r0.width / 2) - (r1.left + r1.width / 2)}px, ${(r0.top + r0.height / 2) - (r1.top + r1.height / 2)}px) scale(${Math.max(.04, r0.width / r1.width)}, ${Math.max(.04, r0.height / r1.height)})`; box.style.opacity = "0"; } const b = root.querySelector(".book.pulled"); if (b) b.classList.remove("pulled"); setTimeout(() => { if (lb === el) closeNow(); }, reduce ? 0 : 320); };
   $$(".book", root).forEach((b) => b.addEventListener("click", () => open(b.dataset.book)));
   if ("IntersectionObserver" in window) { const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { root.classList.add("in"); io.disconnect(); } }), { threshold: .2 }); io.observe(root); } else root.classList.add("in");
   document.addEventListener("library:open", (e) => open(e.detail));
