@@ -1,0 +1,9 @@
+[
+ {
+  "id": "sample-tape",
+  "title": {"ar": "شريط تجريبي: أرسل فيديوهاتك ليحل محله", "en": "Sample tape: send your videos to replace it"},
+  "year": "2026",
+  "kind": "promo",
+  "demo": true
+ }
+]

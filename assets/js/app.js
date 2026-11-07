@@ -9,6 +9,7 @@ import { THEMES, pulseHero, applyTheme } from "./themes.js";
 import { atlasHtml, initAtlas } from "./atlas.js";
 import { dossierHtml, initDossier } from "./dossier.js";
 import { shelfHtml, initShelf } from "./shelf.js";
+import { tapesHtml, initTapes } from "./tapes.js";
 import { initTour } from "./tour.js";
 import { numbersHtml, heroNumsHtml, initCounters, radarHtml, journeyHtml, initJourney, initDotsNav, collapseLists, nowHtml, mixHtml, initMix, initTilt } from "./infographic.js";
 import { heroScene, bindHeroScene, ticker, stackHtml, fillStack, bindStack, flip, countUp, compassRose, initCursorFx, cycler, initProgress, staggerCards, introSplash } from "./fx.js";
@@ -305,7 +306,7 @@ function bindContact() {
 }
 
 /* ═════ التجميع ═════ */
-const SECTIONS = { hero, now, model, about, drive, atlas, projects: () => "", library, posters, skills, certificates, experience, education: () => "", gis, stats, datasets, notes, services, testimonials, contact };
+const SECTIONS = { hero, now, model, about, drive, atlas, tapes: () => tapesHtml(c.videos), projects: () => "", library, posters, skills, certificates, experience, education: () => "", gis, stats, datasets, notes, services, testimonials, contact };
 function render() {
   const order = (c.site.sections || Object.keys(SECTIONS)).filter((s) => SECTIONS[s]);
   for (const k of Object.keys(SECTIONS)) if (!order.includes(k)) {} // أقسام غير مذكورة لا تُعرض
@@ -316,7 +317,7 @@ function render() {
   let n = 0; $$("#app > section > .kicker").forEach((k) => { if (/^\d\d\s*·/.test(k.textContent)) k.textContent = k.textContent.replace(/^\d\d/, String(++n).padStart(2, "0")); });
   // ربط التفاعلات
   bindModel(); if ($("#model")) recompute(); initAtlas(c.projects); initDossier(c.certificates, (id) => certModal(id)); initShelf(c.projects); initTour(); document.addEventListener("atlas:pick", (e) => $$(".pcard").forEach((x) => x.classList.toggle("rank-1", x.dataset.p === e.detail)), { once: false }); renderCerts(); renderServicesList(); bindContact(); initGis(); initReveal(); bindRequests(); initProgress(); staggerCards();
-  bindHeroScene(); initCursorFx(app); initCounters(app); initJourney(c); initDotsNav(); initMix(app); initTilt(".pcard, .drive-tile, .card.now, .num, .svc", app); collapseLists(".sgroup ul", 5);
+  bindHeroScene(); initCursorFx(app); initCounters(app); initJourney(c); initDotsNav(); initMix(app); initTapes(c.videos); initTilt(".pcard, .drive-tile, .card.now, .num, .svc", app); collapseLists(".sgroup ul", 5);
   const disc = $("#disc"); if (disc) cycler(disc, [L(c.profile.title), ...groups().map((g) => L(g.title))].filter(Boolean));
   if ("IntersectionObserver" in window) { const so = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); so.unobserve(e.target); } }), { threshold: .4 }); $$(".strip, .kicker").forEach((e) => so.observe(e)); } else $$(".strip, .kicker").forEach((e) => e.classList.add("in"));
   app.addEventListener("click", (e) => { const om = e.target.closest("[data-onmap]"); if (om) { e.preventDefault(); e.stopPropagation(); document.dispatchEvent(new CustomEvent("atlas:open", { detail: om.dataset.onmap })); return; } const ev = e.target.closest("[data-ev]"); if (ev) { e.preventDefault(); evidenceModal(ev.dataset.ev); } const md = e.target.closest("[data-md]"); if (md) mdModal(md.dataset.md); });

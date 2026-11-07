@@ -140,7 +140,7 @@ export function setLang(lang, rerender = true) {
 }
 
 /* ── تحميل المحتوى ── */
-const FILES = ["site", "profile", "projects", "posters", "certificates", "skills", "experience", "education", "services", "testimonials", "gis", "datasets", "stats", "notes", "meta"];
+const FILES = ["site", "profile", "projects", "posters", "certificates", "skills", "experience", "education", "services", "testimonials", "gis", "datasets", "stats", "notes", "meta", "videos"];
 export async function loadContent() {
   if (state.content) return state.content;
   const b = base();
@@ -149,7 +149,7 @@ export async function loadContent() {
     try { const r = await fetch(`${b}content/${f}.json`, { cache: "no-cache" }); out[f] = r.ok ? await r.json() : null; } catch { out[f] = null; }
   }));
   // قيم افتراضية آمنة
-  out.site ??= {}; out.profile ??= {}; out.projects = (out.projects || []).filter((p) => p && p.id && p.title).sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
+  out.site ??= {}; out.profile ??= {}; out.videos = Array.isArray(out.videos) ? out.videos : []; out.projects = (out.projects || []).filter((p) => p && p.id && p.title).sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
   out.posters = (out.posters || []).filter((x) => x && x.id && x.title);
   out.certificates = (out.certificates || []).filter((c) => c && c.id && c.title).sort((a, b) => String(b.date || "").localeCompare(String(a.date || "")));
   out.skills ??= { groups: [], tools: [] }; out.skills.groups ??= []; out.skills.tools ??= [];
