@@ -200,5 +200,41 @@
   "skills": [
    "ai-tools"
   ]
+ },
+ {
+  "id": "ai-web",
+  "title": {
+   "ar": "مواقع وأدوات بمساعدة الذكاء الاصطناعي",
+   "en": "Websites & tools built with AI"
+  },
+  "description": {
+   "ar": "موقع تعريفي أو بورتفوليو أو أداة صغيرة تُبنى بسرعة بمساعدة الذكاء الاصطناعي، بتصميم مرتب ومحتوى منظم، مثل هذا الموقع نفسه.",
+   "en": "A landing page, portfolio or small tool built fast with AI assistance, with a clean design and organised content, like this very site."
+  },
+  "includes": [
+   {
+    "ar": "موقع شخصي أو بورتفوليو",
+    "en": "Personal site / portfolio"
+   },
+   {
+    "ar": "أداة ويب صغيرة",
+    "en": "Small web tool"
+   },
+   {
+    "ar": "QR وروابط ذكية",
+    "en": "QR & smart links"
+   },
+   {
+    "ar": "نشر على استضافة مجانية",
+    "en": "Free hosting setup"
+   }
+  ],
+  "priceFrom": null,
+  "currency": "SAR",
+  "icon": "spark",
+  "skills": [
+   "ai-tools",
+   "web-mapping"
+  ]
  }
 ]

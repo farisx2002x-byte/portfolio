@@ -259,8 +259,12 @@ function services() {
 function renderServicesList() {
   const host = $("#svc-host"); if (!host) return;
   const ranked = c.projects.length && groups().length ? rankServices() : c.services.map((s) => ({ s, score: null }));
-  host.innerHTML = ranked.map((r, i) => { const s = r.s; return `<article class="svc ${i === 0 && r.score ? "rec" : ""}">${i === 0 && r.score ? `<span class="tag tag-new rec-tag">${esc(t("recommended"))}</span>` : ""}<div class="ic">${ico(s.icon || "default")}</div><h3>${esc(L(s.title))}</h3>${has(s.description) ? `<p>${esc(L(s.description))}</p>` : ""}${(s.includes || []).filter(has).length ? `<ul>${s.includes.filter(has).map((x) => `<li>${esc(L(x))}</li>`).join("")}</ul>` : ""}${r.score != null ? `<div class="fit"><b>${r.score}</b>/100 ${esc(t("fit"))}</div>` : ""}
-    <div class="row"><span class="price">${s.priceFrom != null && s.priceFrom !== "" ? `${esc(t("from"))} <b>${esc(s.priceFrom)}</b> ${esc(s.currency || "SAR")}` : esc(t("on_request"))}${has(s.delivery) ? ` · ${esc(L(s.delivery))}` : ""}</span><button class="btn btn-ghost btn-sm" type="button" data-order="${esc(s.id)}">${esc(t("order"))}</button></div></article>`; }).join("");
+  const top = Math.max(...ranked.map((r) => r.score || 0), 1); host.innerHTML = ranked.map((r, i) => { const s = r.s; const pct = r.score != null ? Math.round(r.score / top * 100) : null; return `<article class="svc${i === 0 && r.score ? " rec" : ""}${s.id === "ai-web" ? " ai" : ""}" style="--i:${i};--pct:${pct ?? 0}">
+      <span class="svc-n mono">${String(i + 1).padStart(2, "0")}</span>${i === 0 && r.score ? `<span class="tag tag-new rec-tag">${esc(t("recommended"))}</span>` : ""}${s.id === "ai-web" ? `<span class="tag ai-tag">AI</span>` : ""}
+      <div class="ic">${ico(s.icon || "default")}</div><h3>${esc(L(s.title))}</h3>${has(s.description) ? `<p>${esc(L(s.description))}</p>` : ""}
+      ${(s.includes || []).filter(has).length ? `<ul>${s.includes.filter(has).map((x) => `<li>${esc(L(x))}</li>`).join("")}</ul>` : ""}
+      ${pct != null ? `<div class="svc-fit"><div class="fit-bar"><i></i></div><small>${esc(t("fit"))} <b class="mono">${pct}٪</b></small></div>` : ""}
+      <div class="row"><span class="price">${s.priceFrom != null && s.priceFrom !== "" ? `${esc(t("from"))} <b>${esc(s.priceFrom)}</b> ${esc(s.currency || "SAR")}` : esc(t("on_request"))}${has(s.delivery) ? ` · ${esc(L(s.delivery))}` : ""}</span><button class="btn btn-sm svc-go" type="button" data-order="${esc(s.id)}">${esc(t("order"))} <span aria-hidden="true">←</span></button></div></article>`; }).join("");
   $$("[data-order]", host).forEach((b) => b.addEventListener("click", () => { const sel = $("#svc"); if (sel) sel.value = b.dataset.order; updateWa(); $("#contact")?.scrollIntoView({ behavior: reduce ? "auto" : "smooth" }); setTimeout(() => $("#name")?.focus({ preventScroll: true }), 700); }));
 }
 
