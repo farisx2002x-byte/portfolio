@@ -50,7 +50,7 @@
   "rewrites": [
     {
       "source": "/cv",
-      "destination": "/cv-hub.html"
+      "destination": "/cv.html"
     }
   ]
 }
