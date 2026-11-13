@@ -29,7 +29,7 @@ export function initPolish(c) {
   // 2) أختام أرشيفية في زوايا بعض الأقسام
   const year = new Date().getFullYear();
   const st = { certificates: [AR() ? `مُتحقَّق · ${year}` : `VERIFIED · ${year}`, "st-teal"], posters: ["ARCHIVE · A1", "st-gold"], library: [AR() ? "مكتبة الأعمال" : "WORKS LIBRARY", "st-gold"], tapes: ["VHS · " + year, "st-rust"] };
-  for (const [id, [txt, cls]] of Object.entries(st)) { const s = document.getElementById(id) || document.getElementById(id + "-sec"); if (s && !s.querySelector(".stamp")) s.insertAdjacentHTML("afterbegin", stamp(txt, cls)); }
+  for (const [id, [txt, cls]] of Object.entries(st)) { const s = document.getElementById(id) || document.getElementById(id + "-sec"); const o = s && s.querySelector(".orn"); if (o && !s.querySelector(".stamp")) o.insertAdjacentHTML("afterbegin", stamp(txt, cls)); }
   // 3) كشف الكلمات في العناوين الكبيرة
   $$(".h2.rv", app).forEach((h) => { if (h.dataset.split) return; h.dataset.split = "1"; let n = 0; const walk = (node) => { [...node.childNodes].forEach((ch) => { if (ch.nodeType === 3) { const frag = document.createDocumentFragment(); ch.textContent.split(/(\s+)/).forEach((w) => { if (!w) return; if (/^\s+$/.test(w)) { frag.appendChild(document.createTextNode(w)); return; } const sp = document.createElement("span"); sp.className = "w"; sp.style.setProperty("--w", n++); sp.textContent = w; frag.appendChild(sp); }); ch.replaceWith(frag); } else if (ch.nodeType === 1 && !ch.classList.contains("w")) walk(ch); }); }; walk(h); });
   // 4) حبيبات ورق + مسطرة المسّاح (شاشات عريضة) + بوصلة البطل
